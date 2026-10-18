@@ -38,15 +38,15 @@ kicad-cli sch erc --output review/erc.rpt PCB_FUMEHOODS.kicad_sch
 kicad-cli pcb drc --output review/drc.rpt PCB_FUMEHOODS.kicad_pcb
 ```
 
-The SVG below is generated from the supplied schematic, not a conceptual replacement.
+The schematic PDF and PCB preview are generated from the supplied design files.
 
 [View schematic PDF](PCB_FUMEHOODS.pdf)
 
 ![SashSense PCB layout](PCB_FUMEHOODS-board.svg)
 
-![SashSense electrical schematic](PCB_FUMEHOODS.svg)
 
-[Open schematic SVG](PCB_FUMEHOODS.svg)
+
+
 
 ## Verified results and current status
 
@@ -72,7 +72,7 @@ No bench test, accuracy, energy-saving, production, or completed deployment resu
 - `PCB_FUMEHOODS.kicad_pro`: project settings and configured design rules.
 - `PCB_FUMEHOODS.kicad_sch`: editable electrical schematic.
 - `PCB_FUMEHOODS.kicad_pcb`: editable board layout.
-- `PCB_FUMEHOODS.svg`: generated schematic view.
+- `PCB_FUMEHOODS.pdf`: exported schematic view; `PCB_FUMEHOODS-board.svg`: PCB preview.
 - `erc.rpt`, `drc.rpt`: recorded KiCad checks, including exclusions.
 - `SOURCE_NOTES.md`: provenance, review scope, and exclusions.
 - `SHA256SUMS.txt`: hashes of the three source files.
@@ -80,5 +80,3 @@ No bench test, accuracy, energy-saving, production, or completed deployment resu
 ## Sharing and ownership
 
 This repository is intended for controlled private sharing. Reviewers need explicit repository access. No license is granted by this repository; no open-source license has been added to lab-associated work.
-
-
