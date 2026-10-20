@@ -1,6 +1,6 @@
 # Source notes
 
-The in-hood KiCad project was renamed from `PCB_FUMEHOODS` to `SashSense_node1`. Its CAD contents and project settings were kept unchanged. The repository history retains the earlier filenames.
+The in-hood KiCad project was renamed from `PCB_FUMEHOODS` to `SashSense_node1`. Its distance sensor was later changed from VL53L0X to the pin-compatible VL53L1X, and its rule-check findings were fixed (SCL and +5V moved off the board edge, ground pour joined with GND vias, C5 rotated, silkscreen corrected). The repository history retains the earlier files.
 
 The original local folder also contains a KiCad automatic PCB snapshot dated 2026-09-02. That snapshot is kept separately.
 

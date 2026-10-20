@@ -264,7 +264,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "PCB_FUMEHOODS.kicad_pro",
+    "filename": "SashSense_node1.kicad_pro",
     "version": 3
   },
   "net_settings": {
@@ -313,8 +313,8 @@
     "legacy_lib_list": [],
     "top_level_sheets": [
       {
-        "filename": "PCB_FUMEHOODS.kicad_sch",
-        "name": "PCB_FUMEHOODS",
+        "filename": "SashSense_node1.kicad_sch",
+        "name": "SashSense_node1",
         "uuid": "00000000-0000-0000-0000-000000000000"
       }
     ]
