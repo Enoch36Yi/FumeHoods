@@ -4,7 +4,7 @@ SashSense monitors fume hood sash position and whether someone is working at the
 
 I selected sensors, tested breadboard circuits, designed PCBs and built earlier ESP32 prototypes. I also coordinate the team's technical work.
 
-The in-hood node measures sash opening and temperature/humidity. The presence node uses VL53L1X and an AMG8833 thermopile array. This repository contains an earlier in-hood board revision and a reconstructed presence board. The reconstruction has not been fabricated or tested as hardware; it is separate from the earlier prototypes.
+The in-hood node measures sash opening and temperature/humidity. The presence node uses VL53L1X and an AMG8833 thermopile array, this node build off of SEAL's firefly human presence project. This repository contains an earlier in-hood board revision and a reconstructed presence board. The reconstruction has not been fabricated or tested as hardware; it is separate from the earlier prototypes.
 
 ## Node 1 — in-hood board
 
