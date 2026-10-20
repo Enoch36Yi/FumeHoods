@@ -2,7 +2,7 @@
 
 SashSense monitors fume hood sash position and whether someone is working at the hood. It is designed to beep when a user walks away and leaves the sash open. The wider project is working toward deployment across 191 UW fume hoods, supported by a UW STF Green Building Award.
 
-I selected sensors, tested breadboard circuits, designed PCBs and built earlier ESP32 prototypes. I also coordinate the team's technical work.
+I selected sensors, tested breadboard circuits, designed PCBs and built earlier ESP32 prototypes, coordinating team member contributions.
 
 The in-hood node measures sash opening and temperature/humidity. The presence node uses VL53L1X and an AMG8833 thermopile array; it builds on SEAL's Firefly human-presence project.
 
