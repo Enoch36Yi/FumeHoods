@@ -15,8 +15,8 @@ FPDIR = ROOT/'libraries'/'SashSense.pretty'
 if BOARD_FILE.exists() and '--overwrite' not in sys.argv:
     raise SystemExit(BOARD_FILE.name+' exists; pass --overwrite to regenerate it (manual board edits would be replaced).')
 
-# Exact required outline: 500.000 x 500.000 mm, origin offset so the page frame stays clear.
-OUTLINE = (25.0, 25.0, 525.0, 525.0)
+# Outline trimmed to the populated region (160 x 60 mm); the module antenna stays on the top edge.
+OUTLINE = OUTLINE_MM
 F, B = pcb.F_Cu, pcb.B_Cu
 SIG, VIA_D, VIA_H = 0.2, 0.6, 0.3
 
@@ -30,9 +30,10 @@ ds.SetBoardThickness(mm(1.6))
 ds.SetAuxOrigin(xy(OUTLINE[0], OUTLINE[3]))   # placement/drill origin: bottom-left board corner
 ds.SetGridOrigin(xy(OUTLINE[0], OUTLINE[3]))
 tb = b.GetTitleBlock()
-tb.SetTitle('Firefly_pcb2 - SashSense sensor node'); tb.SetRevision('P2'); tb.SetDate('2026-10-19')
+W_MM, H_MM = OUTLINE[2]-OUTLINE[0], OUTLINE[3]-OUTLINE[1]
+tb.SetTitle('Firefly_pcb2 - SashSense sensor node'); tb.SetRevision('P2'); tb.SetDate('2026-10-20')
 tb.SetCompany('SashSense'); tb.SetComment(0, 'PROVISIONAL - NOT RELEASED FOR FABRICATION')
-tb.SetComment(1, '500.00 x 500.00 mm, 2 layers, 1.6 mm nominal; mounting/enclosure/host interface unresolved')
+tb.SetComment(1, f'{W_MM:.2f} x {H_MM:.2f} mm, 2 layers, 1.6 mm nominal; mounting/enclosure/host interface unresolved')
 
 # ---------------------------------------------------------------- netlist (single source of truth)
 xml = ET.parse(ROOT/'reports'/'netlist.xml')
@@ -242,9 +243,9 @@ def rule_area(name, pts):
     for x, y in pts: o.Append(mm(x), mm(y))
     b.Add(z)
 def circle(cx, cy, rad, n=32): return [(cx+rad*math.cos(2*math.pi*i/n), cy+rad*math.sin(2*math.pi*i/n)) for i in range(n)]
-# 25 provisional M3 supports on a 120 mm grid. Copper-free 4 mm radius allows for screw heads/washers.
+# Four provisional M3 supports, 5 mm in from each corner. Copper-free 4 mm radius allows for screw heads/washers.
 HOLE_FP, HOLE_KEEPOUT = 'MountingHole_3.2mm_M3', 4.0
-HOLES = [(xx, yy) for yy in (35, 155, 275, 395, 515) for xx in (35, 155, 275, 395, 515)]
+HOLES = [(x, y) for y in (OUTLINE[1]+5.0, OUTLINE[3]-5.0) for x in (OUTLINE[0]+5.0, OUTLINE[2]-5.0)]
 for i, (xx, yy) in enumerate(HOLES, 1):
     f = pcb.FootprintLoad(str(FPDIR), HOLE_FP); f.SetFPID(pcb.LIB_ID('SashSense', HOLE_FP))
     f.SetReference(f'H{i}'); f.SetValue('M3 SUPPORT - PROVISIONAL')
@@ -252,14 +253,14 @@ for i, (xx, yy) in enumerate(HOLES, 1):
     f.SetPosition(xy(xx, yy)); f.Reference().SetVisible(False); f.Value().SetVisible(False); b.Add(f)
     rule_area(f'H{i}_support_keepout', circle(xx, yy, HOLE_KEEPOUT))
 # Global fiducials round the populated area; board-only, not placed parts.
-FIDUCIALS = [(38.0, 50.0), (186.0, 32.0), (120.0, 70.0)]
+FIDUCIALS = [(38.0, 50.0), (176.0, 40.0), (120.0, 70.0)]
 for i, (xx, yy) in enumerate(FIDUCIALS, 1):
     f = pcb.FootprintLoad(str(FPDIR), 'Fiducial_1mm_Mask2mm'); f.SetFPID(pcb.LIB_ID('SashSense', 'Fiducial_1mm_Mask2mm'))
     f.SetReference(f'FID{i}'); f.SetValue('Fiducial'); f.SetBoardOnly(True); f.SetExcludedFromBOM(True); f.SetExcludedFromPosFiles(True)
     f.SetPosition(xy(xx, yy)); f.Reference().SetVisible(False); f.Value().SetVisible(False); b.Add(f)
 
 # ---------------------------------------------------------------- ground pours on both layers (balanced copper)
-POUR = (27.0, 27.0, 190.0, 82.0)
+POUR = (OUTLINE[0]+2.0, OUTLINE[1]+2.0, OUTLINE[2]-2.0, OUTLINE[3]-2.0)
 for layer in (B, F):
     z = pcb.ZONE(b); z.SetLayer(layer); z.SetNet(nets[GND]); z.SetAssignedPriority(0); z.SetZoneName('GND_'+('top' if layer == F else 'bottom'))
     z.SetLocalClearance(mm(0.25)); z.SetMinThickness(mm(0.25))
@@ -308,14 +309,13 @@ LABELS = [  # (text, x, y, size[, angle]) - placed in measured free space; check
     ('VL53L1X 0x29  +Z', 140.0, 44.6, 0.8), ('AMG8833 0x68  +Z', 172.0, 44.6, 0.8),
     ('BEEPER', 52.0, 70.0, 0.8),
     ('Firefly_pcb2  |  SashSense sensor node  |  P2 PROVISIONAL', 108.0, 79.0, 1.2),
-    ('NOT RELEASED FOR FABRICATION - mounting, apertures and host interface unresolved', 275.0, 100.0, 3.0),
-    ('500.00 x 500.00 mm  |  2 layers  |  1.6 mm nominal  |  M3 support grid PROVISIONAL', 275.0, 108.0, 3.0),
+    ('NOT RELEASED FOR FABRICATION - mounting, apertures and host interface unresolved', 108.0, 81.6, 0.8),
 ]
 placed_text = []
 if '--no-text' not in sys.argv:
     for s, x, y, size, *ang in LABELS:
-        t = text(s, x, y, size, thick=0.15 if size < 2 else 0.4, angle=ang[0] if ang else 0); placed_text.append(t)
-    text('Firefly_pcb2 P2 - BOTTOM', 275.0, 120.0, 3.0, pcb.B_SilkS, 0.4)
+        t = text(s, x, y, size, thick=0.15, angle=ang[0] if ang else 0); placed_text.append(t)
+    text(f'Firefly_pcb2 P2 - BOTTOM  |  {W_MM:.0f} x {H_MM:.0f} mm', 110.0, 66.0, 1.5, pcb.B_SilkS, 0.2)
 
 # Reference designators: first free spot around each courtyard, clear of pads, silk and other text.
 silk_obst = [box(p.GetBoundingBox(), 0.25) for f in b.GetFootprints() for p in f.Pads() if p.IsOnLayer(F) or p.HasHole()]
@@ -336,7 +336,8 @@ for ref in sorted(fps, key=lambda r: -fps[r].GetCourtyard(pcb.F_CrtYd).BBox().Ge
                   (cx1+hw+gap, cy0-hh-gap), (cx0-hw-gap, cy0-hh-gap), (cx1+hw+gap, cy1+hh+gap), (cx0-hw-gap, cy1+hh+gap)]
     for x, y in cands:
         fld.SetPosition(xy(x, y)); q = box(fld.GetBoundingBox(), 0.1)
-        if not overlaps(q) and q[0] > OUTLINE[0]+0.5 and q[1] > OUTLINE[1]+0.5: silk_obst.append(q); break
+        if not overlaps(q) and q[0] > OUTLINE[0]+0.5 and q[1] > OUTLINE[1]+0.5 and q[2] < OUTLINE[2]-0.5 and q[3] < OUTLINE[3]-0.5:
+            silk_obst.append(q); break
     else:
         unplaced.append(ref); fld.SetPosition(xy(mx, my))
 if unplaced: print('WARNING: references without a free silkscreen position:', unplaced)
@@ -344,9 +345,9 @@ if unplaced: print('WARNING: references without a free silkscreen position:', un
 filler = pcb.ZONE_FILLER(b); filler.Fill(b.Zones())
 b.BuildConnectivity()
 pcb.SaveBoard(str(BOARD_FILE), b, True)
-# PAGE_INFO is not exposed to Python; A1 portrait holds the 500 mm board plus title block.
+# PAGE_INFO is not exposed to Python; A4 landscape holds the board plus title block.
 raw = BOARD_FILE.read_text(encoding='utf-8')
-BOARD_FILE.write_text(re.sub(r'\(paper "[^"]*"( portrait)?\)', '(paper "A1" portrait)', raw, count=1), encoding='utf-8')
+BOARD_FILE.write_text(re.sub(r'\(paper "[^"]*"( portrait)?\)', '(paper "A4")', raw, count=1), encoding='utf-8')
 print('Saved', BOARD_FILE.name, len(fps), 'schematic footprints,', stitched, 'stitching vias,',
       len(list(b.GetTracks())), 'tracks/vias; pcbnew unrouted', b.GetConnectivity().GetUnconnectedCount(True))
 

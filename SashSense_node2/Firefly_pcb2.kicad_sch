@@ -1,5 +1,5 @@
 (kicad_sch (version 20250114) (generator "eeschema") (uuid "894ce443-e53a-500f-a9b5-5f3c68ae9496") (paper "A3")
-(title_block (title "Firefly_pcb2 - SashSense sensor node") (date "2026-10-19") (rev "P1") (company "SashSense") (comment 1 "PROVISIONAL - 500 x 500 mm - mechanical/system integration unresolved"))
+(title_block (title "Firefly_pcb2 - SashSense sensor node") (date "2026-10-19") (rev "P1") (company "SashSense") (comment 1 "PROVISIONAL - 160 x 60 mm - mechanical/system integration unresolved"))
 (lib_symbols (symbol "SashSense:RF_Module_ESP32-S3-WROOM-1"
 		(exclude_from_sim no)
 		(in_bom yes)

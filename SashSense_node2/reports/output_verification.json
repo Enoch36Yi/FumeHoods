@@ -1,11 +1,11 @@
 {
   "status": "PASS",
-  "checks_executed": 25,
+  "checks_executed": 23,
   "errors": [],
   "info": {
     "edge_cuts_gerber_extent_mm": [
-      500.0,
-      500.0
+      160.0,
+      60.0
     ],
     "gerber_job_general_specs": {
       "ProjectId": {
@@ -14,8 +14,8 @@
         "Revision": "P2"
       },
       "Size": {
-        "X": 500.05,
-        "Y": 500.05
+        "X": 160.05,
+        "Y": 60.05
       },
       "LayerNumber": 2,
       "BoardThickness": 1.6,
@@ -24,12 +24,12 @@
     "drill_hits_by_diameter_mm": {
       "PTH": {
         "0.2": 12,
-        "0.3": 201,
+        "0.3": 221,
         "1.0": 6,
         "1.6": 2
       },
       "NPTH": {
-        "3.2": 25
+        "3.2": 4
       }
     },
     "bom_lines": 18,
@@ -37,12 +37,12 @@
   },
   "checks": [
     "Gerbers present for F/B copper, paste, silkscreen, mask and Edge.Cuts: B_Cu, B_Mask, B_Paste, B_Silkscreen, Edge_Cuts, F_Cu, F_Mask, F_Paste, F_Silkscreen",
-    "Edge.Cuts Gerber outline spans 500.000000 x 500.000000 mm from the bottom-left origin",
-    "F_Cu Gerber coordinates all lie within the 500 mm outline (6048 coordinates)",
-    "B_Cu Gerber coordinates all lie within the 500 mm outline (1316 coordinates)",
-    "Gerber job file: {'X': 500.05, 'Y': 500.05} mm bounding box = 500 mm centreline + 0.05 mm outline line, 2 layers, thickness 1.6 mm",
-    "PTH drill file hits {0.2: 12, 0.3: 201, 1.0: 6, 1.6: 2} equal board plated holes {0.3: 201, 1.0: 6, 0.2: 12, 1.6: 2}",
-    "NPTH drill file hits {3.2: 25} equal board unplated holes {3.2: 25}",
+    "Edge.Cuts Gerber outline spans 160.000000 x 60.000000 mm from the bottom-left origin",
+    "F_Cu Gerber coordinates all lie within the 160 x 60 mm outline (6076 coordinates)",
+    "B_Cu Gerber coordinates all lie within the 160 x 60 mm outline (1347 coordinates)",
+    "Gerber job file: {'X': 160.05, 'Y': 60.05} mm bounding box = 160 x 60 mm centreline + 0.05 mm outline line, 2 layers, thickness 1.6 mm",
+    "PTH drill file hits {0.2: 12, 0.3: 221, 1.0: 6, 1.6: 2} equal board plated holes {0.3: 221, 1.0: 6, 0.2: 12, 1.6: 2}",
+    "NPTH drill file hits {3.2: 4} equal board unplated holes {3.2: 4}",
     "Smallest plated drill 0.2 mm (module thermal vias; check fabricator minimum)",
     "CPL lists exactly the 29 placed (non-pad) parts",
     "CPL coordinates equal board positions relative to the bottom-left origin, all top side",
@@ -51,14 +51,12 @@
     "BOM quantities sum to the placed part count",
     "CPL and BOM describe the same parts",
     "IPC-D-356 netlist present (51 named nets in test records)",
-    "STEP model present (2900 KiB)",
+    "STEP model present (2866 KiB)",
     "Firefly_pcb2_assembly_top.pdf is a PDF",
     "Firefly_pcb2_board_layers.pdf is a PDF",
-    "Preview Firefly_pcb2_3D_top_full.png present",
-    "Preview Firefly_pcb2_3D_bottom_full.png present",
-    "Preview Firefly_pcb2_3D_top_populated.png present",
-    "Preview Firefly_pcb2_3D_bottom_populated.png present",
-    "Preview Firefly_pcb2_3D_iso_populated.png present",
+    "Preview Firefly_pcb2_3D_top.png present",
+    "Preview Firefly_pcb2_3D_bottom.png present",
+    "Preview Firefly_pcb2_3D_iso.png present",
     "Preview Firefly_pcb2_copper_top.png present",
     "Preview Firefly_pcb2_copper_bottom.png present"
   ],

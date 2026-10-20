@@ -1,10 +1,10 @@
 {
   "name": "Firefly_pcb2",
   "outline_mm": [
-    25,
-    25,
-    525,
-    525
+    30.0,
+    25.0,
+    190.0,
+    85.0
   ],
   "schematic_uuid": "894ce443-e53a-500f-a9b5-5f3c68ae9496",
   "components": [

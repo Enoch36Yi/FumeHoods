@@ -1,37 +1,37 @@
 PCB statistics report
 =====================
-- Date: 10/19/2026 4:43:31 PM
+- Date: 10/20/2026 3:48:57 PM
 - Project: Firefly_pcb2
 - Board name: Firefly_pcb2
 
 Board
 -----
-- Width: 500.0000 mm
-- Height: 500.0000 mm
-- Area: 250000.00 mm²
-- Front copper area: 8326.978 mm²
-- Back copper area: 8858.447 mm²
+- Width: 160.0000 mm
+- Height: 60.0000 mm
+- Area: 9600.00 mm²
+- Front copper area: 7864.621 mm²
+- Back copper area: 8396.09 mm²
 - Min track clearance: 0.3500 mm
 - Min track width: 0.2000 mm
 - Min drill diameter: 0.2000 mm
 - Board stackup thickness: 1.6000 mm
 
-- Front footprint area: 2969.558 mm²
-- Back footprint area: 247.223 mm²
-- Front component density: 1.19 %
-- Back component density: 0.10 %
+- Front footprint area: 2186.958 mm²
+- Back footprint area: 80.133 mm²
+- Front component density: 22.78 %
+- Back component density: 0.83 %
 Pads
 ----
 - Through hole: 20
 - SMD: 145
 - Connector: 0
-- NPTH: 25
+- NPTH: 4
 - Castellated: 0
 - Press-fit: 0
 
 Vias
 ----
-- Through vias: 201
+- Through vias: 221
 - Blind vias: 0
 - Buried vias: 0
 - Micro vias: 0
@@ -43,16 +43,16 @@ Components
 |--------------|------------|-----------|-------|
 |THT:          |          1 |         0 |     1 |
 |SMD:          |         32 |         0 |    32 |
-|Unspecified:  |         34 |         0 |    34 |
-|Total:        |         67 |         0 |    67 |
+|Unspecified:  |         13 |         0 |    13 |
+|Total:        |         46 |         0 |    46 |
 
 Drill holes
 -----------
 
 | Count | Shape |    X Size |    Y Size | Plated | Via/Pad | Start Layer | Stop Layer |
 |-------|-------|-----------|-----------|--------|---------|-------------|------------|
-|   201 | Round | 0.3000 mm | 0.3000 mm |    PTH |     Via |        F.Cu |       B.Cu |
-|    25 | Round | 3.2000 mm | 3.2000 mm |   NPTH |     Pad |        F.Cu |       B.Cu |
+|   221 | Round | 0.3000 mm | 0.3000 mm |    PTH |     Via |        F.Cu |       B.Cu |
 |    12 | Round | 0.2000 mm | 0.2000 mm |    PTH |     Pad |        F.Cu |       B.Cu |
 |     6 | Round | 1.0000 mm | 1.0000 mm |    PTH |     Pad |        F.Cu |       B.Cu |
+|     4 | Round | 3.2000 mm | 3.2000 mm |   NPTH |     Pad |        F.Cu |       B.Cu |
 |     2 | Round | 1.6000 mm | 1.6000 mm |    PTH |     Pad |        F.Cu |       B.Cu |

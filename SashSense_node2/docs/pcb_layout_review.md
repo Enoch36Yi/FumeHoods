@@ -1,30 +1,30 @@
 # Firefly_pcb2 PCB layout and verification (P2)
 
-2026-10-19. Status: placed and fully routed native KiCad 10.0.5 board; digitally verified. **Not released for fabrication**: mounting, sensor apertures, host interface and the beeper part lifecycle remain open (see *Release blockers*).
+2026-10-20. Status: placed and fully routed native KiCad 10.0.5 board, 160 x 60 mm; digitally verified. **Not released for fabrication**: mounting, sensor apertures, host interface and the beeper part lifecycle remain open (see *Release blockers*).
 
 ## Files
 
 | File | Content |
 |---|---|
 | `Firefly_pcb2.kicad_pcb` | Placed, routed and zone-filled board (fill saved by the final native DRC run) |
-| `Firefly_pcb2.kicad_sch`, `.kicad_pro` | Unchanged from the schematic stage (SHA-256 rechecked) |
+| `Firefly_pcb2.kicad_sch`, `.kicad_pro` | Circuit unchanged from the schematic stage; the title-block note now reads 160 x 60 mm |
 | `libraries/SashSense.pretty/Fiducial_1mm_Mask2mm.kicad_mod` | Added local copy of the KiCad fiducial; all other footprints unchanged |
 | `scripts/layout_pcb.py` | Explicit placement and every route; regenerates the board (`--overwrite`) |
 | `scripts/verify_pcb.py`, `scripts/verify_outputs.py` | Independent board and exported-file checks |
 | `scripts/make_pcb_outputs.ps1` | Re-runs ERC, DRC, all checks, previews and the manufacturing review package |
 | `scripts/render_copper.py` | Per-layer copper review images |
 | `reports/drc.json`, `drc.rpt`, `pcb_verification.json`, `output_verification.json`, `board_stats.txt` | Results quoted below |
-| `outputs/previews/` | KiCad 3D renders (full board and populated region, top/bottom/isometric) and per-layer copper views |
+| `outputs/previews/` | KiCad 3D top render and per-layer copper views |
 | `outputs/Firefly_pcb2_board_layers.pdf` | Vector plot of every fabricated layer |
 | `outputs/manufacturing_P2_PROVISIONAL/` | Gerbers, drill, CPL, BOM, assembly drawing, IPC-D-356, STEP; see its README |
 
-The board was placed and routed from the exported schematic netlist.
+The board was placed and routed from the exported schematic netlist. It was first laid out inside a provisional 500 x 500 mm outline; the outline was then trimmed to the populated area, without changing placement or routing, and every check below was re-run.
 
 ## Board
 
-- Outline: a provisional **500 x 500 mm** Edge.Cuts rectangle, from (25, 25) to (525, 525) mm.
-- Two copper layers, 1.6 mm nominal. GND pours on both layers over the populated region (x 27-190, y 27-82 mm) for balanced copper, tied by 171 stitching vias; the rest of the board is bare laminate.
-- 25 provisional M3 supports (3.2 mm NPTH) on the earlier 120 mm grid, each with a 4 mm-radius copper keepout. Three global fiducials. All are board-only items, outside the BOM and CPL.
+- Outline: a **160 x 60 mm** Edge.Cuts rectangle, from (30, 25) to (190, 85) mm, set by `OUTLINE_MM` in `scripts/cad_common.py`.
+- Two copper layers, 1.6 mm nominal. GND pours on both layers 2 mm inside the edge, tied by 191 stitching vias.
+- Four provisional M3 supports (3.2 mm NPTH), 5 mm in from each corner, each with a 4 mm-radius copper keepout. Three global fiducials. All are board-only items, outside the BOM and CPL.
 - All 29 purchased parts and all pads are on the top side.
 
 ### Placement
@@ -71,11 +71,11 @@ The fixed GPIO order puts UART and interrupt lines between the bus pins, and the
 | Native DRC with `--schematic-parity --refill-zones --save-board`, all severities | **0 violations, 0 unconnected items, 0 parity issues** |
 | Exact native unrouted count | **0** (DRC report); pcbnew connectivity independently also 0 |
 | `verify_pcb.py` | 527/527 pass: outline, footprint/UUID/value/footprint parity, 153 pad-to-net comparisons, NC isolation, bypass topology and distances, antenna keepout, supports, via-in-pad, zone fills, track/via sizes |
-| `verify_outputs.py` | 25/25 pass: Gerber outline and coordinates, job file, drill hits vs board holes, CPL positions/refs, BOM coverage, IPC-D-356, STEP, PDFs, previews |
+| `verify_outputs.py` | 23/23 pass: Gerber outline and coordinates, job file, drill hits vs board holes, CPL positions/refs, BOM coverage, IPC-D-356, STEP, PDFs, previews |
 
 KiCad's project defaults ignore five DRC checks (no courtyard, track not centred on via, tuning geometry, footprint filters, footprint type). No finding-specific exclusions exist. A scratch copy with those five set to *error* also gave 0 DRC violations; its parity section then lists 24 footprint-filter metadata mismatches, explained below.
 
-## Schematic review findings (no schematic edits were made)
+## Schematic review findings (no circuit edits were made)
 
 1. **Footprint-filter metadata.** `build_project.py` renames symbols by text replacement, which also rewrote the resistor/capacitor filters to `Device_R_*` / `Device_C_*`; the J1/J2 filters name connector libraries rather than the local library. Effect is limited to footprint-assignment filtering; fix the renaming in `build_project.py` before regenerating the schematic.
 2. **Beeper lifecycle.** DigiKey lists PKLCS1212E4001-R1 as "Last Time Buy"; other distributors disagree. Confirm with Murata or choose a current part and re-audit its land pattern and drive before release.
@@ -91,13 +91,14 @@ The GPIO map, pull-ups, 100 kHz starting bus speed, sensor addresses and bypass 
 - I2C: routed SDA 116 mm, SCL 103 mm; trace capacitance roughly 5-14 pF (0.5-1.2 pF/cm assumption) before device and test-point loading. With 4.7 kohm and about 50 pF total, the RC rise time estimate is about 0.2 us. Measure on hardware.
 - Thermal: the AMG8833 is 93.5 mm from the module, but continuous ground copper conducts heat between them; self-heating must be measured.
 - RF: antenna keepout is clear on both layers; enclosure, supports and cables near the antenna are unknown.
+- Size: the outline follows the existing placement. A smaller board would need parts re-placed; moving the AMG8833 closer to the module reduces its thermal separation.
 - Digital checks do not establish mechanical fit, optics, thermal accuracy, RF performance, assembly yield or hardware function.
 
 ## Before fabrication
 
 1. Beeper: confirmed availability of PKLCS1212E4001-R1, or an approved replacement.
 2. Mechanics: support/mounting pattern, board thickness, enclosure, and sensor aperture or window positions (ToF 27 deg and AMG 60 deg fields of view).
-3. Process: an assembly route that accepts a 500 x 500 mm board (published routine JLCPCB PCBA envelopes do not), copper weight, finish and a fabricator DFM review.
+3. Process: copper weight, finish and a fabricator DFM review.
 4. Interface: the actual 3.3 V source and harness for J1/J2, which decides input protection.
 
 ## Reproduction

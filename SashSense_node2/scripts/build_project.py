@@ -113,7 +113,7 @@ for ref,net,xy in [('#FLG01','+3V3',(35,257)),('#FLG02','GND',(68,257))]:
 
 # One native schematic. Connections are local net labels on deliberately short wires.
 rootid=uid('schematic'); sch=[f'(kicad_sch (version 20250114) (generator "eeschema") (uuid {q(rootid)}) (paper "A3")',
- '(title_block (title "Firefly_pcb2 - SashSense sensor node") (date "2026-10-19") (rev "P1") (company "SashSense") (comment 1 "PROVISIONAL - 500 x 500 mm - mechanical/system integration unresolved"))',
+ '(title_block (title "Firefly_pcb2 - SashSense sensor node") (date "2026-10-19") (rev "P1") (company "SashSense") (comment 1 "PROVISIONAL - 160 x 60 mm - mechanical/system integration unresolved"))',
  '(lib_symbols '+' '.join(raw.replace('(symbol '+q(k),'(symbol '+q('SashSense:'+k),1) for k,raw in symbols.items())+')']
 def effect(size=1.0,justify=''): return f'(effects (font (size {size} {size})) {justify})'
 def wire(x,y,x2,y2,tag): return f'(wire (pts (xy {x:.4f} {y:.4f}) (xy {x2:.4f} {y2:.4f})) (stroke (width 0) (type default)) (uuid {q(uid(tag))}))'
@@ -167,7 +167,7 @@ sch+=['(embedded_fonts no))']
 
 # Default execution is schematic-only. The user stopped this task before PCB completion.
 # Resuming PCB creation requires a separate explicit invocation by the next engineer.
-(ROOT/'design_manifest.json').write_text(json.dumps({'name':NAME,'outline_mm':[25,25,525,525],'schematic_uuid':rootid,'components':components},indent=2),encoding='utf-8')
+(ROOT/'design_manifest.json').write_text(json.dumps({'name':NAME,'outline_mm':list(OUTLINE_MM),'schematic_uuid':rootid,'components':components},indent=2),encoding='utf-8')
 with (ROOT/'outputs'/'BOM.csv').open('w',newline='',encoding='utf-8-sig') as f:
     w=csv.writer(f);w.writerow(['Reference','Value','Manufacturer','MPN','Footprint','Quantity','Status'])
     for c in components:
@@ -175,6 +175,8 @@ with (ROOT/'outputs'/'BOM.csv').open('w',newline='',encoding='utf-8-sig') as f:
 if '--build-pcb' not in sys.argv:
     print('Created',NAME,'schematic and local libraries. PCB generation disabled by default.')
     sys.exit(0)
+# The original 500 mm placement below is superseded; the board is built by layout_pcb.py.
+raise SystemExit('--build-pcb is superseded: run scripts/layout_pcb.py --overwrite for the routed board.')
 
 # PCB with copied local footprint definitions and the exact required board outline.
 b=pcb.BOARD(); b.SetCopperLayerCount(2)
@@ -233,7 +235,7 @@ pcb.SaveBoard(str(ROOT/(NAME+'.kicad_pcb')),b)
 
 project={'meta':{'filename':NAME+'.kicad_pro','version':1},'board':{'design_settings':{'rules':{'min_clearance':0.15,'min_track_width':0.15,'min_via_diameter':0.6,'min_through_hole_diameter':0.2,'min_copper_edge_clearance':0.3,'solder_mask_to_copper_clearance':0.0,'min_silk_clearance':0.1,'min_silk_text_height':0.8,'min_silk_text_thickness':0.12},'rule_severities':{}}},'net_settings':{'classes':[{'name':'Default','clearance':0.2,'track_width':0.2,'via_diameter':0.6,'via_drill':0.3,'microvia_diameter':0.3,'microvia_drill':0.1,'diff_pair_width':0.2,'diff_pair_gap':0.25,'diff_pair_via_gap':0.25}],'net_colors':None,'netclass_assignments':None,'netclass_patterns':[]},'schematic':{'erc_exclusions':[]},'text_variables':{}}
 (ROOT/(NAME+'.kicad_pro')).write_text(json.dumps(project,indent=2),encoding='utf-8')
-(ROOT/'design_manifest.json').write_text(json.dumps({'name':NAME,'outline_mm':[25,25,525,525],'schematic_uuid':rootid,'components':components,'nets':netnames},indent=2),encoding='utf-8')
+(ROOT/'design_manifest.json').write_text(json.dumps({'name':NAME,'outline_mm':list(OUTLINE_MM),'schematic_uuid':rootid,'components':components,'nets':netnames},indent=2),encoding='utf-8')
 with (ROOT/'outputs'/'BOM.csv').open('w',newline='',encoding='utf-8-sig') as f:
     w=csv.writer(f); w.writerow(['Reference','Value','Manufacturer','MPN','Footprint','Quantity','Status'])
     for c in components:

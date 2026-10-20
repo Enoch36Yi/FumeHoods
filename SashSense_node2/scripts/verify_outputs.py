@@ -13,7 +13,8 @@ def ck(ok, desc):
     checks.append(desc)
     if not ok: errors.append(desc)
     return ok
-OX, OY = 25.0, 525.0          # auxiliary (drill/place) origin: bottom-left board corner
+OX, OY = OUTLINE_MM[0], OUTLINE_MM[3]        # auxiliary (drill/place) origin: bottom-left board corner
+BW, BH = OUTLINE_MM[2]-OUTLINE_MM[0], OUTLINE_MM[3]-OUTLINE_MM[1]
 
 # ---------------------------------------------------------------- Gerbers
 def gerber_xy(path):
@@ -31,18 +32,18 @@ ck(all(files.values()), 'Gerbers present for F/B copper, paste, silkscreen, mask
 txt, pts = gerber_xy(files['Edge_Cuts'])
 xs, ys = [p[0] for p in pts], [p[1] for p in pts]
 ew, eh = max(xs)-min(xs), max(ys)-min(ys)
-ck(abs(ew-500.0) < 1e-6 and abs(eh-500.0) < 1e-6 and abs(min(xs)) < 1e-6 and abs(min(ys)) < 1e-6,
+ck(abs(ew-BW) < 1e-6 and abs(eh-BH) < 1e-6 and abs(min(xs)) < 1e-6 and abs(min(ys)) < 1e-6,
    f'Edge.Cuts Gerber outline spans {ew:.6f} x {eh:.6f} mm from the bottom-left origin')
 info['edge_cuts_gerber_extent_mm'] = [round(ew, 6), round(eh, 6)]
 for k in ('F_Cu', 'B_Cu'):
     t, p = gerber_xy(files[k])
-    ck(p and all(-1e-6 <= x <= 500+1e-6 and -1e-6 <= y <= 500+1e-6 for x, y in p), f'{k} Gerber coordinates all lie within the 500 mm outline ({len(p)} coordinates)')
+    ck(p and all(-1e-6 <= x <= BW+1e-6 and -1e-6 <= y <= BH+1e-6 for x, y in p), f'{k} Gerber coordinates all lie within the {BW:g} x {BH:g} mm outline ({len(p)} coordinates)')
 job = json.loads(next(gdir.glob('*.gbrjob')).read_text())
 gs = job.get('GeneralSpecs', {})
 edge_w = next(pcb.ToMM(d.GetWidth()) for d in b.GetDrawings() if d.GetLayer() == pcb.Edge_Cuts)
 # The job file reports the outline bounding box including the 0.05 mm drawing line; the cut path is its centreline.
-ck(abs(gs.get('Size', {}).get('X', 0)-500-edge_w) < 1e-6 and abs(gs.get('Size', {}).get('Y', 0)-500-edge_w) < 1e-6 and gs.get('LayerNumber') == 2,
-   f"Gerber job file: {gs.get('Size')} mm bounding box = 500 mm centreline + {edge_w} mm outline line, {gs.get('LayerNumber')} layers, thickness {gs.get('BoardThickness')} mm")
+ck(abs(gs.get('Size', {}).get('X', 0)-BW-edge_w) < 1e-6 and abs(gs.get('Size', {}).get('Y', 0)-BH-edge_w) < 1e-6 and gs.get('LayerNumber') == 2,
+   f"Gerber job file: {gs.get('Size')} mm bounding box = {BW:g} x {BH:g} mm centreline + {edge_w} mm outline line, {gs.get('LayerNumber')} layers, thickness {gs.get('BoardThickness')} mm")
 info['gerber_job_general_specs'] = gs
 
 # ---------------------------------------------------------------- Drill files
@@ -104,7 +105,7 @@ ck(step.is_file() and step.stat().st_size > 100_000, f'STEP model present ({step
 for p in [M/'assembly'/'Firefly_pcb2_assembly_top.pdf', ROOT/'outputs'/'Firefly_pcb2_board_layers.pdf']:
     ck(p.is_file() and p.read_bytes()[:4] == b'%PDF', f'{p.name} is a PDF')
 pv = ROOT/'outputs'/'previews'
-for n in ['3D_top_full', '3D_bottom_full', '3D_top_populated', '3D_bottom_populated', '3D_iso_populated', 'copper_top', 'copper_bottom']:
+for n in ['3D_top', '3D_bottom', '3D_iso', 'copper_top', 'copper_bottom']:
     p = pv/f'Firefly_pcb2_{n}.png'
     ck(p.is_file() and p.stat().st_size > 20_000, f'Preview {p.name} present')
 

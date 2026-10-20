@@ -39,8 +39,10 @@ edges += [g for f in b.GetFootprints() for g in f.GraphicalItems() if g.GetLayer
 ok = ck(len(edges) == 1 and edges[0].GetShape() == pcb.SHAPE_T_RECT, 'Edge.Cuts contains exactly one closed rectangle')
 s, e = edges[0].GetStart(), edges[0].GetEnd()
 w_nm, h_nm = abs(e.x-s.x), abs(e.y-s.y)
-ck(w_nm == 500_000_000 and h_nm == 500_000_000, f'Nominal outline is exactly 500.000000 x 500.000000 mm (measured {w_nm/1e6:.6f} x {h_nm/1e6:.6f} mm, 1 nm resolution)')
 x0, y0, x1, y1 = min(pt(s)[0], pt(e)[0]), min(pt(s)[1], pt(e)[1]), max(pt(s)[0], pt(e)[0]), max(pt(s)[1], pt(e)[1])
+W_NM, H_NM = round((OUTLINE_MM[2]-OUTLINE_MM[0])*1e6), round((OUTLINE_MM[3]-OUTLINE_MM[1])*1e6)
+ck(w_nm == W_NM and h_nm == H_NM and (x0, y0) == OUTLINE_MM[:2],
+   f'Outline is exactly {W_NM/1e6:.6f} x {H_NM/1e6:.6f} mm at ({OUTLINE_MM[0]}, {OUTLINE_MM[1]}) (measured {w_nm/1e6:.6f} x {h_nm/1e6:.6f} mm, 1 nm resolution)')
 info['outline_mm'] = {'x0': x0, 'y0': y0, 'x1': x1, 'y1': y1, 'width': w_nm/1e6, 'height': h_nm/1e6, 'edge_line_width': mmv(edges[0].GetWidth())}
 def within(bb, m=0.0): return x0+m <= mmv(bb.GetLeft()) and mmv(bb.GetRight()) <= x1-m and y0+m <= mmv(bb.GetTop()) and mmv(bb.GetBottom()) <= y1-m
 ck(all(within(p.GetBoundingBox(), 0.3) for f in b.GetFootprints() for p in f.Pads()), 'Every pad lies at least 0.3 mm inside the outline')
@@ -61,7 +63,7 @@ fps = {f.GetReference(): f for f in b.GetFootprints()}
 schfps = {r: f for r, f in fps.items() if not f.IsBoardOnly()}
 ck(set(schfps) == set(comps), f'Board schematic footprints equal netlist components ({len(schfps)} of {len(comps)})')
 boardonly = sorted(r for r, f in fps.items() if f.IsBoardOnly())
-ck(boardonly == sorted([f'H{i}' for i in range(1, 26)]+['FID1', 'FID2', 'FID3']), 'Board-only items are exactly 25 provisional supports and 3 fiducials')
+ck(boardonly == sorted([f'H{i}' for i in range(1, 5)]+['FID1', 'FID2', 'FID3']), 'Board-only items are exactly 4 provisional corner supports and 3 fiducials')
 for ref, c in sorted(comps.items()):
     f = schfps.get(ref)
     if not f: continue
@@ -131,10 +133,12 @@ for z in b.Zones():
                 o = ps.Outline(i); fillpts += sum(1 for j in range(o.PointCount()) if in_ko(pt(o.CPoint(j)), -0.001))
 ck(fillpts == 0, 'No zone fill vertex inside the antenna keepout')
 holes = [f for r, f in fps.items() if r.startswith('H')]
-ck(len(holes) == 25 and all(len(list(f.Pads())) == 1 and next(iter(f.Pads())).GetAttribute() == pcb.PAD_ATTRIB_NPTH and
-                            abs(mmv(next(iter(f.Pads())).GetDrillSize().x)-3.2) < 1e-6 for f in holes), '25 provisional M3 supports are 3.2 mm NPTH')
+corners = sorted((x, y) for y in (y0+5.0, y1-5.0) for x in (x0+5.0, x1-5.0))
+ck(len(holes) == 4 and sorted(pt(f.GetPosition()) for f in holes) == corners and
+   all(len(list(f.Pads())) == 1 and next(iter(f.Pads())).GetAttribute() == pcb.PAD_ATTRIB_NPTH and
+       abs(mmv(next(iter(f.Pads())).GetDrillSize().x)-3.2) < 1e-6 for f in holes), '4 provisional M3 supports are 3.2 mm NPTH, 5 mm in from each corner')
 hko = [z for z in b.Zones() if z.GetIsRuleArea() and z.GetZoneName().endswith('_support_keepout')]
-ck(len(hko) == 25, '25 copper keepouts (4 mm radius) surround the supports')
+ck(len(hko) == 4, '4 copper keepouts (4 mm radius) surround the supports')
 smd = [p for f in schfps.values() for p in f.Pads() if p.GetAttribute() == pcb.PAD_ATTRIB_SMD]
 vip = [t for t in b.GetTracks() if t.GetClass() == 'PCB_VIA' and any(p.HitTest(t.GetPosition()) for p in smd)]
 ck(not vip, 'No via inside an SMD land')
@@ -176,7 +180,7 @@ info['sensors_mm'] = {
     'U1_to_U2_centre_distance': round(math.dist(centre('U1'), centre('U2')), 1),
     'U1_to_U3_centre_distance': round(math.dist(centre('U1'), centre('U3')), 1),
     'BZ1_to_U3_centre_distance': round(math.dist(centre('BZ1'), centre('U3')), 1),
-    'note': 'Coordinates in KiCad board units (mm, +y down, outline origin at (25,25)); provisional until enclosure/apertures are defined.'}
+    'note': f'KiCad board coordinates (mm, +y down; outline top-left at {OUTLINE_MM[:2]}); provisional until enclosure/apertures are defined.'}
 i2c = length['/I2C_SDA'], length['/I2C_SCL']
 info['i2c_estimate'] = {'routed_length_mm': {'SDA': round(i2c[0], 1), 'SCL': round(i2c[1], 1)},
                         'trace_capacitance_pF_assumed_0.5_to_1.2_pF_per_cm': [round(min(i2c)/10*0.5, 1), round(max(i2c)/10*1.2, 1)],

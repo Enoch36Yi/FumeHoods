@@ -3,6 +3,8 @@ import re, json, uuid, os
 from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 NAME = 'Firefly_pcb2'
+# Board outline (x0, y0, x1, y1) in KiCad mm: 160 x 60 mm, trimmed to the populated region.
+OUTLINE_MM = (30.0, 25.0, 190.0, 85.0)
 KICAD = Path(os.environ.get('KICAD_ROOT',r'C:\Program Files\KiCad\10.0'))
 SHARE = KICAD/'share'/'kicad'
 NS = uuid.UUID('76a4583f-a1e5-42ab-a6e1-a7ef95b0dcd0')

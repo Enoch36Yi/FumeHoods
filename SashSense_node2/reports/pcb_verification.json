@@ -5,16 +5,16 @@
   "info": {
     "drc_source": {
       "kicad_version": "10.0.5",
-      "date": "2026-10-19T20:54:13",
+      "date": "2026-10-20T15:48:53",
       "severity_counts": {}
     },
     "outline_mm": {
-      "x0": 25.0,
+      "x0": 30.0,
       "y0": 25.0,
-      "x1": 525.0,
-      "y1": 525.0,
-      "width": 500.0,
-      "height": 500.0,
+      "x1": 190.0,
+      "y1": 85.0,
+      "width": 160.0,
+      "height": 60.0,
       "edge_line_width": 0.05
     },
     "pads_compared": 153,
@@ -31,8 +31,8 @@
       "C1.1-U1.3": 10.501
     },
     "zone_fill_area_mm2": {
-      "GND_top": 7529.2,
-      "GND_bottom": 8566.2
+      "GND_top": 7228.3,
+      "GND_bottom": 8265.3
     },
     "bottom_layer_segments": {
       "/UART_RX": {
@@ -47,13 +47,13 @@
         "segments": 1,
         "length_mm": 2.82
       },
-      "/TOF_INT": {
-        "segments": 1,
-        "length_mm": 6.2
-      },
       "/I2C_SDA": {
         "segments": 1,
         "length_mm": 3.3
+      },
+      "/TOF_INT": {
+        "segments": 1,
+        "length_mm": 6.2
       },
       "/AMG_INT": {
         "segments": 1,
@@ -70,8 +70,8 @@
       0.8
     ],
     "via_count": {
-      "total": 201,
-      "gnd": 191
+      "total": 221,
+      "gnd": 211
     },
     "net_track_length_mm": {
       "/+3V3": 346.3,
@@ -110,7 +110,7 @@
       "U1_to_U2_centre_distance": 61.5,
       "U1_to_U3_centre_distance": 93.5,
       "BZ1_to_U3_centre_distance": 120.2,
-      "note": "Coordinates in KiCad board units (mm, +y down, outline origin at (25,25)); provisional until enclosure/apertures are defined."
+      "note": "KiCad board coordinates (mm, +y down; outline top-left at (30.0, 25.0)); provisional until enclosure/apertures are defined."
     },
     "i2c_estimate": {
       "routed_length_mm": {
@@ -130,12 +130,12 @@
     "Native DRC schematic parity issues: 0",
     "Native ERC (all severities): 0 violations",
     "Edge.Cuts contains exactly one closed rectangle",
-    "Nominal outline is exactly 500.000000 x 500.000000 mm (measured 500.000000 x 500.000000 mm, 1 nm resolution)",
+    "Outline is exactly 160.000000 x 60.000000 mm at (30.0, 25.0) (measured 160.000000 x 60.000000 mm, 1 nm resolution)",
     "Every pad lies at least 0.3 mm inside the outline",
     "Every courtyard except the module (whose courtyard includes the off-board antenna clearance) lies inside the outline",
     "ESP32-S3 module antenna end is 0.75 mm inside the top board edge (antenna on the board edge)",
     "Board schematic footprints equal netlist components (39 of 39)",
-    "Board-only items are exactly 25 provisional supports and 3 fiducials",
+    "Board-only items are exactly 4 provisional corner supports and 3 fiducials",
     "BZ1 footprint SashSense:Buzzer_Murata_PKLCS1212E matches schematic",
     "BZ1 value PKLCS1212E4001-R1 matches schematic",
     "BZ1 is linked to its schematic symbol UUID",
@@ -645,11 +645,11 @@
     "Module antenna keepout from the manufacturer footprint is present",
     "No track or via inside the antenna keepout",
     "No zone fill vertex inside the antenna keepout",
-    "25 provisional M3 supports are 3.2 mm NPTH",
-    "25 copper keepouts (4 mm radius) surround the supports",
+    "4 provisional M3 supports are 3.2 mm NPTH, 5 mm in from each corner",
+    "4 copper keepouts (4 mm radius) surround the supports",
     "No via inside an SMD land",
-    "Zone GND_top on F.Cu is filled (7529 mm2)",
-    "Zone GND_bottom on F.Cu is filled (8566 mm2)",
+    "Zone GND_top on F.Cu is filled (7228 mm2)",
+    "Zone GND_bottom on F.Cu is filled (8265 mm2)",
     "pcbnew connectivity (independent of the DRC report) counts 0 unrouted connections",
     "All tracks >= 0.2 mm; all vias 0.6 mm / 0.3 mm drill"
   ],

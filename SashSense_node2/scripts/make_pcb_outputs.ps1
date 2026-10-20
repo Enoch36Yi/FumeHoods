@@ -18,17 +18,27 @@ Run $kc @('pcb','drc','--schematic-parity','--severity-all','--format','report',
 Run $kp @('scripts\verify_pcb.py')
 Run $kc @('pcb','export','stats','--output','reports\board_stats.txt',$pcbf)
 
-# 3. Previews
+# 3. Previews and plots
 $pv = 'outputs\previews'; New-Item -ItemType Directory -Force $pv | Out-Null
-Run $kc @('pcb','render','--side','top','--width','2400','--height','2400','--quality','high','--background','opaque','--output',"$pv\Firefly_pcb2_3D_top_full.png",$pcbf)
-Run $kc @('pcb','render','--side','bottom','--width','2400','--height','2400','--quality','high','--background','opaque','--output',"$pv\Firefly_pcb2_3D_bottom_full.png",$pcbf)
-# camera pan calibrated to centre the populated region (x 27-190 mm, y 27-82 mm)
-Run $kc @('pcb','render','--side','top','--width','2400','--height','900','--quality','high','--background','opaque','--zoom','6.5','--pan','4.35,-5.75,0','--output',"$pv\Firefly_pcb2_3D_top_populated.png",$pcbf)
-Run $kc @('pcb','render','--side','bottom','--width','2400','--height','900','--quality','high','--background','opaque','--zoom','6.5','--pan','-4.3,-5.75,0','--output',"$pv\Firefly_pcb2_3D_bottom_populated.png",$pcbf)
-Run $kc @('pcb','render','--width','2400','--height','1400','--quality','high','--background','opaque','--zoom','6','--pan','6.4,-3.2,0','--rotate','-35,0,20','--perspective','--output',"$pv\Firefly_pcb2_3D_iso_populated.png",$pcbf)
-Run $kp @('scripts\render_copper.py','F',"$pv\Firefly_pcb2_copper_top.png")
-Run $kp @('scripts\render_copper.py','B',"$pv\Firefly_pcb2_copper_bottom.png")
+Run $kc @('pcb','render','--side','top','--width','2400','--height','1000','--quality','high','--background','opaque','--zoom','2.3','--output',"$pv\Firefly_pcb2_3D_top.png",$pcbf)
+Run $kc @('pcb','render','--side','bottom','--width','2400','--height','1000','--quality','high','--background','opaque','--zoom','2.3','--output',"$pv\Firefly_pcb2_3D_bottom.png",$pcbf)
+Run $kc @('pcb','render','--width','2400','--height','1400','--quality','high','--background','opaque','--zoom','1.4','--rotate','-35,0,20','--perspective','--output',"$pv\Firefly_pcb2_3D_iso.png",$pcbf)
+$o = (Get-Content 'scripts\cad_common.py' | Select-String 'OUTLINE_MM = \((.*)\)').Matches[0].Groups[1].Value -split ',\s*'
+$region = @("$([double]$o[0]-1)", "$([double]$o[1]-1)", "$([double]$o[2]+1)", "$([double]$o[3]+1)", '14')
+Run $kp (@('scripts\render_copper.py','F',"$pv\Firefly_pcb2_copper_top.png") + $region)
+Run $kp (@('scripts\render_copper.py','B',"$pv\Firefly_pcb2_copper_bottom.png") + $region)
 Run $kc @('pcb','export','pdf','--layers','F.Cu,B.Cu,F.Silkscreen,B.Silkscreen,F.Mask,B.Mask,F.Fab','--common-layers','Edge.Cuts','--mode-multipage','--include-border-title','--output','outputs\Firefly_pcb2_board_layers.pdf',$pcbf)
+Run $kc @('sch','export','pdf','--output','outputs\Firefly_pcb2_schematic.pdf',$schf)
+# Schematic PNG: SVG export rasterised by a local headless Edge/Chrome with a throw-away profile.
+$svgdir = Join-Path $env:TEMP 'firefly_pcb2_sch_svg'; New-Item -ItemType Directory -Force $svgdir | Out-Null
+Run $kc @('sch','export','svg','--output',$svgdir,$schf)
+$browser = @("${env:ProgramFiles(x86)}\Microsoft\Edge\Application\msedge.exe", "$env:ProgramFiles\Google\Chrome\Application\chrome.exe") | Where-Object { Test-Path $_ } | Select-Object -First 1
+if ($browser) {
+    $svg = (Get-ChildItem $svgdir -Filter *.svg | Select-Object -First 1).FullName
+    $png = Join-Path (Resolve-Path 'outputs').Path 'Firefly_pcb2_schematic.png'
+    & $browser --headless=new --disable-gpu --hide-scrollbars "--user-data-dir=$svgdir\profile" --force-device-scale-factor=3 --window-size=1588,1123 --default-background-color=FFFFFFFF "--screenshot=$png" ([uri]$svg).AbsoluteUri | Out-Null
+    Start-Sleep -Seconds 2
+} else { Write-Warning 'No Edge/Chrome found; outputs\Firefly_pcb2_schematic.png not refreshed.' }
 
 # 4. Manufacturing review package (P2 provisional; not released for fabrication)
 $m = 'outputs\manufacturing_P2_PROVISIONAL'
