@@ -54,6 +54,6 @@ Saved KiCad 10.0.5 check results:
 
 A stricter check reports 24 footprint-filter metadata mismatches. The generator needs that fix before schematic regeneration. Script-check results and the stricter-check details are in the [layout review](SashSense_node2/docs/pcb_layout_review.md).
 
-Neither revision is released for fabrication. Node 1's one DRC finding is its ESP32 footprint differing from KiCad's library copy (0.3 mm instead of 0.2 mm thermal vias), kept on purpose. Firefly needs confirmed beeper sourcing, mounting and optical openings, a regulated 3.3 V harness, and a fabricator DFM review. It has no hardware bring-up or deployment result yet.
+Neither revision is released for fabrication. Node 1's one DRC finding is its ESP32 footprint differing from KiCad's library copy (0.3 mm instead of 0.2 mm thermal vias), kept on purpose. Firefly's beeper is externally mounted, and needs mounting and optical openings, a regulated 3.3 V harness, and a fabricator DFM review. 
 
 The root reports describe Node 1; Firefly reports are under `SashSense_node2/reports/`.
