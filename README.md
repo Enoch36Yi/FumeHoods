@@ -26,6 +26,15 @@ The layout uses six short bottom-layer crossings to accommodate the fixed GPIO o
 
 [Node 2 schematic](SashSense_node2/outputs/Firefly_pcb2_schematic.pdf) · [Layout review](SashSense_node2/docs/pcb_layout_review.md) · [Open, check and regenerate](SashSense_node2/README.md)
 
+## JPG files
+
+| Board | Schematic | 3D PCB |
+| --- | --- | --- |
+| Node 1 | [JPG](previews/SashSense_node1_schematic.jpg) | [JPG](previews/SashSense_node1_pcb_3d.jpg) |
+| Node 2 | [JPG](previews/SashSense_node2_schematic.jpg) | [Close-up](previews/SashSense_node2_pcb_3d.jpg) · [Full board](previews/SashSense_node2_pcb_3d_full.jpg) |
+
+These are exports of the saved KiCad designs. The 3D views are CAD renders; some component body models are absent. Node 2's close-up shows the populated corner of its provisional 500 × 500 mm board.
+
 ## Current checks and unfinished work
 
 Fresh checks used KiCad 10.0.5:
