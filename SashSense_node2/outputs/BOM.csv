@@ -1,0 +1,40 @@
+﻿Reference,Value,Manufacturer,MPN,Footprint,Quantity,Status
+U1,ESP32-S3-WROOM-1-N8,Espressif,ESP32-S3-WROOM-1-N8,SashSense:ESP32-S3-WROOM-1,1,P2 PROVISIONAL - placed and routed; not released
+U2,VL53L1CXV0FY/1,STMicroelectronics,VL53L1CXV0FY/1,SashSense:ST_VL53L1x,1,P2 PROVISIONAL - placed and routed; not released
+U3,AMG8833,Panasonic,AMG8833,SashSense:AMG8833,1,P2 PROVISIONAL - placed and routed; not released
+R1,10k,Yageo,RC0603FR-0710KL,SashSense:R_0603_1608Metric,1,P2 PROVISIONAL - placed and routed; not released
+C1,1uF,Murata,GRM188R61A105KA61D,SashSense:C_0603_1608Metric,1,P2 PROVISIONAL - placed and routed; not released
+R2,10k,Yageo,RC0603FR-0710KL,SashSense:R_0603_1608Metric,1,P2 PROVISIONAL - placed and routed; not released
+R3,10k,Yageo,RC0603FR-0710KL,SashSense:R_0603_1608Metric,1,P2 PROVISIONAL - placed and routed; not released
+R4,10k,Yageo,RC0603FR-0710KL,SashSense:R_0603_1608Metric,1,P2 PROVISIONAL - placed and routed; not released
+R5,4.7k,Yageo,RC0603FR-074K7L,SashSense:R_0603_1608Metric,1,P2 PROVISIONAL - placed and routed; not released
+R6,4.7k,Yageo,RC0603FR-074K7L,SashSense:R_0603_1608Metric,1,P2 PROVISIONAL - placed and routed; not released
+R7,10k,Yageo,RC0603FR-0710KL,SashSense:R_0603_1608Metric,1,P2 PROVISIONAL - placed and routed; not released
+C2,10uF,Murata,GRM21BR61A106KE19L,SashSense:C_0805_2012Metric,1,P2 PROVISIONAL - placed and routed; not released
+C3,100nF,Murata,GRM188R71C104KA01D,SashSense:C_0603_1608Metric,1,P2 PROVISIONAL - placed and routed; not released
+C4,47uF,Murata,GRM31CR60J476ME19L,SashSense:C_1206_3216Metric,1,P2 PROVISIONAL - placed and routed; not released
+C5,47uF,Murata,GRM31CR60J476ME19L,SashSense:C_1206_3216Metric,1,P2 PROVISIONAL - placed and routed; not released
+C6,100nF,Murata,GRM188R71C104KA01D,SashSense:C_0603_1608Metric,1,P2 PROVISIONAL - placed and routed; not released
+C7,4.7uF,Murata,GRM188R60J475KE19D,SashSense:C_0603_1608Metric,1,P2 PROVISIONAL - placed and routed; not released
+C8,10uF,Murata,GRM21BR61A106KE19L,SashSense:C_0805_2012Metric,1,P2 PROVISIONAL - placed and routed; not released
+C9,100nF,Murata,GRM188R71C104KA01D,SashSense:C_0603_1608Metric,1,P2 PROVISIONAL - placed and routed; not released
+C10,1uF,Murata,GRM188R61A105KA61D,SashSense:C_0603_1608Metric,1,P2 PROVISIONAL - placed and routed; not released
+R8,20R,Yageo,RC0603FR-0720RL,SashSense:R_0603_1608Metric,1,P2 PROVISIONAL - placed and routed; not released
+C11,1.5uF,Murata,GRM188R61A155KA61D,SashSense:C_0603_1608Metric,1,P2 PROVISIONAL - placed and routed; not released
+SW1,RESET,E-Switch,TL3342F160QG,SashSense:SW_SPST_TL3342,1,P2 PROVISIONAL - placed and routed; not released
+SW2,BOOT,E-Switch,TL3342F160QG,SashSense:SW_SPST_TL3342,1,P2 PROVISIONAL - placed and routed; not released
+J1,REGULATED 3.3V IN,PCB,PCB FEATURE,SashSense:SolderWire-0.75sqmm_1x02_P4.8mm_D1.25mm_OD2.3mm,1,PCB FEATURE (pads) - P2 PROVISIONAL
+J2,UART / BOOT SERVICE,PCB,PCB FEATURE,SashSense:ServicePads_1x06,1,PCB FEATURE (pads) - P2 PROVISIONAL
+BZ1,PKLCS1212E4001-R1,Murata,PKLCS1212E4001-R1,SashSense:Buzzer_Murata_PKLCS1212E,1,P2 PROVISIONAL - placed and routed; not released
+Q1,MMBT3904LT1G,onsemi,MMBT3904LT1G,SashSense:SOT-23,1,P2 PROVISIONAL - placed and routed; not released
+R9,1k,Yageo,RC0603FR-071KL,SashSense:R_0603_1608Metric,1,P2 PROVISIONAL - placed and routed; not released
+R10,100k,Yageo,RC0603FR-07100KL,SashSense:R_0603_1608Metric,1,P2 PROVISIONAL - placed and routed; not released
+R11,1k,Yageo,RC0603FR-071KL,SashSense:R_0603_1608Metric,1,P2 PROVISIONAL - placed and routed; not released
+TP1,+3V3,PCB,PCB FEATURE,SashSense:TestPoint_Pad_D1.5mm,1,PCB FEATURE (pads) - P2 PROVISIONAL
+TP2,GND,PCB,PCB FEATURE,SashSense:TestPoint_Pad_D1.5mm,1,PCB FEATURE (pads) - P2 PROVISIONAL
+TP3,I2C_SDA,PCB,PCB FEATURE,SashSense:TestPoint_Pad_D1.5mm,1,PCB FEATURE (pads) - P2 PROVISIONAL
+TP4,I2C_SCL,PCB,PCB FEATURE,SashSense:TestPoint_Pad_D1.5mm,1,PCB FEATURE (pads) - P2 PROVISIONAL
+TP5,TOF_XSHUT,PCB,PCB FEATURE,SashSense:TestPoint_Pad_D1.5mm,1,PCB FEATURE (pads) - P2 PROVISIONAL
+TP6,TOF_INT,PCB,PCB FEATURE,SashSense:TestPoint_Pad_D1.5mm,1,PCB FEATURE (pads) - P2 PROVISIONAL
+TP7,AMG_INT,PCB,PCB FEATURE,SashSense:TestPoint_Pad_D1.5mm,1,PCB FEATURE (pads) - P2 PROVISIONAL
+TP8,BEEP_PWM,PCB,PCB FEATURE,SashSense:TestPoint_Pad_D1.5mm,1,PCB FEATURE (pads) - P2 PROVISIONAL

@@ -1,0 +1,978 @@
+{
+  "name": "Firefly_pcb2",
+  "outline_mm": [
+    25,
+    25,
+    525,
+    525
+  ],
+  "schematic_uuid": "894ce443-e53a-500f-a9b5-5f3c68ae9496",
+  "components": [
+    {
+      "ref": "U1",
+      "key": "RF_Module_ESP32-S3-WROOM-1",
+      "value": "ESP32-S3-WROOM-1-N8",
+      "fp": "SashSense:ESP32-S3-WROOM-1",
+      "nets": {
+        "1": "GND",
+        "2": "+3V3",
+        "3": "EN",
+        "4": "BEEP_PWM",
+        "33": "AMG_INT",
+        "34": "TOF_XSHUT",
+        "35": "TOF_INT",
+        "36": "UART_RX",
+        "37": "UART_TX",
+        "38": "I2C_SCL",
+        "39": "I2C_SDA",
+        "40": "GND",
+        "41": "GND",
+        "27": "BOOT"
+      },
+      "xy": [
+        75,
+        46
+      ],
+      "sch": [
+        75,
+        73
+      ],
+      "mpn": "ESP32-S3-WROOM-1-N8",
+      "maker": "Espressif",
+      "angle": 0,
+      "section": "",
+      "uuid": "1d67a869-2e0e-5f28-aca1-2b78e76b0e11"
+    },
+    {
+      "ref": "U2",
+      "key": "Sensor_Distance_VL53L1CXV0FY1",
+      "value": "VL53L1CXV0FY/1",
+      "fp": "SashSense:ST_VL53L1x",
+      "nets": {
+        "1": "+3V3",
+        "2": "GND",
+        "3": "GND",
+        "4": "GND",
+        "5": "TOF_XSHUT",
+        "6": "GND",
+        "7": "TOF_INT",
+        "9": "I2C_SDA",
+        "10": "I2C_SCL",
+        "11": "+3V3",
+        "12": "GND"
+      },
+      "xy": [
+        137,
+        55
+      ],
+      "sch": [
+        180,
+        65
+      ],
+      "mpn": "VL53L1CXV0FY/1",
+      "maker": "STMicroelectronics",
+      "angle": 0,
+      "section": "",
+      "uuid": "e33465b9-49f3-57be-8899-9305bbddbdbb"
+    },
+    {
+      "ref": "U3",
+      "key": "AMG8833",
+      "value": "AMG8833",
+      "fp": "SashSense:AMG8833",
+      "nets": {
+        "2": "I2C_SDA",
+        "3": "I2C_SCL",
+        "4": "AMG_INT",
+        "5": "GND",
+        "6": "GND",
+        "9": "+3V3",
+        "10": "AMG_AVDD",
+        "12": "AMG_DVDD",
+        "13": "+3V3"
+      },
+      "xy": [
+        180,
+        55
+      ],
+      "sch": [
+        300,
+        65
+      ],
+      "mpn": "AMG8833",
+      "maker": "Panasonic",
+      "angle": 0,
+      "section": "",
+      "uuid": "b31fce04-9ce7-545a-ae8b-cc37e48b0e4a"
+    },
+    {
+      "ref": "R1",
+      "key": "Device_R",
+      "value": "10k",
+      "fp": "SashSense:R_0603_1608Metric",
+      "nets": {
+        "1": "+3V3",
+        "2": "EN"
+      },
+      "xy": [
+        58,
+        44
+      ],
+      "sch": [
+        34,
+        130
+      ],
+      "mpn": "RC0603FR-0710KL",
+      "maker": "Yageo",
+      "angle": 0,
+      "section": "",
+      "uuid": "1fcf4ba7-a152-572c-945d-f18caea4fce2"
+    },
+    {
+      "ref": "C1",
+      "key": "Device_C",
+      "value": "1uF",
+      "fp": "SashSense:C_0603_1608Metric",
+      "nets": {
+        "1": "EN",
+        "2": "GND"
+      },
+      "xy": [
+        58,
+        49
+      ],
+      "sch": [
+        49,
+        130
+      ],
+      "mpn": "GRM188R61A105KA61D",
+      "maker": "Murata",
+      "angle": 0,
+      "section": "",
+      "uuid": "1b716c7e-9751-58f9-b96c-697f188d12ed"
+    },
+    {
+      "ref": "R2",
+      "key": "Device_R",
+      "value": "10k",
+      "fp": "SashSense:R_0603_1608Metric",
+      "nets": {
+        "1": "+3V3",
+        "2": "BOOT"
+      },
+      "xy": [
+        91,
+        61
+      ],
+      "sch": [
+        68,
+        130
+      ],
+      "mpn": "RC0603FR-0710KL",
+      "maker": "Yageo",
+      "angle": 0,
+      "section": "",
+      "uuid": "a5e6bb1b-872c-58fa-8fb8-7f4206f6a991"
+    },
+    {
+      "ref": "R3",
+      "key": "Device_R",
+      "value": "10k",
+      "fp": "SashSense:R_0603_1608Metric",
+      "nets": {
+        "1": "+3V3",
+        "2": "TOF_XSHUT"
+      },
+      "xy": [
+        143,
+        61
+      ],
+      "sch": [
+        153,
+        116
+      ],
+      "mpn": "RC0603FR-0710KL",
+      "maker": "Yageo",
+      "angle": 0,
+      "section": "",
+      "uuid": "e0937db6-1324-5291-84f0-24975ba46860"
+    },
+    {
+      "ref": "R4",
+      "key": "Device_R",
+      "value": "10k",
+      "fp": "SashSense:R_0603_1608Metric",
+      "nets": {
+        "1": "+3V3",
+        "2": "TOF_INT"
+      },
+      "xy": [
+        143,
+        66
+      ],
+      "sch": [
+        172,
+        116
+      ],
+      "mpn": "RC0603FR-0710KL",
+      "maker": "Yageo",
+      "angle": 0,
+      "section": "",
+      "uuid": "f5dd5cd5-e0a2-5141-b519-710ab9a2df4d"
+    },
+    {
+      "ref": "R5",
+      "key": "Device_R",
+      "value": "4.7k",
+      "fp": "SashSense:R_0603_1608Metric",
+      "nets": {
+        "1": "+3V3",
+        "2": "I2C_SDA"
+      },
+      "xy": [
+        100,
+        47
+      ],
+      "sch": [
+        211,
+        116
+      ],
+      "mpn": "RC0603FR-074K7L",
+      "maker": "Yageo",
+      "angle": 0,
+      "section": "",
+      "uuid": "26ea790c-3460-5f2e-9b18-c190fe45d768"
+    },
+    {
+      "ref": "R6",
+      "key": "Device_R",
+      "value": "4.7k",
+      "fp": "SashSense:R_0603_1608Metric",
+      "nets": {
+        "1": "+3V3",
+        "2": "I2C_SCL"
+      },
+      "xy": [
+        100,
+        52
+      ],
+      "sch": [
+        231,
+        116
+      ],
+      "mpn": "RC0603FR-074K7L",
+      "maker": "Yageo",
+      "angle": 0,
+      "section": "",
+      "uuid": "cb203e08-2492-544e-bf6b-67e3b32b78f3"
+    },
+    {
+      "ref": "R7",
+      "key": "Device_R",
+      "value": "10k",
+      "fp": "SashSense:R_0603_1608Metric",
+      "nets": {
+        "1": "+3V3",
+        "2": "AMG_INT"
+      },
+      "xy": [
+        169,
+        64
+      ],
+      "sch": [
+        271,
+        116
+      ],
+      "mpn": "RC0603FR-0710KL",
+      "maker": "Yageo",
+      "angle": 0,
+      "section": "",
+      "uuid": "8695cb84-5198-5e90-b307-0755e3373d53"
+    },
+    {
+      "ref": "C2",
+      "key": "Device_C",
+      "value": "10uF",
+      "fp": "SashSense:C_0805_2012Metric",
+      "nets": {
+        "1": "+3V3",
+        "2": "GND"
+      },
+      "xy": [
+        61,
+        47
+      ],
+      "sch": [
+        30,
+        170
+      ],
+      "mpn": "GRM21BR61A106KE19L",
+      "maker": "Murata",
+      "angle": 0,
+      "section": "",
+      "uuid": "25e16b37-c47d-557d-8c48-005a04d855e1"
+    },
+    {
+      "ref": "C3",
+      "key": "Device_C",
+      "value": "100nF",
+      "fp": "SashSense:C_0603_1608Metric",
+      "nets": {
+        "1": "+3V3",
+        "2": "GND"
+      },
+      "xy": [
+        63,
+        43
+      ],
+      "sch": [
+        49,
+        170
+      ],
+      "mpn": "GRM188R71C104KA01D",
+      "maker": "Murata",
+      "angle": 0,
+      "section": "",
+      "uuid": "49d984ef-6ef5-5cb3-b4ac-9e4b312f4929"
+    },
+    {
+      "ref": "C4",
+      "key": "Device_C",
+      "value": "47uF",
+      "fp": "SashSense:C_1206_3216Metric",
+      "nets": {
+        "1": "+3V3",
+        "2": "GND"
+      },
+      "xy": [
+        54,
+        61
+      ],
+      "sch": [
+        68,
+        170
+      ],
+      "mpn": "GRM31CR60J476ME19L",
+      "maker": "Murata",
+      "angle": 0,
+      "section": "",
+      "uuid": "5c968d91-486a-5966-984c-c3e5c750d106"
+    },
+    {
+      "ref": "C5",
+      "key": "Device_C",
+      "value": "47uF",
+      "fp": "SashSense:C_1206_3216Metric",
+      "nets": {
+        "1": "+3V3",
+        "2": "GND"
+      },
+      "xy": [
+        54,
+        67
+      ],
+      "sch": [
+        87,
+        170
+      ],
+      "mpn": "GRM31CR60J476ME19L",
+      "maker": "Murata",
+      "angle": 0,
+      "section": "",
+      "uuid": "46ece762-0251-5b53-94c3-c7af4c06ae0a"
+    },
+    {
+      "ref": "C6",
+      "key": "Device_C",
+      "value": "100nF",
+      "fp": "SashSense:C_0603_1608Metric",
+      "nets": {
+        "1": "+3V3",
+        "2": "GND"
+      },
+      "xy": [
+        134.5,
+        52.6
+      ],
+      "sch": [
+        151,
+        151
+      ],
+      "mpn": "GRM188R71C104KA01D",
+      "maker": "Murata",
+      "angle": 0,
+      "section": "",
+      "uuid": "bb1b9e60-2823-542d-8dc2-4d36ed3a445e"
+    },
+    {
+      "ref": "C7",
+      "key": "Device_C",
+      "value": "4.7uF",
+      "fp": "SashSense:C_0603_1608Metric",
+      "nets": {
+        "1": "+3V3",
+        "2": "GND"
+      },
+      "xy": [
+        131.5,
+        55
+      ],
+      "sch": [
+        170,
+        151
+      ],
+      "mpn": "GRM188R60J475KE19D",
+      "maker": "Murata",
+      "angle": 0,
+      "section": "",
+      "uuid": "5ec27b5a-bdbb-5215-849a-dede3e4ee8da"
+    },
+    {
+      "ref": "C8",
+      "key": "Device_C",
+      "value": "10uF",
+      "fp": "SashSense:C_0805_2012Metric",
+      "nets": {
+        "1": "+3V3",
+        "2": "GND"
+      },
+      "xy": [
+        184.5,
+        48
+      ],
+      "sch": [
+        264,
+        151
+      ],
+      "mpn": "GRM21BR61A106KE19L",
+      "maker": "Murata",
+      "angle": 0,
+      "section": "",
+      "uuid": "901b7423-d5b3-5362-b91a-7291088763cb"
+    },
+    {
+      "ref": "C9",
+      "key": "Device_C",
+      "value": "100nF",
+      "fp": "SashSense:C_0603_1608Metric",
+      "nets": {
+        "1": "+3V3",
+        "2": "GND"
+      },
+      "xy": [
+        188,
+        52
+      ],
+      "sch": [
+        283,
+        151
+      ],
+      "mpn": "GRM188R71C104KA01D",
+      "maker": "Murata",
+      "angle": 0,
+      "section": "",
+      "uuid": "8c8a93cd-4147-5bdd-9f15-4b4ba6e777ee"
+    },
+    {
+      "ref": "C10",
+      "key": "Device_C",
+      "value": "1uF",
+      "fp": "SashSense:C_0603_1608Metric",
+      "nets": {
+        "1": "AMG_AVDD",
+        "2": "AMG_AVCAP_RETURN"
+      },
+      "xy": [
+        181.27,
+        47.5
+      ],
+      "sch": [
+        302,
+        151
+      ],
+      "mpn": "GRM188R61A105KA61D",
+      "maker": "Murata",
+      "angle": 0,
+      "section": "",
+      "uuid": "415cf281-9c4e-51f2-a801-65e52b1ca3af"
+    },
+    {
+      "ref": "R8",
+      "key": "Device_R",
+      "value": "20R",
+      "fp": "SashSense:R_0603_1608Metric",
+      "nets": {
+        "1": "AMG_AVCAP_RETURN",
+        "2": "GND"
+      },
+      "xy": [
+        181.27,
+        43.8
+      ],
+      "sch": [
+        321,
+        151
+      ],
+      "mpn": "RC0603FR-0720RL",
+      "maker": "Yageo",
+      "angle": 0,
+      "section": "",
+      "uuid": "61880758-e3e5-5202-ac79-e4d40b99209b"
+    },
+    {
+      "ref": "C11",
+      "key": "Device_C",
+      "value": "1.5uF",
+      "fp": "SashSense:C_0603_1608Metric",
+      "nets": {
+        "1": "AMG_DVDD",
+        "2": "GND"
+      },
+      "xy": [
+        177.46,
+        48
+      ],
+      "sch": [
+        340,
+        151
+      ],
+      "mpn": "GRM188R61A155KA61D",
+      "maker": "Murata",
+      "angle": 0,
+      "section": "",
+      "uuid": "21374f2c-99d5-5cb9-b213-edb96d01e659"
+    },
+    {
+      "ref": "SW1",
+      "key": "Switch_SW_Push",
+      "value": "RESET",
+      "fp": "SashSense:SW_SPST_TL3342",
+      "nets": {
+        "1": "EN",
+        "2": "GND"
+      },
+      "xy": [
+        52,
+        48
+      ],
+      "sch": [
+        35,
+        210
+      ],
+      "mpn": "TL3342F160QG",
+      "maker": "E-Switch",
+      "angle": 0,
+      "section": "",
+      "uuid": "88b8cd98-01f9-5f67-bb93-08fa3eafb565"
+    },
+    {
+      "ref": "SW2",
+      "key": "Switch_SW_Push",
+      "value": "BOOT",
+      "fp": "SashSense:SW_SPST_TL3342",
+      "nets": {
+        "1": "BOOT",
+        "2": "GND"
+      },
+      "xy": [
+        93,
+        67
+      ],
+      "sch": [
+        68,
+        210
+      ],
+      "mpn": "TL3342F160QG",
+      "maker": "E-Switch",
+      "angle": 0,
+      "section": "",
+      "uuid": "551c8a83-8127-5ad4-b226-e4b6cc76fdda"
+    },
+    {
+      "ref": "J1",
+      "key": "Connector_Generic_Conn_01x02",
+      "value": "REGULATED 3.3V IN",
+      "fp": "SashSense:SolderWire-0.75sqmm_1x02_P4.8mm_D1.25mm_OD2.3mm",
+      "nets": {
+        "1": "+3V3",
+        "2": "GND"
+      },
+      "xy": [
+        44,
+        61
+      ],
+      "sch": [
+        29,
+        245
+      ],
+      "mpn": "PCB FEATURE",
+      "maker": "PCB",
+      "angle": 0,
+      "section": "",
+      "uuid": "603edc86-1baf-5577-b124-812280ebab88"
+    },
+    {
+      "ref": "J2",
+      "key": "Connector_Generic_Conn_01x06",
+      "value": "UART / BOOT SERVICE",
+      "fp": "SashSense:ServicePads_1x06",
+      "nets": {
+        "1": "GND",
+        "2": "UART_RX",
+        "3": "UART_TX",
+        "4": "EN",
+        "5": "BOOT",
+        "6": "+3V3"
+      },
+      "xy": [
+        90,
+        78
+      ],
+      "sch": [
+        117,
+        239
+      ],
+      "mpn": "PCB FEATURE",
+      "maker": "PCB",
+      "angle": 0,
+      "section": "",
+      "uuid": "c3e6454a-d68a-58fe-aa3f-b314a81a8611"
+    },
+    {
+      "ref": "BZ1",
+      "key": "Device_Buzzer",
+      "value": "PKLCS1212E4001-R1",
+      "fp": "SashSense:Buzzer_Murata_PKLCS1212E",
+      "nets": {
+        "1": "+3V3",
+        "2": "BEEP_LOW"
+      },
+      "xy": [
+        53,
+        90
+      ],
+      "sch": [
+        242,
+        213
+      ],
+      "mpn": "PKLCS1212E4001-R1",
+      "maker": "Murata",
+      "angle": 0,
+      "section": "",
+      "uuid": "fd926426-48a9-58c8-a1a9-60daf10f49ab"
+    },
+    {
+      "ref": "Q1",
+      "key": "Transistor_BJT_Q_NPN_BEC",
+      "value": "MMBT3904LT1G",
+      "fp": "SashSense:SOT-23",
+      "nets": {
+        "1": "BEEP_BASE",
+        "2": "GND",
+        "3": "BEEP_LOW"
+      },
+      "xy": [
+        68,
+        86
+      ],
+      "sch": [
+        275,
+        218
+      ],
+      "mpn": "MMBT3904LT1G",
+      "maker": "onsemi",
+      "angle": 0,
+      "section": "",
+      "uuid": "ece32047-464d-54b8-adfa-cfdcce72e85f"
+    },
+    {
+      "ref": "R9",
+      "key": "Device_R",
+      "value": "1k",
+      "fp": "SashSense:R_0603_1608Metric",
+      "nets": {
+        "1": "BEEP_PWM",
+        "2": "BEEP_BASE"
+      },
+      "xy": [
+        68,
+        80
+      ],
+      "sch": [
+        310,
+        213
+      ],
+      "mpn": "RC0603FR-071KL",
+      "maker": "Yageo",
+      "angle": 0,
+      "section": "",
+      "uuid": "a593f294-d916-5232-a15d-ec19f36e7a2a"
+    },
+    {
+      "ref": "R10",
+      "key": "Device_R",
+      "value": "100k",
+      "fp": "SashSense:R_0603_1608Metric",
+      "nets": {
+        "1": "BEEP_BASE",
+        "2": "GND"
+      },
+      "xy": [
+        73,
+        86
+      ],
+      "sch": [
+        332,
+        213
+      ],
+      "mpn": "RC0603FR-07100KL",
+      "maker": "Yageo",
+      "angle": 0,
+      "section": "",
+      "uuid": "e5c1a1f1-3e0f-5c4f-ba01-340d259d7c90"
+    },
+    {
+      "ref": "R11",
+      "key": "Device_R",
+      "value": "1k",
+      "fp": "SashSense:R_0603_1608Metric",
+      "nets": {
+        "1": "+3V3",
+        "2": "BEEP_LOW"
+      },
+      "xy": [
+        53,
+        101
+      ],
+      "sch": [
+        218,
+        213
+      ],
+      "mpn": "RC0603FR-071KL",
+      "maker": "Yageo",
+      "angle": 0,
+      "section": "",
+      "uuid": "63fad429-64d4-5b7a-be07-931952dd075b"
+    },
+    {
+      "ref": "TP1",
+      "key": "Connector_TestPoint",
+      "value": "+3V3",
+      "fp": "SashSense:TestPoint_Pad_D1.5mm",
+      "nets": {
+        "1": "+3V3"
+      },
+      "xy": [
+        61,
+        72
+      ],
+      "sch": [
+        157,
+        243
+      ],
+      "mpn": "PCB FEATURE",
+      "maker": "PCB",
+      "angle": 0,
+      "section": "",
+      "uuid": "863f4336-a740-5847-83d0-b517acded511"
+    },
+    {
+      "ref": "TP2",
+      "key": "Connector_TestPoint",
+      "value": "GND",
+      "fp": "SashSense:TestPoint_Pad_D1.5mm",
+      "nets": {
+        "1": "GND"
+      },
+      "xy": [
+        66,
+        72
+      ],
+      "sch": [
+        177,
+        243
+      ],
+      "mpn": "PCB FEATURE",
+      "maker": "PCB",
+      "angle": 0,
+      "section": "",
+      "uuid": "0ca2ad38-939a-5b2b-b50c-b4576d4b3a42"
+    },
+    {
+      "ref": "TP3",
+      "key": "Connector_TestPoint",
+      "value": "I2C_SDA",
+      "fp": "SashSense:TestPoint_Pad_D1.5mm",
+      "nets": {
+        "1": "I2C_SDA"
+      },
+      "xy": [
+        115,
+        62
+      ],
+      "sch": [
+        197,
+        243
+      ],
+      "mpn": "PCB FEATURE",
+      "maker": "PCB",
+      "angle": 0,
+      "section": "",
+      "uuid": "9334fd94-cac2-515a-a950-5690f6700b21"
+    },
+    {
+      "ref": "TP4",
+      "key": "Connector_TestPoint",
+      "value": "I2C_SCL",
+      "fp": "SashSense:TestPoint_Pad_D1.5mm",
+      "nets": {
+        "1": "I2C_SCL"
+      },
+      "xy": [
+        120,
+        62
+      ],
+      "sch": [
+        217,
+        243
+      ],
+      "mpn": "PCB FEATURE",
+      "maker": "PCB",
+      "angle": 0,
+      "section": "",
+      "uuid": "e96d7b7a-c718-5ffb-b841-74e09bb9ba4f"
+    },
+    {
+      "ref": "TP5",
+      "key": "Connector_TestPoint",
+      "value": "TOF_XSHUT",
+      "fp": "SashSense:TestPoint_Pad_D1.5mm",
+      "nets": {
+        "1": "TOF_XSHUT"
+      },
+      "xy": [
+        147,
+        72
+      ],
+      "sch": [
+        237,
+        243
+      ],
+      "mpn": "PCB FEATURE",
+      "maker": "PCB",
+      "angle": 0,
+      "section": "",
+      "uuid": "f4544c5f-c149-5161-bae9-4c931d3de712"
+    },
+    {
+      "ref": "TP6",
+      "key": "Connector_TestPoint",
+      "value": "TOF_INT",
+      "fp": "SashSense:TestPoint_Pad_D1.5mm",
+      "nets": {
+        "1": "TOF_INT"
+      },
+      "xy": [
+        152,
+        72
+      ],
+      "sch": [
+        257,
+        243
+      ],
+      "mpn": "PCB FEATURE",
+      "maker": "PCB",
+      "angle": 0,
+      "section": "",
+      "uuid": "c9a2932e-fea6-5af6-aed9-9eddc907c76b"
+    },
+    {
+      "ref": "TP7",
+      "key": "Connector_TestPoint",
+      "value": "AMG_INT",
+      "fp": "SashSense:TestPoint_Pad_D1.5mm",
+      "nets": {
+        "1": "AMG_INT"
+      },
+      "xy": [
+        165,
+        72
+      ],
+      "sch": [
+        277,
+        243
+      ],
+      "mpn": "PCB FEATURE",
+      "maker": "PCB",
+      "angle": 0,
+      "section": "",
+      "uuid": "a08546d7-940c-536d-9df3-06d0c05f0761"
+    },
+    {
+      "ref": "TP8",
+      "key": "Connector_TestPoint",
+      "value": "BEEP_PWM",
+      "fp": "SashSense:TestPoint_Pad_D1.5mm",
+      "nets": {
+        "1": "BEEP_PWM"
+      },
+      "xy": [
+        78,
+        86
+      ],
+      "sch": [
+        297,
+        243
+      ],
+      "mpn": "PCB FEATURE",
+      "maker": "PCB",
+      "angle": 0,
+      "section": "",
+      "uuid": "ea05b0d6-760a-53e1-8232-d574e40ef9ce"
+    },
+    {
+      "ref": "#FLG01",
+      "key": "power_PWR_FLAG",
+      "value": "PWR_FLAG",
+      "fp": "",
+      "nets": {
+        "1": "+3V3"
+      },
+      "xy": [
+        0,
+        0
+      ],
+      "sch": [
+        35,
+        257
+      ],
+      "mpn": "",
+      "maker": "",
+      "angle": 0,
+      "section": "",
+      "uuid": "f7cc3c7d-3a54-5e26-9d04-b81f97e52b4e"
+    },
+    {
+      "ref": "#FLG02",
+      "key": "power_PWR_FLAG",
+      "value": "PWR_FLAG",
+      "fp": "",
+      "nets": {
+        "1": "GND"
+      },
+      "xy": [
+        0,
+        0
+      ],
+      "sch": [
+        68,
+        257
+      ],
+      "mpn": "",
+      "maker": "",
+      "angle": 0,
+      "section": "",
+      "uuid": "b7a43379-1b83-5467-ae96-7074bf39802f"
+    }
+  ]
+}

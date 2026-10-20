@@ -1,0 +1,377 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-10-19T20:55:31",
+    "ignored_checks": [],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.5",
+    "schematic_parity": [
+        {
+            "description": "SashSense:C_0603_1608Metric doesn't match symbol's footprint filters (Device_C_*)",
+            "items": [
+                {
+                    "description": "Footprint C1",
+                    "pos": {
+                        "x": 62.5,
+                        "y": 40.2
+                    },
+                    "uuid": "44bf76d5-0ff5-4f65-9835-836b451d1d55"
+                }
+            ],
+            "severity": "error",
+            "type": "footprint_filters_mismatch"
+        },
+        {
+            "description": "SashSense:C_0805_2012Metric doesn't match symbol's footprint filters (Device_C_*)",
+            "items": [
+                {
+                    "description": "Footprint C2",
+                    "pos": {
+                        "x": 66.599999,
+                        "y": 33.95
+                    },
+                    "uuid": "ac4f8c0f-eba2-4396-8263-ee0b66e295af"
+                }
+            ],
+            "severity": "error",
+            "type": "footprint_filters_mismatch"
+        },
+        {
+            "description": "SashSense:C_0603_1608Metric doesn't match symbol's footprint filters (Device_C_*)",
+            "items": [
+                {
+                    "description": "Footprint C3",
+                    "pos": {
+                        "x": 69.0,
+                        "y": 34.07
+                    },
+                    "uuid": "82293080-ec05-4f9b-835c-6a9e755c7822"
+                }
+            ],
+            "severity": "error",
+            "type": "footprint_filters_mismatch"
+        },
+        {
+            "description": "SashSense:C_1206_3216Metric doesn't match symbol's footprint filters (Device_C_*)",
+            "items": [
+                {
+                    "description": "Footprint C4",
+                    "pos": {
+                        "x": 51.5,
+                        "y": 31.6
+                    },
+                    "uuid": "bcf0131f-7113-4565-b953-b4e78b07d1c8"
+                }
+            ],
+            "severity": "error",
+            "type": "footprint_filters_mismatch"
+        },
+        {
+            "description": "SashSense:C_1206_3216Metric doesn't match symbol's footprint filters (Device_C_*)",
+            "items": [
+                {
+                    "description": "Footprint C5",
+                    "pos": {
+                        "x": 54.5,
+                        "y": 31.6
+                    },
+                    "uuid": "2b2a3454-a609-45f4-b097-cadf77b1dac7"
+                }
+            ],
+            "severity": "error",
+            "type": "footprint_filters_mismatch"
+        },
+        {
+            "description": "SashSense:C_0603_1608Metric doesn't match symbol's footprint filters (Device_C_*)",
+            "items": [
+                {
+                    "description": "Footprint C6",
+                    "pos": {
+                        "x": 144.6,
+                        "y": 54.4
+                    },
+                    "uuid": "bc5933b0-72a9-44d5-9dce-d912684945a0"
+                }
+            ],
+            "severity": "error",
+            "type": "footprint_filters_mismatch"
+        },
+        {
+            "description": "SashSense:C_0603_1608Metric doesn't match symbol's footprint filters (Device_C_*)",
+            "items": [
+                {
+                    "description": "Footprint C7",
+                    "pos": {
+                        "x": 144.6,
+                        "y": 52.6
+                    },
+                    "uuid": "d1229a7d-e89a-48d4-b0a7-78e8e5b2b149"
+                }
+            ],
+            "severity": "error",
+            "type": "footprint_filters_mismatch"
+        },
+        {
+            "description": "SashSense:C_0805_2012Metric doesn't match symbol's footprint filters (Device_C_*)",
+            "items": [
+                {
+                    "description": "Footprint C8",
+                    "pos": {
+                        "x": 167.6,
+                        "y": 63.6
+                    },
+                    "uuid": "762d8cb7-a773-408a-ad23-3180cdbbedb3"
+                }
+            ],
+            "severity": "error",
+            "type": "footprint_filters_mismatch"
+        },
+        {
+            "description": "SashSense:C_0603_1608Metric doesn't match symbol's footprint filters (Device_C_*)",
+            "items": [
+                {
+                    "description": "Footprint C9",
+                    "pos": {
+                        "x": 167.8,
+                        "y": 61.0
+                    },
+                    "uuid": "5e090912-7b03-4778-a268-368ceb162ad2"
+                }
+            ],
+            "severity": "error",
+            "type": "footprint_filters_mismatch"
+        },
+        {
+            "description": "SashSense:C_0603_1608Metric doesn't match symbol's footprint filters (Device_C_*)",
+            "items": [
+                {
+                    "description": "Footprint C10",
+                    "pos": {
+                        "x": 170.73,
+                        "y": 61.4
+                    },
+                    "uuid": "15931ce3-7dc0-4402-a5de-8ca65c5a65df"
+                }
+            ],
+            "severity": "error",
+            "type": "footprint_filters_mismatch"
+        },
+        {
+            "description": "SashSense:C_0603_1608Metric doesn't match symbol's footprint filters (Device_C_*)",
+            "items": [
+                {
+                    "description": "Footprint C11",
+                    "pos": {
+                        "x": 173.27,
+                        "y": 61.4
+                    },
+                    "uuid": "0b053247-9861-483a-9c9a-cff9b36bd10d"
+                }
+            ],
+            "severity": "error",
+            "type": "footprint_filters_mismatch"
+        },
+        {
+            "description": "SashSense:SolderWire-0.75sqmm_1x02_P4.8mm_D1.25mm_OD2.3mm doesn't match symbol's footprint filters (Connector*:*_1x??_*)",
+            "items": [
+                {
+                    "description": "Footprint J1",
+                    "pos": {
+                        "x": 44.0,
+                        "y": 34.0
+                    },
+                    "uuid": "9dfbe839-1e88-49e7-91b1-877589a36d50"
+                }
+            ],
+            "severity": "error",
+            "type": "footprint_filters_mismatch"
+        },
+        {
+            "description": "SashSense:ServicePads_1x06 doesn't match symbol's footprint filters (Connector*:*_1x??_*)",
+            "items": [
+                {
+                    "description": "Footprint J2",
+                    "pos": {
+                        "x": 93.0,
+                        "y": 45.9
+                    },
+                    "uuid": "0a87840d-3ed6-4841-8fdd-0b52f9b42784"
+                }
+            ],
+            "severity": "error",
+            "type": "footprint_filters_mismatch"
+        },
+        {
+            "description": "SashSense:R_0603_1608Metric doesn't match symbol's footprint filters (Device_R_*)",
+            "items": [
+                {
+                    "description": "Footprint R1",
+                    "pos": {
+                        "x": 63.8,
+                        "y": 35.125
+                    },
+                    "uuid": "5924c881-a09d-4a45-b5b6-33e77fb4ccb0"
+                }
+            ],
+            "severity": "error",
+            "type": "footprint_filters_mismatch"
+        },
+        {
+            "description": "SashSense:R_0603_1608Metric doesn't match symbol's footprint filters (Device_R_*)",
+            "items": [
+                {
+                    "description": "Footprint R2",
+                    "pos": {
+                        "x": 104.43,
+                        "y": 49.2
+                    },
+                    "uuid": "00517c02-fec5-4944-baed-a59626447082"
+                }
+            ],
+            "severity": "error",
+            "type": "footprint_filters_mismatch"
+        },
+        {
+            "description": "SashSense:R_0603_1608Metric doesn't match symbol's footprint filters (Device_R_*)",
+            "items": [
+                {
+                    "description": "Footprint R3",
+                    "pos": {
+                        "x": 140.5,
+                        "y": 55.7
+                    },
+                    "uuid": "1e261c63-3c13-45ae-949a-e799f4f3ab38"
+                }
+            ],
+            "severity": "error",
+            "type": "footprint_filters_mismatch"
+        },
+        {
+            "description": "SashSense:R_0603_1608Metric doesn't match symbol's footprint filters (Device_R_*)",
+            "items": [
+                {
+                    "description": "Footprint R4",
+                    "pos": {
+                        "x": 140.5,
+                        "y": 57.4
+                    },
+                    "uuid": "48d461b8-c72f-4625-8cf7-a164cb3cdc99"
+                }
+            ],
+            "severity": "error",
+            "type": "footprint_filters_mismatch"
+        },
+        {
+            "description": "SashSense:R_0603_1608Metric doesn't match symbol's footprint filters (Device_R_*)",
+            "items": [
+                {
+                    "description": "Footprint R5",
+                    "pos": {
+                        "x": 179.6,
+                        "y": 52.0
+                    },
+                    "uuid": "2d1aa7ec-5286-4be2-9e53-da844c9f7cac"
+                }
+            ],
+            "severity": "error",
+            "type": "footprint_filters_mismatch"
+        },
+        {
+            "description": "SashSense:R_0603_1608Metric doesn't match symbol's footprint filters (Device_R_*)",
+            "items": [
+                {
+                    "description": "Footprint R6",
+                    "pos": {
+                        "x": 144.4,
+                        "y": 49.0
+                    },
+                    "uuid": "96e0510b-ecdd-408b-91aa-059ea88ec2d2"
+                }
+            ],
+            "severity": "error",
+            "type": "footprint_filters_mismatch"
+        },
+        {
+            "description": "SashSense:R_0603_1608Metric doesn't match symbol's footprint filters (Device_R_*)",
+            "items": [
+                {
+                    "description": "Footprint R7",
+                    "pos": {
+                        "x": 164.4,
+                        "y": 52.0
+                    },
+                    "uuid": "8f0d1a61-b570-4d3d-adec-89e2fd00d509"
+                }
+            ],
+            "severity": "error",
+            "type": "footprint_filters_mismatch"
+        },
+        {
+            "description": "SashSense:R_0603_1608Metric doesn't match symbol's footprint filters (Device_R_*)",
+            "items": [
+                {
+                    "description": "Footprint R8",
+                    "pos": {
+                        "x": 170.73,
+                        "y": 64.5
+                    },
+                    "uuid": "694ff488-3575-465d-ba85-736ebbee9101"
+                }
+            ],
+            "severity": "error",
+            "type": "footprint_filters_mismatch"
+        },
+        {
+            "description": "SashSense:R_0603_1608Metric doesn't match symbol's footprint filters (Device_R_*)",
+            "items": [
+                {
+                    "description": "Footprint R9",
+                    "pos": {
+                        "x": 50.5,
+                        "y": 52.5
+                    },
+                    "uuid": "4c0f75e0-312d-47f9-80c2-314ef539bebe"
+                }
+            ],
+            "severity": "error",
+            "type": "footprint_filters_mismatch"
+        },
+        {
+            "description": "SashSense:R_0603_1608Metric doesn't match symbol's footprint filters (Device_R_*)",
+            "items": [
+                {
+                    "description": "Footprint R10",
+                    "pos": {
+                        "x": 55.0,
+                        "y": 53.0
+                    },
+                    "uuid": "e4d9348d-b298-4d43-819c-7d103faee24e"
+                }
+            ],
+            "severity": "error",
+            "type": "footprint_filters_mismatch"
+        },
+        {
+            "description": "SashSense:R_0603_1608Metric doesn't match symbol's footprint filters (Device_R_*)",
+            "items": [
+                {
+                    "description": "Footprint R11",
+                    "pos": {
+                        "x": 63.6,
+                        "y": 66.0
+                    },
+                    "uuid": "75b59504-d7d5-4cd7-9cdd-2cc3c7dbc476"
+                }
+            ],
+            "severity": "error",
+            "type": "footprint_filters_mismatch"
+        }
+    ],
+    "source": "Firefly_pcb2.kicad_pcb",
+    "unconnected_items": [],
+    "violations": []
+}

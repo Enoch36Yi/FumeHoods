@@ -1,0 +1,1675 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>Firefly_pcb2.kicad_sch</source>
+    <date>2026-10-19T20:54:03</date>
+    <tool>Eeschema 10.0.5</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>Firefly_pcb2 - SashSense sensor node</title>
+        <company>SashSense</company>
+        <rev>P1</rev>
+        <date>2026-10-19</date>
+        <source>Firefly_pcb2.kicad_sch</source>
+        <comment number="1" value="PROVISIONAL - 500 x 500 mm - mechanical/system integration unresolved"/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="BZ1">
+      <value>PKLCS1212E4001-R1</value>
+      <footprint>SashSense:Buzzer_Murata_PKLCS1212E</footprint>
+      <fields>
+        <field name="MPN">PKLCS1212E4001-R1</field>
+        <field name="Manufacturer">Murata</field>
+        <field name="Footprint">SashSense:Buzzer_Murata_PKLCS1212E</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SashSense" part="Device_Buzzer" description="Buzzer, polarized"/>
+      <property name="MPN" value="PKLCS1212E4001-R1"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="Sheetname" value="Firefly_pcb2"/>
+      <property name="Sheetfile" value="Firefly_pcb2.kicad_sch"/>
+      <property name="ki_keywords" value="quartz resonator ceramic"/>
+      <property name="ki_fp_filters" value="*Buzzer*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>fd926426-48a9-58c8-a1a9-60daf10f49ab</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C1">
+      <value>1uF</value>
+      <footprint>SashSense:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">GRM188R61A105KA61D</field>
+        <field name="Manufacturer">Murata</field>
+        <field name="Footprint">SashSense:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SashSense" part="Device_C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="GRM188R61A105KA61D"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="Sheetname" value="Firefly_pcb2"/>
+      <property name="Sheetfile" value="Firefly_pcb2.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="Device_C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1b716c7e-9751-58f9-b96c-697f188d12ed</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C2">
+      <value>10uF</value>
+      <footprint>SashSense:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">GRM21BR61A106KE19L</field>
+        <field name="Manufacturer">Murata</field>
+        <field name="Footprint">SashSense:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SashSense" part="Device_C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="GRM21BR61A106KE19L"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="Sheetname" value="Firefly_pcb2"/>
+      <property name="Sheetfile" value="Firefly_pcb2.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="Device_C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>25e16b37-c47d-557d-8c48-005a04d855e1</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C3">
+      <value>100nF</value>
+      <footprint>SashSense:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">GRM188R71C104KA01D</field>
+        <field name="Manufacturer">Murata</field>
+        <field name="Footprint">SashSense:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SashSense" part="Device_C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="GRM188R71C104KA01D"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="Sheetname" value="Firefly_pcb2"/>
+      <property name="Sheetfile" value="Firefly_pcb2.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="Device_C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>49d984ef-6ef5-5cb3-b4ac-9e4b312f4929</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C4">
+      <value>47uF</value>
+      <footprint>SashSense:C_1206_3216Metric</footprint>
+      <fields>
+        <field name="MPN">GRM31CR60J476ME19L</field>
+        <field name="Manufacturer">Murata</field>
+        <field name="Footprint">SashSense:C_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SashSense" part="Device_C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="GRM31CR60J476ME19L"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="Sheetname" value="Firefly_pcb2"/>
+      <property name="Sheetfile" value="Firefly_pcb2.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="Device_C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5c968d91-486a-5966-984c-c3e5c750d106</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C5">
+      <value>47uF</value>
+      <footprint>SashSense:C_1206_3216Metric</footprint>
+      <fields>
+        <field name="MPN">GRM31CR60J476ME19L</field>
+        <field name="Manufacturer">Murata</field>
+        <field name="Footprint">SashSense:C_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SashSense" part="Device_C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="GRM31CR60J476ME19L"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="Sheetname" value="Firefly_pcb2"/>
+      <property name="Sheetfile" value="Firefly_pcb2.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="Device_C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>46ece762-0251-5b53-94c3-c7af4c06ae0a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C6">
+      <value>100nF</value>
+      <footprint>SashSense:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">GRM188R71C104KA01D</field>
+        <field name="Manufacturer">Murata</field>
+        <field name="Footprint">SashSense:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SashSense" part="Device_C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="GRM188R71C104KA01D"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="Sheetname" value="Firefly_pcb2"/>
+      <property name="Sheetfile" value="Firefly_pcb2.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="Device_C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>bb1b9e60-2823-542d-8dc2-4d36ed3a445e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C7">
+      <value>4.7uF</value>
+      <footprint>SashSense:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">GRM188R60J475KE19D</field>
+        <field name="Manufacturer">Murata</field>
+        <field name="Footprint">SashSense:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SashSense" part="Device_C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="GRM188R60J475KE19D"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="Sheetname" value="Firefly_pcb2"/>
+      <property name="Sheetfile" value="Firefly_pcb2.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="Device_C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5ec27b5a-bdbb-5215-849a-dede3e4ee8da</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C8">
+      <value>10uF</value>
+      <footprint>SashSense:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">GRM21BR61A106KE19L</field>
+        <field name="Manufacturer">Murata</field>
+        <field name="Footprint">SashSense:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SashSense" part="Device_C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="GRM21BR61A106KE19L"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="Sheetname" value="Firefly_pcb2"/>
+      <property name="Sheetfile" value="Firefly_pcb2.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="Device_C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>901b7423-d5b3-5362-b91a-7291088763cb</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C9">
+      <value>100nF</value>
+      <footprint>SashSense:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">GRM188R71C104KA01D</field>
+        <field name="Manufacturer">Murata</field>
+        <field name="Footprint">SashSense:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SashSense" part="Device_C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="GRM188R71C104KA01D"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="Sheetname" value="Firefly_pcb2"/>
+      <property name="Sheetfile" value="Firefly_pcb2.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="Device_C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8c8a93cd-4147-5bdd-9f15-4b4ba6e777ee</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C10">
+      <value>1uF</value>
+      <footprint>SashSense:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">GRM188R61A105KA61D</field>
+        <field name="Manufacturer">Murata</field>
+        <field name="Footprint">SashSense:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SashSense" part="Device_C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="GRM188R61A105KA61D"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="Sheetname" value="Firefly_pcb2"/>
+      <property name="Sheetfile" value="Firefly_pcb2.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="Device_C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>415cf281-9c4e-51f2-a801-65e52b1ca3af</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C11">
+      <value>1.5uF</value>
+      <footprint>SashSense:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">GRM188R61A155KA61D</field>
+        <field name="Manufacturer">Murata</field>
+        <field name="Footprint">SashSense:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SashSense" part="Device_C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="GRM188R61A155KA61D"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="Sheetname" value="Firefly_pcb2"/>
+      <property name="Sheetfile" value="Firefly_pcb2.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="Device_C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>21374f2c-99d5-5cb9-b213-edb96d01e659</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J1">
+      <value>REGULATED 3.3V IN</value>
+      <footprint>SashSense:SolderWire-0.75sqmm_1x02_P4.8mm_D1.25mm_OD2.3mm</footprint>
+      <fields>
+        <field name="MPN">PCB FEATURE</field>
+        <field name="Manufacturer">PCB</field>
+        <field name="Footprint">SashSense:SolderWire-0.75sqmm_1x02_P4.8mm_D1.25mm_OD2.3mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SashSense" part="Connector_Generic_Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="MPN" value="PCB FEATURE"/>
+      <property name="Manufacturer" value="PCB"/>
+      <property name="Sheetname" value="Firefly_pcb2"/>
+      <property name="Sheetfile" value="Firefly_pcb2.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>603edc86-1baf-5577-b124-812280ebab88</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J2">
+      <value>UART / BOOT SERVICE</value>
+      <footprint>SashSense:ServicePads_1x06</footprint>
+      <fields>
+        <field name="MPN">PCB FEATURE</field>
+        <field name="Manufacturer">PCB</field>
+        <field name="Footprint">SashSense:ServicePads_1x06</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SashSense" part="Connector_Generic_Conn_01x06" description="Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="MPN" value="PCB FEATURE"/>
+      <property name="Manufacturer" value="PCB"/>
+      <property name="Sheetname" value="Firefly_pcb2"/>
+      <property name="Sheetfile" value="Firefly_pcb2.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c3e6454a-d68a-58fe-aa3f-b314a81a8611</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="Q1">
+      <value>MMBT3904LT1G</value>
+      <footprint>SashSense:SOT-23</footprint>
+      <fields>
+        <field name="MPN">MMBT3904LT1G</field>
+        <field name="Manufacturer">onsemi</field>
+        <field name="Footprint">SashSense:SOT-23</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SashSense" part="Transistor_BJT_Q_NPN_BEC" description="NPN transistor, base/emitter/collector"/>
+      <property name="MPN" value="MMBT3904LT1G"/>
+      <property name="Manufacturer" value="onsemi"/>
+      <property name="Sheetname" value="Firefly_pcb2"/>
+      <property name="Sheetfile" value="Firefly_pcb2.kicad_sch"/>
+      <property name="ki_keywords" value="BJT"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ece32047-464d-54b8-adfa-cfdcce72e85f</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="3"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R1">
+      <value>10k</value>
+      <footprint>SashSense:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Footprint">SashSense:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SashSense" part="Device_R" description="Resistor"/>
+      <property name="MPN" value="RC0603FR-0710KL"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="Sheetname" value="Firefly_pcb2"/>
+      <property name="Sheetfile" value="Firefly_pcb2.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="Device_R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1fcf4ba7-a152-572c-945d-f18caea4fce2</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R2">
+      <value>10k</value>
+      <footprint>SashSense:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Footprint">SashSense:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SashSense" part="Device_R" description="Resistor"/>
+      <property name="MPN" value="RC0603FR-0710KL"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="Sheetname" value="Firefly_pcb2"/>
+      <property name="Sheetfile" value="Firefly_pcb2.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="Device_R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a5e6bb1b-872c-58fa-8fb8-7f4206f6a991</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R3">
+      <value>10k</value>
+      <footprint>SashSense:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Footprint">SashSense:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SashSense" part="Device_R" description="Resistor"/>
+      <property name="MPN" value="RC0603FR-0710KL"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="Sheetname" value="Firefly_pcb2"/>
+      <property name="Sheetfile" value="Firefly_pcb2.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="Device_R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e0937db6-1324-5291-84f0-24975ba46860</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R4">
+      <value>10k</value>
+      <footprint>SashSense:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Footprint">SashSense:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SashSense" part="Device_R" description="Resistor"/>
+      <property name="MPN" value="RC0603FR-0710KL"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="Sheetname" value="Firefly_pcb2"/>
+      <property name="Sheetfile" value="Firefly_pcb2.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="Device_R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f5dd5cd5-e0a2-5141-b519-710ab9a2df4d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R5">
+      <value>4.7k</value>
+      <footprint>SashSense:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">RC0603FR-074K7L</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Footprint">SashSense:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SashSense" part="Device_R" description="Resistor"/>
+      <property name="MPN" value="RC0603FR-074K7L"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="Sheetname" value="Firefly_pcb2"/>
+      <property name="Sheetfile" value="Firefly_pcb2.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="Device_R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>26ea790c-3460-5f2e-9b18-c190fe45d768</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R6">
+      <value>4.7k</value>
+      <footprint>SashSense:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">RC0603FR-074K7L</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Footprint">SashSense:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SashSense" part="Device_R" description="Resistor"/>
+      <property name="MPN" value="RC0603FR-074K7L"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="Sheetname" value="Firefly_pcb2"/>
+      <property name="Sheetfile" value="Firefly_pcb2.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="Device_R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>cb203e08-2492-544e-bf6b-67e3b32b78f3</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R7">
+      <value>10k</value>
+      <footprint>SashSense:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Footprint">SashSense:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SashSense" part="Device_R" description="Resistor"/>
+      <property name="MPN" value="RC0603FR-0710KL"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="Sheetname" value="Firefly_pcb2"/>
+      <property name="Sheetfile" value="Firefly_pcb2.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="Device_R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8695cb84-5198-5e90-b307-0755e3373d53</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R8">
+      <value>20R</value>
+      <footprint>SashSense:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">RC0603FR-0720RL</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Footprint">SashSense:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SashSense" part="Device_R" description="Resistor"/>
+      <property name="MPN" value="RC0603FR-0720RL"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="Sheetname" value="Firefly_pcb2"/>
+      <property name="Sheetfile" value="Firefly_pcb2.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="Device_R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>61880758-e3e5-5202-ac79-e4d40b99209b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R9">
+      <value>1k</value>
+      <footprint>SashSense:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">RC0603FR-071KL</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Footprint">SashSense:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SashSense" part="Device_R" description="Resistor"/>
+      <property name="MPN" value="RC0603FR-071KL"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="Sheetname" value="Firefly_pcb2"/>
+      <property name="Sheetfile" value="Firefly_pcb2.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="Device_R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a593f294-d916-5232-a15d-ec19f36e7a2a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R10">
+      <value>100k</value>
+      <footprint>SashSense:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">RC0603FR-07100KL</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Footprint">SashSense:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SashSense" part="Device_R" description="Resistor"/>
+      <property name="MPN" value="RC0603FR-07100KL"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="Sheetname" value="Firefly_pcb2"/>
+      <property name="Sheetfile" value="Firefly_pcb2.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="Device_R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e5c1a1f1-3e0f-5c4f-ba01-340d259d7c90</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R11">
+      <value>1k</value>
+      <footprint>SashSense:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">RC0603FR-071KL</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Footprint">SashSense:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SashSense" part="Device_R" description="Resistor"/>
+      <property name="MPN" value="RC0603FR-071KL"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="Sheetname" value="Firefly_pcb2"/>
+      <property name="Sheetfile" value="Firefly_pcb2.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="Device_R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>63fad429-64d4-5b7a-be07-931952dd075b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="SW1">
+      <value>RESET</value>
+      <footprint>SashSense:SW_SPST_TL3342</footprint>
+      <fields>
+        <field name="MPN">TL3342F160QG</field>
+        <field name="Manufacturer">E-Switch</field>
+        <field name="Footprint">SashSense:SW_SPST_TL3342</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SashSense" part="Switch_SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="MPN" value="TL3342F160QG"/>
+      <property name="Manufacturer" value="E-Switch"/>
+      <property name="Sheetname" value="Firefly_pcb2"/>
+      <property name="Sheetfile" value="Firefly_pcb2.kicad_sch"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>88b8cd98-01f9-5f67-bb93-08fa3eafb565</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="SW2">
+      <value>BOOT</value>
+      <footprint>SashSense:SW_SPST_TL3342</footprint>
+      <fields>
+        <field name="MPN">TL3342F160QG</field>
+        <field name="Manufacturer">E-Switch</field>
+        <field name="Footprint">SashSense:SW_SPST_TL3342</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SashSense" part="Switch_SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="MPN" value="TL3342F160QG"/>
+      <property name="Manufacturer" value="E-Switch"/>
+      <property name="Sheetname" value="Firefly_pcb2"/>
+      <property name="Sheetfile" value="Firefly_pcb2.kicad_sch"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>551c8a83-8127-5ad4-b226-e4b6cc76fdda</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP1">
+      <value>+3V3</value>
+      <footprint>SashSense:TestPoint_Pad_D1.5mm</footprint>
+      <fields>
+        <field name="MPN">PCB FEATURE</field>
+        <field name="Manufacturer">PCB</field>
+        <field name="Footprint">SashSense:TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SashSense" part="Connector_TestPoint" description="test point"/>
+      <property name="MPN" value="PCB FEATURE"/>
+      <property name="Manufacturer" value="PCB"/>
+      <property name="Sheetname" value="Firefly_pcb2"/>
+      <property name="Sheetfile" value="Firefly_pcb2.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>863f4336-a740-5847-83d0-b517acded511</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP2">
+      <value>GND</value>
+      <footprint>SashSense:TestPoint_Pad_D1.5mm</footprint>
+      <fields>
+        <field name="MPN">PCB FEATURE</field>
+        <field name="Manufacturer">PCB</field>
+        <field name="Footprint">SashSense:TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SashSense" part="Connector_TestPoint" description="test point"/>
+      <property name="MPN" value="PCB FEATURE"/>
+      <property name="Manufacturer" value="PCB"/>
+      <property name="Sheetname" value="Firefly_pcb2"/>
+      <property name="Sheetfile" value="Firefly_pcb2.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0ca2ad38-939a-5b2b-b50c-b4576d4b3a42</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP3">
+      <value>I2C_SDA</value>
+      <footprint>SashSense:TestPoint_Pad_D1.5mm</footprint>
+      <fields>
+        <field name="MPN">PCB FEATURE</field>
+        <field name="Manufacturer">PCB</field>
+        <field name="Footprint">SashSense:TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SashSense" part="Connector_TestPoint" description="test point"/>
+      <property name="MPN" value="PCB FEATURE"/>
+      <property name="Manufacturer" value="PCB"/>
+      <property name="Sheetname" value="Firefly_pcb2"/>
+      <property name="Sheetfile" value="Firefly_pcb2.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9334fd94-cac2-515a-a950-5690f6700b21</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP4">
+      <value>I2C_SCL</value>
+      <footprint>SashSense:TestPoint_Pad_D1.5mm</footprint>
+      <fields>
+        <field name="MPN">PCB FEATURE</field>
+        <field name="Manufacturer">PCB</field>
+        <field name="Footprint">SashSense:TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SashSense" part="Connector_TestPoint" description="test point"/>
+      <property name="MPN" value="PCB FEATURE"/>
+      <property name="Manufacturer" value="PCB"/>
+      <property name="Sheetname" value="Firefly_pcb2"/>
+      <property name="Sheetfile" value="Firefly_pcb2.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e96d7b7a-c718-5ffb-b841-74e09bb9ba4f</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP5">
+      <value>TOF_XSHUT</value>
+      <footprint>SashSense:TestPoint_Pad_D1.5mm</footprint>
+      <fields>
+        <field name="MPN">PCB FEATURE</field>
+        <field name="Manufacturer">PCB</field>
+        <field name="Footprint">SashSense:TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SashSense" part="Connector_TestPoint" description="test point"/>
+      <property name="MPN" value="PCB FEATURE"/>
+      <property name="Manufacturer" value="PCB"/>
+      <property name="Sheetname" value="Firefly_pcb2"/>
+      <property name="Sheetfile" value="Firefly_pcb2.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f4544c5f-c149-5161-bae9-4c931d3de712</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP6">
+      <value>TOF_INT</value>
+      <footprint>SashSense:TestPoint_Pad_D1.5mm</footprint>
+      <fields>
+        <field name="MPN">PCB FEATURE</field>
+        <field name="Manufacturer">PCB</field>
+        <field name="Footprint">SashSense:TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SashSense" part="Connector_TestPoint" description="test point"/>
+      <property name="MPN" value="PCB FEATURE"/>
+      <property name="Manufacturer" value="PCB"/>
+      <property name="Sheetname" value="Firefly_pcb2"/>
+      <property name="Sheetfile" value="Firefly_pcb2.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c9a2932e-fea6-5af6-aed9-9eddc907c76b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP7">
+      <value>AMG_INT</value>
+      <footprint>SashSense:TestPoint_Pad_D1.5mm</footprint>
+      <fields>
+        <field name="MPN">PCB FEATURE</field>
+        <field name="Manufacturer">PCB</field>
+        <field name="Footprint">SashSense:TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SashSense" part="Connector_TestPoint" description="test point"/>
+      <property name="MPN" value="PCB FEATURE"/>
+      <property name="Manufacturer" value="PCB"/>
+      <property name="Sheetname" value="Firefly_pcb2"/>
+      <property name="Sheetfile" value="Firefly_pcb2.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a08546d7-940c-536d-9df3-06d0c05f0761</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP8">
+      <value>BEEP_PWM</value>
+      <footprint>SashSense:TestPoint_Pad_D1.5mm</footprint>
+      <fields>
+        <field name="MPN">PCB FEATURE</field>
+        <field name="Manufacturer">PCB</field>
+        <field name="Footprint">SashSense:TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SashSense" part="Connector_TestPoint" description="test point"/>
+      <property name="MPN" value="PCB FEATURE"/>
+      <property name="Manufacturer" value="PCB"/>
+      <property name="Sheetname" value="Firefly_pcb2"/>
+      <property name="Sheetfile" value="Firefly_pcb2.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ea05b0d6-760a-53e1-8232-d574e40ef9ce</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U1">
+      <value>ESP32-S3-WROOM-1-N8</value>
+      <footprint>SashSense:ESP32-S3-WROOM-1</footprint>
+      <fields>
+        <field name="MPN">ESP32-S3-WROOM-1-N8</field>
+        <field name="Manufacturer">Espressif</field>
+        <field name="Footprint">SashSense:ESP32-S3-WROOM-1</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SashSense" part="RF_Module_ESP32-S3-WROOM-1" description="RF Module, ESP32-S3 SoC, Wi-Fi 802.11b/g/n, Bluetooth, BLE, 32-bit, 3.3V, onboard antenna, SMD"/>
+      <property name="MPN" value="ESP32-S3-WROOM-1-N8"/>
+      <property name="Manufacturer" value="Espressif"/>
+      <property name="Sheetname" value="Firefly_pcb2"/>
+      <property name="Sheetfile" value="Firefly_pcb2.kicad_sch"/>
+      <property name="ki_keywords" value="RF Radio BT ESP ESP32-S3 Espressif onboard PCB antenna"/>
+      <property name="ki_fp_filters" value="ESP32?S3?WROOM?1*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1d67a869-2e0e-5f28-aca1-2b78e76b0e11</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="3"/>
+            <pin num="27"/>
+            <pin num="39"/>
+            <pin num="38"/>
+            <pin num="15"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="12"/>
+            <pin num="17"/>
+            <pin num="18"/>
+            <pin num="19"/>
+            <pin num="20"/>
+            <pin num="21"/>
+            <pin num="22"/>
+            <pin num="8"/>
+            <pin num="9"/>
+            <pin num="2"/>
+            <pin num="41"/>
+            <pin num="1"/>
+            <pin num="40"/>
+            <pin num="37"/>
+            <pin num="36"/>
+            <pin num="10"/>
+            <pin num="11"/>
+            <pin num="13"/>
+            <pin num="14"/>
+            <pin num="23"/>
+            <pin num="28"/>
+            <pin num="29"/>
+            <pin num="30"/>
+            <pin num="31"/>
+            <pin num="32"/>
+            <pin num="33"/>
+            <pin num="34"/>
+            <pin num="35"/>
+            <pin num="26"/>
+            <pin num="16"/>
+            <pin num="24"/>
+            <pin num="25"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U2">
+      <value>VL53L1CXV0FY/1</value>
+      <footprint>SashSense:ST_VL53L1x</footprint>
+      <fields>
+        <field name="MPN">VL53L1CXV0FY/1</field>
+        <field name="Manufacturer">STMicroelectronics</field>
+        <field name="Footprint">SashSense:ST_VL53L1x</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SashSense" part="Sensor_Distance_VL53L1CXV0FY1" description="4m distance ranging ToF sensor, Optical LGA12"/>
+      <property name="MPN" value="VL53L1CXV0FY/1"/>
+      <property name="Manufacturer" value="STMicroelectronics"/>
+      <property name="Sheetname" value="Firefly_pcb2"/>
+      <property name="Sheetfile" value="Firefly_pcb2.kicad_sch"/>
+      <property name="ki_keywords" value="VL53L1x ToF"/>
+      <property name="ki_fp_filters" value="ST*VL53L1x*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e33465b9-49f3-57be-8899-9305bbddbdbb</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="7"/>
+            <pin num="9"/>
+            <pin num="10"/>
+            <pin num="5"/>
+            <pin num="8"/>
+            <pin num="11"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="6"/>
+            <pin num="12"/>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U3">
+      <value>AMG8833</value>
+      <footprint>SashSense:AMG8833</footprint>
+      <fields>
+        <field name="MPN">AMG8833</field>
+        <field name="Manufacturer">Panasonic</field>
+        <field name="Footprint">SashSense:AMG8833</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SashSense" part="AMG8833" description=""/>
+      <property name="MPN" value="AMG8833"/>
+      <property name="Manufacturer" value="Panasonic"/>
+      <property name="Sheetname" value="Firefly_pcb2"/>
+      <property name="Sheetfile" value="Firefly_pcb2.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b31fce04-9ce7-545a-ae8b-cc37e48b0e4a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="1"/>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="9"/>
+            <pin num="10"/>
+            <pin num="11"/>
+            <pin num="12"/>
+            <pin num="13"/>
+            <pin num="14"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="SashSense" part="AMG8833">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">AMG8833</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="NC" type="no_connect"/>
+        <pin num="2" name="SDA" type="bidirectional"/>
+        <pin num="3" name="SCL" type="input"/>
+        <pin num="4" name="INT" type="open_collector"/>
+        <pin num="5" name="AD_SELECT" type="input"/>
+        <pin num="6" name="GND" type="power_in"/>
+        <pin num="7" name="NC" type="no_connect"/>
+        <pin num="8" name="NC" type="no_connect"/>
+        <pin num="9" name="VDD" type="power_in"/>
+        <pin num="10" name="AVDD-PC" type="passive"/>
+        <pin num="11" name="NC" type="no_connect"/>
+        <pin num="12" name="DVDD-PC" type="passive"/>
+        <pin num="13" name="VPP" type="power_in"/>
+        <pin num="14" name="NC" type="no_connect"/>
+      </pins>
+    </libpart>
+    <libpart lib="SashSense" part="Connector_Generic_Conn_01x02">
+      <description>Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x02</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="SashSense" part="Connector_Generic_Conn_01x06">
+      <description>Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x06</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="SashSense" part="Connector_TestPoint">
+      <description>test point</description>
+      <footprints>
+        <fp>Pin*</fp>
+        <fp>Test*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">TP</field>
+        <field name="Value">TestPoint</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">test point</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="SashSense" part="Device_Buzzer">
+      <description>Buzzer, polarized</description>
+      <footprints>
+        <fp>*Buzzer*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">BZ</field>
+        <field name="Value">Buzzer</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Buzzer, polarized</field>
+      </fields>
+      <pins>
+        <pin num="1" name="+" type="passive"/>
+        <pin num="2" name="-" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="SashSense" part="Device_C">
+      <description>Unpolarized capacitor</description>
+      <footprints>
+        <fp>Device_C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="SashSense" part="Device_R">
+      <description>Resistor</description>
+      <footprints>
+        <fp>Device_R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="SashSense" part="RF_Module_ESP32-S3-WROOM-1">
+      <description>RF Module, ESP32-S3 SoC, Wi-Fi 802.11b/g/n, Bluetooth, BLE, 32-bit, 3.3V, onboard antenna, SMD</description>
+      <docs>https://www.espressif.com/sites/default/files/documentation/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf</docs>
+      <footprints>
+        <fp>ESP32?S3?WROOM?1*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">ESP32-S3-WROOM-1</field>
+        <field name="Footprint">RF_Module:ESP32-S3-WROOM-1</field>
+        <field name="Datasheet">https://www.espressif.com/sites/default/files/documentation/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf</field>
+        <field name="Description">RF Module, ESP32-S3 SoC, Wi-Fi 802.11b/g/n, Bluetooth, BLE, 32-bit, 3.3V, onboard antenna, SMD</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="power_in"/>
+        <pin num="2" name="3V3" type="power_in"/>
+        <pin num="3" name="EN" type="input"/>
+        <pin num="4" name="IO4" type="bidirectional"/>
+        <pin num="5" name="IO5" type="bidirectional"/>
+        <pin num="6" name="IO6" type="bidirectional"/>
+        <pin num="7" name="IO7" type="bidirectional"/>
+        <pin num="8" name="IO15" type="bidirectional"/>
+        <pin num="9" name="IO16" type="bidirectional"/>
+        <pin num="10" name="IO17" type="bidirectional"/>
+        <pin num="11" name="IO18" type="bidirectional"/>
+        <pin num="12" name="IO8" type="bidirectional"/>
+        <pin num="13" name="USB_D-" type="bidirectional"/>
+        <pin num="14" name="USB_D+" type="bidirectional"/>
+        <pin num="15" name="IO3" type="bidirectional"/>
+        <pin num="16" name="IO46" type="bidirectional"/>
+        <pin num="17" name="IO9" type="bidirectional"/>
+        <pin num="18" name="IO10" type="bidirectional"/>
+        <pin num="19" name="IO11" type="bidirectional"/>
+        <pin num="20" name="IO12" type="bidirectional"/>
+        <pin num="21" name="IO13" type="bidirectional"/>
+        <pin num="22" name="IO14" type="bidirectional"/>
+        <pin num="23" name="IO21" type="bidirectional"/>
+        <pin num="24" name="IO47" type="bidirectional"/>
+        <pin num="25" name="IO48" type="bidirectional"/>
+        <pin num="26" name="IO45" type="bidirectional"/>
+        <pin num="27" name="IO0" type="bidirectional"/>
+        <pin num="28" name="IO35" type="bidirectional"/>
+        <pin num="29" name="IO36" type="bidirectional"/>
+        <pin num="30" name="IO37" type="bidirectional"/>
+        <pin num="31" name="IO38" type="bidirectional"/>
+        <pin num="32" name="IO39" type="bidirectional"/>
+        <pin num="33" name="IO40" type="bidirectional"/>
+        <pin num="34" name="IO41" type="bidirectional"/>
+        <pin num="35" name="IO42" type="bidirectional"/>
+        <pin num="36" name="RXD0" type="bidirectional"/>
+        <pin num="37" name="TXD0" type="bidirectional"/>
+        <pin num="38" name="IO2" type="bidirectional"/>
+        <pin num="39" name="IO1" type="bidirectional"/>
+        <pin num="40" name="GND" type="passive"/>
+        <pin num="41" name="GND" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="SashSense" part="Sensor_Distance_VL53L1CXV0FY1">
+      <description>4m distance ranging ToF sensor, Optical LGA12</description>
+      <docs>https://www.st.com/resource/en/datasheet/vl53l1x.pdf</docs>
+      <footprints>
+        <fp>ST*VL53L1x*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">VL53L1CXV0FY1</field>
+        <field name="Footprint">Sensor_Distance:ST_VL53L1x</field>
+        <field name="Datasheet">https://www.st.com/resource/en/datasheet/vl53l1x.pdf</field>
+        <field name="Description">4m distance ranging ToF sensor, Optical LGA12</field>
+      </fields>
+      <pins>
+        <pin num="1" name="AVDDVCSEL" type="power_in"/>
+        <pin num="2" name="AVSSVCSEL" type="power_in"/>
+        <pin num="3" name="GND" type="power_in"/>
+        <pin num="4" name="GND" type="passive"/>
+        <pin num="5" name="XSHUT" type="input"/>
+        <pin num="6" name="GND" type="passive"/>
+        <pin num="7" name="GPIO1" type="open_collector"/>
+        <pin num="8" name="DNC" type="no_connect"/>
+        <pin num="9" name="SDA" type="bidirectional"/>
+        <pin num="10" name="SCL" type="input"/>
+        <pin num="11" name="AVDD" type="power_in"/>
+        <pin num="12" name="GND" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="SashSense" part="Switch_SW_Push">
+      <description>Push button switch, generic, two pins</description>
+      <fields>
+        <field name="Reference">SW</field>
+        <field name="Value">SW_Push</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Push button switch, generic, two pins</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="SashSense" part="Transistor_BJT_Q_NPN_BEC">
+      <description>NPN transistor, base/emitter/collector</description>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">Q_NPN_BEC</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">NPN transistor, base/emitter/collector</field>
+        <field name="Sim.Device">NPN</field>
+        <field name="Sim.Pins">1=B 2=E 3=C</field>
+      </fields>
+      <pins>
+        <pin num="1" name="B" type="input"/>
+        <pin num="2" name="E" type="passive"/>
+        <pin num="3" name="C" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="SashSense">
+      <uri>${KIPRJMOD}/libraries/SashSense.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="/+3V3" class="Default">
+      <node ref="BZ1" pin="1" pinfunction="+_1" pintype="passive"/>
+      <node ref="C2" pin="1" pintype="passive"/>
+      <node ref="C3" pin="1" pintype="passive"/>
+      <node ref="C4" pin="1" pintype="passive"/>
+      <node ref="C5" pin="1" pintype="passive"/>
+      <node ref="C6" pin="1" pintype="passive"/>
+      <node ref="C7" pin="1" pintype="passive"/>
+      <node ref="C8" pin="1" pintype="passive"/>
+      <node ref="C9" pin="1" pintype="passive"/>
+      <node ref="J1" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="J2" pin="6" pinfunction="Pin_6_6" pintype="passive"/>
+      <node ref="R1" pin="1" pintype="passive"/>
+      <node ref="R11" pin="1" pintype="passive"/>
+      <node ref="R2" pin="1" pintype="passive"/>
+      <node ref="R3" pin="1" pintype="passive"/>
+      <node ref="R4" pin="1" pintype="passive"/>
+      <node ref="R5" pin="1" pintype="passive"/>
+      <node ref="R6" pin="1" pintype="passive"/>
+      <node ref="R7" pin="1" pintype="passive"/>
+      <node ref="TP1" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U1" pin="2" pinfunction="3V3_2" pintype="power_in"/>
+      <node ref="U2" pin="1" pinfunction="AVDDVCSEL_1" pintype="power_in"/>
+      <node ref="U2" pin="11" pinfunction="AVDD_11" pintype="power_in"/>
+      <node ref="U3" pin="13" pinfunction="VPP_13" pintype="power_in"/>
+      <node ref="U3" pin="9" pinfunction="VDD_9" pintype="power_in"/>
+    </net>
+    <net code="2" name="/AMG_AVCAP_RETURN" class="Default">
+      <node ref="C10" pin="2" pintype="passive"/>
+      <node ref="R8" pin="1" pintype="passive"/>
+    </net>
+    <net code="3" name="/AMG_AVDD" class="Default">
+      <node ref="C10" pin="1" pintype="passive"/>
+      <node ref="U3" pin="10" pinfunction="AVDD-PC_10" pintype="passive"/>
+    </net>
+    <net code="4" name="/AMG_DVDD" class="Default">
+      <node ref="C11" pin="1" pintype="passive"/>
+      <node ref="U3" pin="12" pinfunction="DVDD-PC_12" pintype="passive"/>
+    </net>
+    <net code="5" name="/AMG_INT" class="Default">
+      <node ref="R7" pin="2" pintype="passive"/>
+      <node ref="TP7" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U1" pin="33" pinfunction="IO40_33" pintype="bidirectional"/>
+      <node ref="U3" pin="4" pinfunction="INT_4" pintype="open_collector"/>
+    </net>
+    <net code="6" name="/BEEP_BASE" class="Default">
+      <node ref="Q1" pin="1" pinfunction="B_1" pintype="input"/>
+      <node ref="R10" pin="1" pintype="passive"/>
+      <node ref="R9" pin="2" pintype="passive"/>
+    </net>
+    <net code="7" name="/BEEP_LOW" class="Default">
+      <node ref="BZ1" pin="2" pinfunction="-_2" pintype="passive"/>
+      <node ref="Q1" pin="3" pinfunction="C_3" pintype="passive"/>
+      <node ref="R11" pin="2" pintype="passive"/>
+    </net>
+    <net code="8" name="/BEEP_PWM" class="Default">
+      <node ref="R9" pin="1" pintype="passive"/>
+      <node ref="TP8" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U1" pin="4" pinfunction="IO4_4" pintype="bidirectional"/>
+    </net>
+    <net code="9" name="/BOOT" class="Default">
+      <node ref="J2" pin="5" pinfunction="Pin_5_5" pintype="passive"/>
+      <node ref="R2" pin="2" pintype="passive"/>
+      <node ref="SW2" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U1" pin="27" pinfunction="IO0_27" pintype="bidirectional"/>
+    </net>
+    <net code="10" name="/EN" class="Default">
+      <node ref="C1" pin="1" pintype="passive"/>
+      <node ref="J2" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
+      <node ref="R1" pin="2" pintype="passive"/>
+      <node ref="SW1" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U1" pin="3" pinfunction="EN_3" pintype="input"/>
+    </net>
+    <net code="11" name="/GND" class="Default">
+      <node ref="C1" pin="2" pintype="passive"/>
+      <node ref="C11" pin="2" pintype="passive"/>
+      <node ref="C2" pin="2" pintype="passive"/>
+      <node ref="C3" pin="2" pintype="passive"/>
+      <node ref="C4" pin="2" pintype="passive"/>
+      <node ref="C5" pin="2" pintype="passive"/>
+      <node ref="C6" pin="2" pintype="passive"/>
+      <node ref="C7" pin="2" pintype="passive"/>
+      <node ref="C8" pin="2" pintype="passive"/>
+      <node ref="C9" pin="2" pintype="passive"/>
+      <node ref="J1" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="J2" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="Q1" pin="2" pinfunction="E_2" pintype="passive"/>
+      <node ref="R10" pin="2" pintype="passive"/>
+      <node ref="R8" pin="2" pintype="passive"/>
+      <node ref="SW1" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="SW2" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="TP2" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U1" pin="1" pinfunction="GND_1" pintype="power_in"/>
+      <node ref="U1" pin="40" pinfunction="GND_40" pintype="passive"/>
+      <node ref="U1" pin="41" pinfunction="GND_41" pintype="passive"/>
+      <node ref="U2" pin="12" pinfunction="GND_12" pintype="passive"/>
+      <node ref="U2" pin="2" pinfunction="AVSSVCSEL_2" pintype="power_in"/>
+      <node ref="U2" pin="3" pinfunction="GND_3" pintype="power_in"/>
+      <node ref="U2" pin="4" pinfunction="GND_4" pintype="passive"/>
+      <node ref="U2" pin="6" pinfunction="GND_6" pintype="passive"/>
+      <node ref="U3" pin="5" pinfunction="AD_SELECT_5" pintype="input"/>
+      <node ref="U3" pin="6" pinfunction="GND_6" pintype="power_in"/>
+    </net>
+    <net code="12" name="/I2C_SCL" class="Default">
+      <node ref="R6" pin="2" pintype="passive"/>
+      <node ref="TP4" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U1" pin="38" pinfunction="IO2_38" pintype="bidirectional"/>
+      <node ref="U2" pin="10" pinfunction="SCL_10" pintype="input"/>
+      <node ref="U3" pin="3" pinfunction="SCL_3" pintype="input"/>
+    </net>
+    <net code="13" name="/I2C_SDA" class="Default">
+      <node ref="R5" pin="2" pintype="passive"/>
+      <node ref="TP3" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U1" pin="39" pinfunction="IO1_39" pintype="bidirectional"/>
+      <node ref="U2" pin="9" pinfunction="SDA_9" pintype="bidirectional"/>
+      <node ref="U3" pin="2" pinfunction="SDA_2" pintype="bidirectional"/>
+    </net>
+    <net code="14" name="/TOF_INT" class="Default">
+      <node ref="R4" pin="2" pintype="passive"/>
+      <node ref="TP6" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U1" pin="35" pinfunction="IO42_35" pintype="bidirectional"/>
+      <node ref="U2" pin="7" pinfunction="GPIO1_7" pintype="open_collector"/>
+    </net>
+    <net code="15" name="/TOF_XSHUT" class="Default">
+      <node ref="R3" pin="2" pintype="passive"/>
+      <node ref="TP5" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U1" pin="34" pinfunction="IO41_34" pintype="bidirectional"/>
+      <node ref="U2" pin="5" pinfunction="XSHUT_5" pintype="input"/>
+    </net>
+    <net code="16" name="/UART_RX" class="Default">
+      <node ref="J2" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="U1" pin="36" pinfunction="RXD0_36" pintype="bidirectional"/>
+    </net>
+    <net code="17" name="/UART_TX" class="Default">
+      <node ref="J2" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+      <node ref="U1" pin="37" pinfunction="TXD0_37" pintype="bidirectional"/>
+    </net>
+    <net code="18" name="unconnected-(U1-IO3-Pad15)" class="Default">
+      <node ref="U1" pin="15" pinfunction="IO3_15" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="19" name="unconnected-(U1-IO5-Pad5)" class="Default">
+      <node ref="U1" pin="5" pinfunction="IO5_5" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="20" name="unconnected-(U1-IO6-Pad6)" class="Default">
+      <node ref="U1" pin="6" pinfunction="IO6_6" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="21" name="unconnected-(U1-IO7-Pad7)" class="Default">
+      <node ref="U1" pin="7" pinfunction="IO7_7" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="22" name="unconnected-(U1-IO8-Pad12)" class="Default">
+      <node ref="U1" pin="12" pinfunction="IO8_12" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="23" name="unconnected-(U1-IO9-Pad17)" class="Default">
+      <node ref="U1" pin="17" pinfunction="IO9_17" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="24" name="unconnected-(U1-IO10-Pad18)" class="Default">
+      <node ref="U1" pin="18" pinfunction="IO10_18" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="25" name="unconnected-(U1-IO11-Pad19)" class="Default">
+      <node ref="U1" pin="19" pinfunction="IO11_19" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="26" name="unconnected-(U1-IO12-Pad20)" class="Default">
+      <node ref="U1" pin="20" pinfunction="IO12_20" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="27" name="unconnected-(U1-IO13-Pad21)" class="Default">
+      <node ref="U1" pin="21" pinfunction="IO13_21" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="28" name="unconnected-(U1-IO14-Pad22)" class="Default">
+      <node ref="U1" pin="22" pinfunction="IO14_22" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="29" name="unconnected-(U1-IO15-Pad8)" class="Default">
+      <node ref="U1" pin="8" pinfunction="IO15_8" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="30" name="unconnected-(U1-IO16-Pad9)" class="Default">
+      <node ref="U1" pin="9" pinfunction="IO16_9" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="31" name="unconnected-(U1-IO17-Pad10)" class="Default">
+      <node ref="U1" pin="10" pinfunction="IO17_10" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="32" name="unconnected-(U1-IO18-Pad11)" class="Default">
+      <node ref="U1" pin="11" pinfunction="IO18_11" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="33" name="unconnected-(U1-IO21-Pad23)" class="Default">
+      <node ref="U1" pin="23" pinfunction="IO21_23" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="34" name="unconnected-(U1-IO35-Pad28)" class="Default">
+      <node ref="U1" pin="28" pinfunction="IO35_28" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="35" name="unconnected-(U1-IO36-Pad29)" class="Default">
+      <node ref="U1" pin="29" pinfunction="IO36_29" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="36" name="unconnected-(U1-IO37-Pad30)" class="Default">
+      <node ref="U1" pin="30" pinfunction="IO37_30" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="37" name="unconnected-(U1-IO38-Pad31)" class="Default">
+      <node ref="U1" pin="31" pinfunction="IO38_31" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="38" name="unconnected-(U1-IO39-Pad32)" class="Default">
+      <node ref="U1" pin="32" pinfunction="IO39_32" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="39" name="unconnected-(U1-IO45-Pad26)" class="Default">
+      <node ref="U1" pin="26" pinfunction="IO45_26" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="40" name="unconnected-(U1-IO46-Pad16)" class="Default">
+      <node ref="U1" pin="16" pinfunction="IO46_16" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="41" name="unconnected-(U1-IO47-Pad24)" class="Default">
+      <node ref="U1" pin="24" pinfunction="IO47_24" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="42" name="unconnected-(U1-IO48-Pad25)" class="Default">
+      <node ref="U1" pin="25" pinfunction="IO48_25" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="43" name="unconnected-(U1-USB_D+-Pad14)" class="Default">
+      <node ref="U1" pin="14" pinfunction="USB_D+_14" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="44" name="unconnected-(U1-USB_D--Pad13)" class="Default">
+      <node ref="U1" pin="13" pinfunction="USB_D-_13" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="45" name="unconnected-(U2-DNC-Pad8)" class="Default">
+      <node ref="U2" pin="8" pinfunction="DNC_8" pintype="no_connect"/>
+    </net>
+    <net code="46" name="unconnected-(U3-NC-Pad1)" class="Default">
+      <node ref="U3" pin="1" pinfunction="NC_1" pintype="no_connect"/>
+    </net>
+    <net code="47" name="unconnected-(U3-NC-Pad7)" class="Default">
+      <node ref="U3" pin="7" pinfunction="NC_7" pintype="no_connect"/>
+    </net>
+    <net code="48" name="unconnected-(U3-NC-Pad8)" class="Default">
+      <node ref="U3" pin="8" pinfunction="NC_8" pintype="no_connect"/>
+    </net>
+    <net code="49" name="unconnected-(U3-NC-Pad11)" class="Default">
+      <node ref="U3" pin="11" pinfunction="NC_11" pintype="no_connect"/>
+    </net>
+    <net code="50" name="unconnected-(U3-NC-Pad14)" class="Default">
+      <node ref="U3" pin="14" pinfunction="NC_14" pintype="no_connect"/>
+    </net>
+  </nets>
+</export>

@@ -1,13 +1,11 @@
-# Source and review notes
+# Source notes
 
-The three KiCad source files were copied without design changes from the user-supplied Fumehoods_technicalwork_Enoch folder. Original files and their local history were preserved.
+The root KiCad files are the original in-hood project, renamed from PCB_FUMEHOODS to SashSense_node1 for this repository. The schematic, board and project settings are byte-identical to the original local files. Fresh checks after the rename gave ERC 0, parity 0, 10 DRC findings and 9 unconnected items; exported net connectivity also matched the original exactly.
 
-The source root is not a Git repository. Its `.history` directory is KiCad's automatic local-history repository: one commit `dffdc29` (`PCB Save`, 2026-09-02), authored by `KiCad <noreply@kicad.org>`, tracking only a PCB snapshot, with no remotes. That author identity does not establish a human contribution. The snapshot remains in the original folder; this package does not replace it or imply that the current files have a human development commit history.
+The original folder has no project Git repository. Its .history directory contains one KiCad automatic PCB snapshot (dffdc29, 2026-09-02) with no remote. That snapshot and all original local files remain untouched. The repository history retains the earlier filenames.
 
-Enoch explicitly confirmed that he developed the schematic/PCB and is authorized to upload them privately. Personal contact information from the resume is not included.
+SashSense_node2 contains selected source and review files from SashSense_Reconstruction. Firefly_pcb2 is a new presence-board reconstruction, not recovery of the lost original board. Its native CAD files are unchanged from the supplied design. In a separate working copy, ERC, native DRC/parity/unrouted checks, and 186 schematic / 527 board / 25 artifact checks were rerun successfully. A stricter scratch copy records the 24 footprint-filter metadata parity issues separately.
 
-Only the schematic, PCB, project settings, and their generated review materials are included. Excluded: KiCad local preferences (`.kicad_prl`), automatic history internals, Gaslead documentation, enclosure files, zip archives, and unrelated material. Enclosure documentation contains historical simulation claims that were not rerun for this electrical design review.
+Selected project-local libraries, builders, engineering review docs, schematic/layer PDFs, a few previews and verification reports are included. Original vendor PDF downloads, internal handoff notes, drafts, local preferences, large STEP exports and manufacturing archives are excluded. The output verification report refers to the complete local manufacturing review package; the export script recreates those files on demand. The netlist XML's absolute source pathname was replaced with the schematic filename; electrical content was preserved and rechecked.
 
-A case-insensitive text scan of the three source files for credential terms, private-key markers, confidentiality markers, email/address markers, and Windows absolute paths returned no matches. This is a scoped text review, not a guarantee about all possible secrets or ownership. Files were also inspected as KiCad design/project text. The included files are small; no large generated fabrication archives or raw private datasets are included.
-
-The ERC report lists four ignored check categories; the DRC report lists five. Reported counts reflect those settings. No board geometry, rule configuration, or original results were altered for presentation.
+The user confirmed authorship/authorization for private sharing of this engineering work and requested both board revisions here. No new license has been added. Neither board is released for fabrication.

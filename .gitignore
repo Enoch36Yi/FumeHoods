@@ -6,3 +6,11 @@
 review/
 .DS_Store
 Thumbs.db
+__pycache__/
+*.py[cod]
+.env*
+!.env.example
+SashSense_node2/outputs/manufacturing_P2_PROVISIONAL/*
+!SashSense_node2/outputs/manufacturing_P2_PROVISIONAL/README.md
+SashSense_node2/sources/
+SashSense_node2/drafts/

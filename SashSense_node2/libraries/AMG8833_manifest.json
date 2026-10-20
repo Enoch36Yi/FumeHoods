@@ -1,0 +1,35 @@
+{
+  "manufacturer": "Panasonic Industry",
+  "part": "AMG8833",
+  "footprint": "SashSense:AMG8833",
+  "source": "https://industrial.panasonic.com/cdbs/www-data/pdf/ADI8000/ADI8000C66.pdf",
+  "source_locator": "10-Feb-2023, PDF page 3 Dimensions and page 4 External circuit",
+  "units": "mm",
+  "coordinate_system": "KiCad front-side PCB top view: +x right, +y down; origin package center",
+  "orientation": "Pin 1 bottom-left, pin 7 bottom-right, pin 8 top-right, pin 14 top-left. Optical lens center is x=+2.0, y=0.",
+  "body": {"width": 11.6, "height": 8.0, "package_height": 4.3},
+  "pad_geometry_derivation": "Corner pad x center spacing 11.0; inner five pitch 1.27 centered x=0. Copper outer row-edge span 8.7 and normal inter-row edge gap 3.5 give normal pad height (8.7-3.5)/2=2.6, normal row y=+/-3.05. Pin 1 height 3.6 and inner edge y=+0.75 give center y=+2.55. Corner pad width 0.8, other pad width 0.7.",
+  "pads": [
+    {"number":"1", "name":"NC", "type":"no_connect", "x":-5.5, "y":2.55, "width":0.8, "height":3.6, "connect":"UNCONNECTED"},
+    {"number":"2", "name":"SDA", "type":"bidirectional", "x":-2.54, "y":3.05, "width":0.7, "height":2.6, "connect":"I2C_SDA"},
+    {"number":"3", "name":"SCL", "type":"input", "x":-1.27, "y":3.05, "width":0.7, "height":2.6, "connect":"I2C_SCL"},
+    {"number":"4", "name":"INT", "type":"open_collector", "x":0.0, "y":3.05, "width":0.7, "height":2.6, "connect":"AMG_INT; 10k pull-up if used"},
+    {"number":"5", "name":"AD_SELECT", "type":"input", "x":1.27, "y":3.05, "width":0.7, "height":2.6, "connect":"GND for 7-bit address 0x68; VDD for 0x69"},
+    {"number":"6", "name":"GND", "type":"power_in", "x":2.54, "y":3.05, "width":0.7, "height":2.6, "connect":"GND"},
+    {"number":"7", "name":"NC", "type":"no_connect", "x":5.5, "y":3.05, "width":0.8, "height":2.6, "connect":"UNCONNECTED"},
+    {"number":"8", "name":"NC", "type":"no_connect", "x":5.5, "y":-3.05, "width":0.8, "height":2.6, "connect":"UNCONNECTED"},
+    {"number":"9", "name":"VDD", "type":"power_in", "x":2.54, "y":-3.05, "width":0.7, "height":2.6, "connect":"+3V3; 10uF +/-20% to GND"},
+    {"number":"10", "name":"AVDD-PC", "type":"passive", "x":1.27, "y":-3.05, "width":0.7, "height":2.6, "connect":"Pin10 -> 1uF +/-10% -> 20ohm +/-5% -> GND. Do not tie directly to +3V3."},
+    {"number":"11", "name":"NC", "type":"no_connect", "x":0.0, "y":-3.05, "width":0.7, "height":2.6, "connect":"UNCONNECTED"},
+    {"number":"12", "name":"DVDD-PC", "type":"passive", "x":-1.27, "y":-3.05, "width":0.7, "height":2.6, "connect":"1.5uF +/-10% to GND. Do not tie directly to +3V3."},
+    {"number":"13", "name":"VPP", "type":"power_in", "x":-2.54, "y":-3.05, "width":0.7, "height":2.6, "connect":"+3V3 (same net as pin9)"},
+    {"number":"14", "name":"NC", "type":"no_connect", "x":-5.5, "y":-3.05, "width":0.8, "height":2.6, "connect":"UNCONNECTED"}
+  ],
+  "application_notes": [
+    "AMG8833 is 3.3V +/-0.3V high-gain variant; do not use 5V AMG8853 assumptions.",
+    "Manufacturer circuit uses 10k +/-5% pull-ups for SDA, SCL and INT. Use one shared bus pull-up pair; choose actual resistance from bus capacitance and clock speed.",
+    "Keep pin9/13 at identical supply voltage; AVDD-PC and DVDD-PC are internal regulator capacitor nodes, not external power inputs.",
+    "Use wide, short ground connections and keep all local capacitors near sensor.",
+    "Pin1 is a no-connect mechanical pad and is deliberately longer in the manufacturer's recommended PCB land pattern."
+  ]
+}

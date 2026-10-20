@@ -1,0 +1,3373 @@
+(kicad_sch (version 20250114) (generator "eeschema") (uuid "894ce443-e53a-500f-a9b5-5f3c68ae9496") (paper "A3")
+(title_block (title "Firefly_pcb2 - SashSense sensor node") (date "2026-10-19") (rev "P1") (company "SashSense") (comment 1 "PROVISIONAL - 500 x 500 mm - mechanical/system integration unresolved"))
+(lib_symbols (symbol "SashSense:RF_Module_ESP32-S3-WROOM-1"
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "U"
+			(at -12.7 26.67 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "ESP32-S3-WROOM-1"
+			(at 12.7 26.67 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "RF_Module:ESP32-S3-WROOM-1"
+			(at 0 2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.espressif.com/sites/default/files/documentation/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "RF Module, ESP32-S3 SoC, Wi-Fi 802.11b/g/n, Bluetooth, BLE, 32-bit, 3.3V, onboard antenna, SMD"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "RF Radio BT ESP ESP32-S3 Espressif onboard PCB antenna"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "ESP32?S3?WROOM?1*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "RF_Module_ESP32-S3-WROOM-1_0_0"
+			(rectangle
+				(start -12.7 25.4)
+				(end 12.7 -25.4)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(text "PSRAM"
+				(at 5.08 2.54 900)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+		)
+		(symbol "RF_Module_ESP32-S3-WROOM-1_0_1"
+			(polyline
+				(pts
+					(xy 7.62 -1.27) (xy 6.35 -1.27) (xy 6.35 6.35) (xy 7.62 6.35)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "RF_Module_ESP32-S3-WROOM-1_1_1"
+			(pin power_in line
+				(at 0 -27.94 90)
+				(length 2.54)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 0 27.94 270)
+				(length 2.54)
+				(name "3V3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -15.24 22.86 0)
+				(length 2.54)
+				(name "EN"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -15.24 7.62 0)
+				(length 2.54)
+				(name "IO4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -15.24 5.08 0)
+				(length 2.54)
+				(name "IO5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -15.24 2.54 0)
+				(length 2.54)
+				(name "IO6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -15.24 0 0)
+				(length 2.54)
+				(name "IO7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -15.24 -20.32 0)
+				(length 2.54)
+				(name "IO15"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "8"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -15.24 -22.86 0)
+				(length 2.54)
+				(name "IO16"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "9"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at 15.24 17.78 180)
+				(length 2.54)
+				(name "IO17"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "10"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at 15.24 15.24 180)
+				(length 2.54)
+				(name "IO18"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "11"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -15.24 -2.54 0)
+				(length 2.54)
+				(name "IO8"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "12"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at 15.24 12.7 180)
+				(length 2.54)
+				(name "USB_D-"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "13"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(alternate "IO19" bidirectional line)
+			)
+			(pin bidirectional line
+				(at 15.24 10.16 180)
+				(length 2.54)
+				(name "USB_D+"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "14"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(alternate "IO20" bidirectional line)
+			)
+			(pin bidirectional line
+				(at -15.24 10.16 0)
+				(length 2.54)
+				(name "IO3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "15"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at 15.24 -17.78 180)
+				(length 2.54)
+				(name "IO46"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "16"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -15.24 -5.08 0)
+				(length 2.54)
+				(name "IO9"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "17"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -15.24 -7.62 0)
+				(length 2.54)
+				(name "IO10"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "18"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -15.24 -10.16 0)
+				(length 2.54)
+				(name "IO11"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "19"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -15.24 -12.7 0)
+				(length 2.54)
+				(name "IO12"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "20"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -15.24 -15.24 0)
+				(length 2.54)
+				(name "IO13"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "21"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -15.24 -17.78 0)
+				(length 2.54)
+				(name "IO14"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "22"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at 15.24 7.62 180)
+				(length 2.54)
+				(name "IO21"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "23"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at 15.24 -20.32 180)
+				(length 2.54)
+				(name "IO47"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "24"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at 15.24 -22.86 180)
+				(length 2.54)
+				(name "IO48"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "25"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at 15.24 -15.24 180)
+				(length 2.54)
+				(name "IO45"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "26"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -15.24 17.78 0)
+				(length 2.54)
+				(name "IO0"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "27"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at 15.24 5.08 180)
+				(length 2.54)
+				(name "IO35"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "28"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at 15.24 2.54 180)
+				(length 2.54)
+				(name "IO36"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "29"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at 15.24 0 180)
+				(length 2.54)
+				(name "IO37"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "30"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at 15.24 -2.54 180)
+				(length 2.54)
+				(name "IO38"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "31"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at 15.24 -5.08 180)
+				(length 2.54)
+				(name "IO39"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "32"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at 15.24 -7.62 180)
+				(length 2.54)
+				(name "IO40"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "33"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at 15.24 -10.16 180)
+				(length 2.54)
+				(name "IO41"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "34"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at 15.24 -12.7 180)
+				(length 2.54)
+				(name "IO42"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "35"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at 15.24 20.32 180)
+				(length 2.54)
+				(name "RXD0"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "36"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at 15.24 22.86 180)
+				(length 2.54)
+				(name "TXD0"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "37"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -15.24 12.7 0)
+				(length 2.54)
+				(name "IO2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "38"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -15.24 15.24 0)
+				(length 2.54)
+				(name "IO1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "39"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -27.94 90)
+				(length 2.54)
+				(hide yes)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "40"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -27.94 90)
+				(length 2.54)
+				(hide yes)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "41"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	) (symbol "SashSense:Sensor_Distance_VL53L1CXV0FY1"
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "U"
+			(at -6.35 13.97 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "VL53L1CXV0FY1"
+			(at 12.065 13.97 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Sensor_Distance:ST_VL53L1x"
+			(at 17.145 -13.97 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.st.com/resource/en/datasheet/vl53l1x.pdf"
+			(at 2.54 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "4m distance ranging ToF sensor, Optical LGA12"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "VL53L1x ToF"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "ST*VL53L1x*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "Sensor_Distance_VL53L1CXV0FY1_0_1"
+			(rectangle
+				(start -7.62 12.7)
+				(end 7.62 -12.7)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+		)
+		(symbol "Sensor_Distance_VL53L1CXV0FY1_1_1"
+			(pin power_in line
+				(at 2.54 15.24 270)
+				(length 2.54)
+				(name "AVDDVCSEL"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 2.54 -15.24 90)
+				(length 2.54)
+				(name "AVSSVCSEL"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 0 -15.24 90)
+				(length 2.54)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -15.24 90)
+				(length 2.54)
+				(hide yes)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -10.16 -7.62 0)
+				(length 2.54)
+				(name "XSHUT"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -15.24 90)
+				(length 2.54)
+				(hide yes)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin open_collector line
+				(at -10.16 5.08 0)
+				(length 2.54)
+				(name "GPIO1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin no_connect line
+				(at -7.62 7.62 0)
+				(length 2.54)
+				(hide yes)
+				(name "DNC"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "8"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -10.16 0 0)
+				(length 2.54)
+				(name "SDA"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "9"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -10.16 -2.54 0)
+				(length 2.54)
+				(name "SCL"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "10"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 0 15.24 270)
+				(length 2.54)
+				(name "AVDD"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "11"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -15.24 90)
+				(length 2.54)
+				(hide yes)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "12"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	) (symbol "SashSense:AMG8833" (pin_names (offset 0.508)) (in_bom yes) (on_board yes) (property "Reference" "U" (at 0 15.239999999999998 0) (effects (font (size 1.27 1.27)))) (property "Value" "AMG8833" (at 0 -15.239999999999998 0) (effects (font (size 1.27 1.27)))) (symbol "AMG8833_0_1" (rectangle (start -12.7 12.7) (end 12.7 -12.7) (stroke (width 0.254) (type default)) (fill (type background)))) (symbol "AMG8833_1_1" (pin bidirectional line (at -15.239999999999998 5.08 0) (length 2.54) (name "SDA" (effects (font (size 1.0 1.0)))) (number "2" (effects (font (size 1.0 1.0))))) (pin input line (at -15.239999999999998 2.54 0) (length 2.54) (name "SCL" (effects (font (size 1.0 1.0)))) (number "3" (effects (font (size 1.0 1.0))))) (pin open_collector line (at -15.239999999999998 0.0 0) (length 2.54) (name "INT" (effects (font (size 1.0 1.0)))) (number "4" (effects (font (size 1.0 1.0))))) (pin input line (at -15.239999999999998 -2.54 0) (length 2.54) (name "AD_SELECT" (effects (font (size 1.0 1.0)))) (number "5" (effects (font (size 1.0 1.0))))) (pin power_in line (at -15.239999999999998 -5.08 0) (length 2.54) (name "GND" (effects (font (size 1.0 1.0)))) (number "6" (effects (font (size 1.0 1.0))))) (pin no_connect line (at 15.239999999999998 10.16 180) (length 2.54) (name "NC" (effects (font (size 1.0 1.0)))) (number "1" (effects (font (size 1.0 1.0))))) (pin no_connect line (at 15.239999999999998 7.62 180) (length 2.54) (name "NC" (effects (font (size 1.0 1.0)))) (number "7" (effects (font (size 1.0 1.0))))) (pin no_connect line (at 15.239999999999998 5.08 180) (length 2.54) (name "NC" (effects (font (size 1.0 1.0)))) (number "8" (effects (font (size 1.0 1.0))))) (pin power_in line (at 15.239999999999998 2.54 180) (length 2.54) (name "VDD" (effects (font (size 1.0 1.0)))) (number "9" (effects (font (size 1.0 1.0))))) (pin passive line (at 15.239999999999998 0.0 180) (length 2.54) (name "AVDD-PC" (effects (font (size 1.0 1.0)))) (number "10" (effects (font (size 1.0 1.0))))) (pin no_connect line (at 15.239999999999998 -2.539999999999999 180) (length 2.54) (name "NC" (effects (font (size 1.0 1.0)))) (number "11" (effects (font (size 1.0 1.0))))) (pin passive line (at 15.239999999999998 -5.08 180) (length 2.54) (name "DVDD-PC" (effects (font (size 1.0 1.0)))) (number "12" (effects (font (size 1.0 1.0))))) (pin power_in line (at 15.239999999999998 -7.620000000000001 180) (length 2.54) (name "VPP" (effects (font (size 1.0 1.0)))) (number "13" (effects (font (size 1.0 1.0))))) (pin no_connect line (at 15.239999999999998 -10.16 180) (length 2.54) (name "NC" (effects (font (size 1.0 1.0)))) (number "14" (effects (font (size 1.0 1.0))))) )) (symbol "SashSense:Device_R"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "R"
+			(at 2.032 0 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R"
+			(at 0 0 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at -1.778 0 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "R res resistor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "Device_R_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "Device_R_0_1"
+			(rectangle
+				(start -1.016 -2.54)
+				(end 1.016 2.54)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "Device_R_1_1"
+			(pin passive line
+				(at 0 3.81 270)
+				(length 1.27)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -3.81 90)
+				(length 1.27)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	) (symbol "SashSense:Device_C"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0.254)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "C"
+			(at 0.635 2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "C"
+			(at 0.635 -2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 0.9652 -3.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "cap capacitor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "Device_C_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "Device_C_0_1"
+			(polyline
+				(pts
+					(xy -2.032 0.762) (xy 2.032 0.762)
+				)
+				(stroke
+					(width 0.508)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -2.032 -0.762) (xy 2.032 -0.762)
+				)
+				(stroke
+					(width 0.508)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "Device_C_1_1"
+			(pin passive line
+				(at 0 3.81 270)
+				(length 2.794)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -3.81 90)
+				(length 2.794)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	) (symbol "SashSense:Switch_SW_Push"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "SW"
+			(at 1.27 2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SW_Push"
+			(at 0 -1.524 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 5.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 5.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Push button switch, generic, two pins"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "switch normally-open pushbutton push-button"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "Switch_SW_Push_0_1"
+			(circle
+				(center -2.032 0)
+				(radius 0.508)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 1.27) (xy 0 3.048)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(circle
+				(center 2.032 0)
+				(radius 0.508)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.54 1.27) (xy -2.54 1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at -5.08 0 0)
+				(length 2.54)
+				(name "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 5.08 0 180)
+				(length 2.54)
+				(name "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	) (symbol "SashSense:Connector_Generic_Conn_01x02"
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "J"
+			(at 0 2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x02"
+			(at 0 -5.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "connector"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "Connector*:*_1x??_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "Connector_Generic_Conn_01x02_1_1"
+			(rectangle
+				(start -1.27 1.27)
+				(end 1.27 -3.81)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(rectangle
+				(start -1.27 0.127)
+				(end 0 -0.127)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 -2.413)
+				(end 0 -2.667)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at -5.08 0 0)
+				(length 3.81)
+				(name "Pin_1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 -2.54 0)
+				(length 3.81)
+				(name "Pin_2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	) (symbol "SashSense:Connector_Generic_Conn_01x06"
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "J"
+			(at 0 7.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x06"
+			(at 0 -10.16 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "connector"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "Connector*:*_1x??_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "Connector_Generic_Conn_01x06_1_1"
+			(rectangle
+				(start -1.27 6.35)
+				(end 1.27 -8.89)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(rectangle
+				(start -1.27 5.207)
+				(end 0 4.953)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 2.667)
+				(end 0 2.413)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 0.127)
+				(end 0 -0.127)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 -2.413)
+				(end 0 -2.667)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 -4.953)
+				(end 0 -5.207)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 -7.493)
+				(end 0 -7.747)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at -5.08 5.08 0)
+				(length 3.81)
+				(name "Pin_1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 2.54 0)
+				(length 3.81)
+				(name "Pin_2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 0 0)
+				(length 3.81)
+				(name "Pin_3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 -2.54 0)
+				(length 3.81)
+				(name "Pin_4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 -5.08 0)
+				(length 3.81)
+				(name "Pin_5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 -7.62 0)
+				(length 3.81)
+				(name "Pin_6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	) (symbol "SashSense:Device_Buzzer"
+		(pin_names
+			(offset 0.0254)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "BZ"
+			(at 3.81 1.27 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Buzzer"
+			(at 3.81 -1.27 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at -0.635 2.54 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at -0.635 2.54 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Buzzer, polarized"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "quartz resonator ceramic"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "*Buzzer*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "Device_Buzzer_0_1"
+			(polyline
+				(pts
+					(xy -1.651 1.905) (xy -1.143 1.905)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -1.397 2.159) (xy -1.397 1.651)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start 0 3.175)
+				(mid 3.1612 0)
+				(end 0 -3.175)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 3.175) (xy 0 -3.175)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "Device_Buzzer_1_1"
+			(pin passive line
+				(at -2.54 2.54 0)
+				(length 2.54)
+				(name "+"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -2.54 -2.54 0)
+				(length 2.54)
+				(name "-"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	) (symbol "SashSense:Transistor_BJT_Q_NPN_BEC"
+		(pin_names
+			(offset 0)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "Q"
+			(at 5.08 1.27 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Q_NPN_BEC"
+			(at 5.08 -1.27 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 5.08 2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "NPN transistor, base/emitter/collector"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" "NPN"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=B 2=E 3=C"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "BJT"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "Transistor_BJT_Q_NPN_BEC_0_1"
+			(polyline
+				(pts
+					(xy -2.54 0) (xy 0.635 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0.635 1.905) (xy 0.635 -1.905)
+				)
+				(stroke
+					(width 0.508)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(circle
+				(center 1.27 0)
+				(radius 2.8194)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "Transistor_BJT_Q_NPN_BEC_1_1"
+			(polyline
+				(pts
+					(xy 0.635 0.635) (xy 2.54 2.54)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0.635 -0.635) (xy 2.54 -2.54)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 1.27 -1.778) (xy 1.778 -1.27) (xy 2.286 -2.286) (xy 1.27 -1.778)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(pin input line
+				(at -5.08 0 0)
+				(length 2.54)
+				(name "B"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 2.54 -5.08 90)
+				(length 2.54)
+				(name "E"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 2.54 5.08 270)
+				(length 2.54)
+				(name "C"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	) (symbol "SashSense:Connector_TestPoint"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0.762)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "TP"
+			(at 0 6.858 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 0 5.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 5.08 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 5.08 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "test point tp"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "Pin* Test*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "Connector_TestPoint_0_1"
+			(circle
+				(center 0 3.302)
+				(radius 0.762)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "Connector_TestPoint_1_1"
+			(pin passive line
+				(at 0 0 90)
+				(length 2.54)
+				(name "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	) (symbol "SashSense:power_PWR_FLAG"
+		(power global)
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "#FLG"
+			(at 0 1.905 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 0 3.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "flag power"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "power_PWR_FLAG_0_0"
+			(pin power_out line
+				(at 0 0 90)
+				(length 0)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(symbol "power_PWR_FLAG_0_1"
+			(polyline
+				(pts
+					(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(embedded_fonts no)
+	))
+(wire (pts (xy 74.9300 100.3300) (xy 74.9300 105.4100)) (stroke (width 0) (type default)) (uuid "00798a3f-055e-5940-afcf-f2eec58857cb"))
+(label "GND" (at 74.9300 105.4100 90) (effects (font (size 0.95 0.95)) (justify right bottom)) (uuid "0ac4e6b7-0429-5aad-9696-37d06ca34989"))
+(wire (pts (xy 74.9300 44.4500) (xy 74.9300 39.3700)) (stroke (width 0) (type default)) (uuid "db99cdd2-ec52-5ee8-9d40-928fc5863f90"))
+(label "+3V3" (at 74.9300 39.3700 90) (effects (font (size 0.95 0.95)) (justify left bottom)) (uuid "c9988767-250d-5401-87a5-c1c3b694c302"))
+(wire (pts (xy 59.6900 49.5300) (xy 54.6100 49.5300)) (stroke (width 0) (type default)) (uuid "c31da232-1160-5ff0-88d6-98ef07e76c68"))
+(label "EN" (at 54.6100 49.5300 0) (effects (font (size 0.95 0.95)) (justify right bottom)) (uuid "e460fabe-e348-50d7-ae16-fc864a9595d1"))
+(wire (pts (xy 59.6900 64.7700) (xy 54.6100 64.7700)) (stroke (width 0) (type default)) (uuid "b6718625-c664-5cb3-b90d-cca8e7006559"))
+(label "BEEP_PWM" (at 54.6100 64.7700 0) (effects (font (size 0.95 0.95)) (justify right bottom)) (uuid "f37f436f-4ad0-5078-b0f7-bd0c872df127"))
+(no_connect (at 59.690000000000005 67.31) (uuid "3672efa6-2df4-5252-ae50-213bdad3aef2"))
+(no_connect (at 59.690000000000005 69.85) (uuid "435bdd30-1823-53da-a11f-94a2e3659e5e"))
+(no_connect (at 59.690000000000005 72.39) (uuid "3f5f11e9-5e0f-5e0c-8d36-a4b172e3948b"))
+(no_connect (at 59.690000000000005 92.71000000000001) (uuid "1e81633b-9d8e-5fd1-8fb5-c21023816fe0"))
+(no_connect (at 59.690000000000005 95.25) (uuid "5cf16cda-9695-50ec-83fe-977826c00e8a"))
+(no_connect (at 90.17 54.61) (uuid "2f6bff9a-acb4-504c-b9b2-5099358dd30a"))
+(no_connect (at 90.17 57.15) (uuid "56c4c324-dc1f-50ac-8c6f-2509210b12db"))
+(no_connect (at 59.690000000000005 74.93) (uuid "9f99a3c1-78ac-5de0-8ce6-454384b93336"))
+(no_connect (at 90.17 59.69) (uuid "2c2224e3-0d05-5ebf-8c7f-ec5f1bd18855"))
+(no_connect (at 90.17 62.230000000000004) (uuid "21777684-7edb-5063-b3d2-050b44e332e7"))
+(no_connect (at 59.690000000000005 62.230000000000004) (uuid "428067ad-6807-59c8-810c-7d28dbd60bd1"))
+(no_connect (at 90.17 90.17) (uuid "16acf37b-e201-5a6e-a65e-4aad6dba0f7e"))
+(no_connect (at 59.690000000000005 77.47) (uuid "9af2d9ee-b5cb-50b3-a41e-31a6d8ccefdb"))
+(no_connect (at 59.690000000000005 80.01) (uuid "382aaf00-ee14-511c-9d9d-e80148a3056f"))
+(no_connect (at 59.690000000000005 82.55) (uuid "5b1780c9-9d97-574f-90ea-8191c70a675e"))
+(no_connect (at 59.690000000000005 85.09) (uuid "667e9e99-3b7c-5a01-8c73-e0101e952121"))
+(no_connect (at 59.690000000000005 87.63) (uuid "7109fda1-416b-50bc-b153-ec5906eb4d2c"))
+(no_connect (at 59.690000000000005 90.17) (uuid "ae4bccc1-33d3-5667-bf8b-db61c9e99a5c"))
+(no_connect (at 90.17 64.77) (uuid "807a5b83-9d8a-5ed4-9f1b-3ab6ec873981"))
+(no_connect (at 90.17 92.71000000000001) (uuid "02a7cb5d-ef4e-5a1e-b8f7-7c932f6828c5"))
+(no_connect (at 90.17 95.25) (uuid "12630374-a32c-50f5-a1d6-9c4e0adb7827"))
+(no_connect (at 90.17 87.63) (uuid "813d8fe9-9105-532a-806c-e42f080cf6e8"))
+(wire (pts (xy 59.6900 54.6100) (xy 54.6100 54.6100)) (stroke (width 0) (type default)) (uuid "77311b1f-d5ff-576c-913d-b94ee0e8179a"))
+(label "BOOT" (at 54.6100 54.6100 0) (effects (font (size 0.95 0.95)) (justify right bottom)) (uuid "ec553e21-b64a-5407-9165-89b1bb5b0f69"))
+(no_connect (at 90.17 67.31) (uuid "8a55680e-f184-5dd3-9f08-516c5a68a99a"))
+(no_connect (at 90.17 69.85) (uuid "09060839-b0ef-54fa-aa06-4c02aab6a83f"))
+(no_connect (at 90.17 72.39) (uuid "d854caa3-72c1-5d2d-97cd-a4dbe6ca5974"))
+(no_connect (at 90.17 74.93) (uuid "4b5d50bd-6720-5518-877a-eb5333732bdd"))
+(no_connect (at 90.17 77.47) (uuid "667bde8e-650b-5c20-928e-a90b67c1757c"))
+(wire (pts (xy 90.1700 80.0100) (xy 95.2500 80.0100)) (stroke (width 0) (type default)) (uuid "f2e2b8b8-c587-555d-890a-770f7edc7a83"))
+(label "AMG_INT" (at 95.2500 80.0100 0) (effects (font (size 0.95 0.95)) (justify left bottom)) (uuid "7e8f27bc-df32-5c87-bd85-d9ba3f54bc51"))
+(wire (pts (xy 90.1700 82.5500) (xy 95.2500 82.5500)) (stroke (width 0) (type default)) (uuid "0e6198b4-1458-57c1-8efb-617e6c0b431d"))
+(label "TOF_XSHUT" (at 95.2500 82.5500 0) (effects (font (size 0.95 0.95)) (justify left bottom)) (uuid "bf4ceefc-f7d4-5dbf-adc7-e92392ed9679"))
+(wire (pts (xy 90.1700 85.0900) (xy 95.2500 85.0900)) (stroke (width 0) (type default)) (uuid "ecf82502-e393-5387-aaca-c1f625ed6b84"))
+(label "TOF_INT" (at 95.2500 85.0900 0) (effects (font (size 0.95 0.95)) (justify left bottom)) (uuid "8309a92d-e343-5bc6-a449-29be907b47ce"))
+(wire (pts (xy 90.1700 52.0700) (xy 95.2500 52.0700)) (stroke (width 0) (type default)) (uuid "a112e066-cafc-5507-8302-241eddaa5475"))
+(label "UART_RX" (at 95.2500 52.0700 0) (effects (font (size 0.95 0.95)) (justify left bottom)) (uuid "b4b2d695-e27d-5db2-8cfa-cde4ca5cb642"))
+(wire (pts (xy 90.1700 49.5300) (xy 95.2500 49.5300)) (stroke (width 0) (type default)) (uuid "6b93a1bf-c4a0-57c4-a83f-01c4b8950de8"))
+(label "UART_TX" (at 95.2500 49.5300 0) (effects (font (size 0.95 0.95)) (justify left bottom)) (uuid "b6cc383d-6827-5009-8ed7-3123e08ad151"))
+(wire (pts (xy 59.6900 59.6900) (xy 54.6100 59.6900)) (stroke (width 0) (type default)) (uuid "6c4ec3ba-8788-5226-93f5-cac2c61540c5"))
+(label "I2C_SCL" (at 54.6100 59.6900 0) (effects (font (size 0.95 0.95)) (justify right bottom)) (uuid "2b229ca9-089e-5b35-afb5-429ee4032ae1"))
+(wire (pts (xy 59.6900 57.1500) (xy 54.6100 57.1500)) (stroke (width 0) (type default)) (uuid "5ad592b9-2aab-57cf-b459-d15ccc82d656"))
+(label "I2C_SDA" (at 54.6100 57.1500 0) (effects (font (size 0.95 0.95)) (justify right bottom)) (uuid "44be52c7-8eec-5fb0-b5d6-57b0717f5ec8"))
+(symbol (lib_id "SashSense:RF_Module_ESP32-S3-WROOM-1") (at 74.93 72.39 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "1d67a869-2e0e-5f28-aca1-2b78e76b0e11")
+(property "Reference" "U1" (at 62.230000000000004 45.72 0) (effects (font (size 1.1 1.1)) ))
+(property "Value" "ESP32-S3-WROOM-1-N8" (at 87.63000000000001 45.72 0) (effects (font (size 1.0 1.0)) ))
+(property "Footprint" "SashSense:ESP32-S3-WROOM-1" (at 74.93 72.39 0) (effects (font (size 1 1)) (hide yes)))
+(property "MPN" "ESP32-S3-WROOM-1-N8" (at 74.93 72.39 0) (effects (font (size 1 1)) (hide yes)))
+(property "Manufacturer" "Espressif" (at 74.93 72.39 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "f6edb6ae-48a4-5ab0-a22c-302d6b9d5a34"))
+(pin "2" (uuid "0ae0cad5-a843-5319-92eb-f4a6126cfe56"))
+(pin "3" (uuid "5d4b2aff-039c-5d66-a25b-a1dadb748788"))
+(pin "4" (uuid "73ed1dc8-cafc-530a-a219-37cad29c683e"))
+(pin "5" (uuid "3ab11d28-e8bb-50fa-ab0e-daa3dfd97024"))
+(pin "6" (uuid "25842413-d423-51b4-a9e8-492ef273b0d5"))
+(pin "7" (uuid "a474c4ad-28eb-5112-8af0-0a483e868e54"))
+(pin "8" (uuid "96c07574-3713-5c1f-a097-6f4057fc8c3c"))
+(pin "9" (uuid "85bc6b21-c914-5c40-ac6d-430fcf10810d"))
+(pin "10" (uuid "bc2ce600-8273-5dce-81b0-42dc17cfcf9a"))
+(pin "11" (uuid "36bee931-a804-51bd-b1e1-74506d167afa"))
+(pin "12" (uuid "3b4312d1-69b1-5c24-9e21-ccc37cb1ca27"))
+(pin "13" (uuid "26892c47-8b24-5d97-b263-9ee38a2cd187"))
+(pin "14" (uuid "d55ba7a1-e157-591b-bf55-264a61e8d139"))
+(pin "15" (uuid "df9a2982-1998-5a6d-8540-6a3a558c2aa7"))
+(pin "16" (uuid "b77c0b32-e4c7-5765-8e41-224f9aaabb7e"))
+(pin "17" (uuid "c97fce98-b7ef-5f65-bf35-0ed5392a207a"))
+(pin "18" (uuid "21c328f4-ea89-5478-822f-5cdcdf4d105f"))
+(pin "19" (uuid "116c835d-bfd3-5b6e-8024-5d667d0191a1"))
+(pin "20" (uuid "48f0beb7-fd59-56de-8301-d58e25c7506f"))
+(pin "21" (uuid "8474320f-2a4c-58cb-bda3-8f3343a46b76"))
+(pin "22" (uuid "1fbb22b0-cd80-5826-be24-64d1b773f974"))
+(pin "23" (uuid "f0a8ee90-650d-59ca-b987-dc5642bdbe97"))
+(pin "24" (uuid "bbd75e8e-4d93-5b0f-be5b-18745f408fd1"))
+(pin "25" (uuid "5075e017-75c1-5a51-98a0-5ce41de29d19"))
+(pin "26" (uuid "4359ca80-8e59-5e2d-b787-0571ef85136c"))
+(pin "27" (uuid "09516fa7-62e3-5776-8472-d0c25533c2e2"))
+(pin "28" (uuid "ec14083a-e7e6-5531-badb-a816cf5e78e4"))
+(pin "29" (uuid "44a913d5-89e3-5bf5-8cbb-861828fa5930"))
+(pin "30" (uuid "d7e30374-d31d-5571-a670-0a76015a3160"))
+(pin "31" (uuid "ad910452-ada1-577d-84e5-f7b3ced124aa"))
+(pin "32" (uuid "f6b6bc85-8172-55d4-89f2-516aa804bf15"))
+(pin "33" (uuid "b3b7a9fb-1725-5671-b893-87628ea5e553"))
+(pin "34" (uuid "65294e3b-1a87-5e45-a0e4-66a3f4375572"))
+(pin "35" (uuid "286f74be-c81b-5809-93cf-afb827cdfd89"))
+(pin "36" (uuid "3e6d49c6-35fe-556d-b22c-04fa539cfc7a"))
+(pin "37" (uuid "ed7d5c45-755c-512e-813b-a37fb8ba41a6"))
+(pin "38" (uuid "553c567b-3eb9-5ab0-8f97-c718967e3a9e"))
+(pin "39" (uuid "c440589b-6a9e-5837-85e6-34da9398c0eb"))
+(pin "40" (uuid "57ecb70e-10ac-50ea-b009-2792a7743295"))
+(pin "41" (uuid "6fab3232-dfa3-5a91-b483-26dc756dcd4a"))
+(instances (project "Firefly_pcb2" (path "/894ce443-e53a-500f-a9b5-5f3c68ae9496" (reference "U1") (unit 1)))) )
+(wire (pts (xy 182.8800 49.5300) (xy 182.8800 44.4500)) (stroke (width 0) (type default)) (uuid "795645e5-8a09-5bdf-bd83-d9532bdf229b"))
+(label "+3V3" (at 182.8800 44.4500 90) (effects (font (size 0.95 0.95)) (justify left bottom)) (uuid "75196d5d-0082-5bfc-82a4-7b4a20a533a9"))
+(wire (pts (xy 182.8800 80.0100) (xy 182.8800 85.0900)) (stroke (width 0) (type default)) (uuid "303d45fe-c2f5-5785-b66d-8de070b5c174"))
+(label "GND" (at 182.8800 85.0900 90) (effects (font (size 0.95 0.95)) (justify right bottom)) (uuid "60a7a9d7-fd71-5134-99ce-be0e2c678d41"))
+(wire (pts (xy 180.3400 80.0100) (xy 180.3400 85.0900)) (stroke (width 0) (type default)) (uuid "652700cc-232f-5e72-b408-29db223c8d85"))
+(label "GND" (at 180.3400 85.0900 90) (effects (font (size 0.95 0.95)) (justify right bottom)) (uuid "efe65e1f-f00a-51ee-a41d-a5e771dfa360"))
+(wire (pts (xy 170.1800 72.3900) (xy 165.1000 72.3900)) (stroke (width 0) (type default)) (uuid "c027a44b-0d7d-5ed4-9e38-40f2ab494b71"))
+(label "TOF_XSHUT" (at 165.1000 72.3900 0) (effects (font (size 0.95 0.95)) (justify right bottom)) (uuid "25b6fe58-a2ad-55e3-8160-f6f800b077f1"))
+(wire (pts (xy 170.1800 59.6900) (xy 165.1000 59.6900)) (stroke (width 0) (type default)) (uuid "de4360b6-c4d9-50bc-91cb-a5072a605df1"))
+(label "TOF_INT" (at 165.1000 59.6900 0) (effects (font (size 0.95 0.95)) (justify right bottom)) (uuid "4ebe59af-ba17-5f1b-8732-58b79d40e9fd"))
+(wire (pts (xy 170.1800 64.7700) (xy 165.1000 64.7700)) (stroke (width 0) (type default)) (uuid "c22978ae-e211-5802-8b7c-e24c5a4c86ae"))
+(label "I2C_SDA" (at 165.1000 64.7700 0) (effects (font (size 0.95 0.95)) (justify right bottom)) (uuid "66d20cb6-d3ff-5b15-ba49-2e0f2dd0918b"))
+(wire (pts (xy 170.1800 67.3100) (xy 165.1000 67.3100)) (stroke (width 0) (type default)) (uuid "3c97a4b5-2867-530a-a3bb-ffc1425c3c15"))
+(label "I2C_SCL" (at 165.1000 67.3100 0) (effects (font (size 0.95 0.95)) (justify right bottom)) (uuid "c2c4badb-a6a5-5084-9ebc-2c3a2d75a079"))
+(wire (pts (xy 180.3400 49.5300) (xy 180.3400 44.4500)) (stroke (width 0) (type default)) (uuid "4b436691-b1b6-5df8-adcb-0632630499df"))
+(label "+3V3" (at 180.3400 44.4500 90) (effects (font (size 0.95 0.95)) (justify left bottom)) (uuid "80333dc7-b8a5-54fd-931d-639c2e0c913e"))
+(symbol (lib_id "SashSense:Sensor_Distance_VL53L1CXV0FY1") (at 180.34 64.77 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "e33465b9-49f3-57be-8899-9305bbddbdbb")
+(property "Reference" "U2" (at 173.99 50.8 0) (effects (font (size 1.1 1.1)) ))
+(property "Value" "VL53L1CXV0FY/1" (at 192.405 50.8 0) (effects (font (size 1.0 1.0)) ))
+(property "Footprint" "SashSense:ST_VL53L1x" (at 180.34 64.77 0) (effects (font (size 1 1)) (hide yes)))
+(property "MPN" "VL53L1CXV0FY/1" (at 180.34 64.77 0) (effects (font (size 1 1)) (hide yes)))
+(property "Manufacturer" "STMicroelectronics" (at 180.34 64.77 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "e5944ef3-334e-51c8-8e87-1086f66f5263"))
+(pin "2" (uuid "10595359-f76a-51c7-86eb-9ec837c3e6ff"))
+(pin "3" (uuid "3adb7b3e-bcb2-5c84-af60-377e90a525a9"))
+(pin "4" (uuid "ff7eb251-083b-5086-b570-f0f5dbeb0d79"))
+(pin "5" (uuid "39db4f34-be1e-5d91-b42f-e6ca6eeb688d"))
+(pin "6" (uuid "16513808-4963-5fde-9e7c-51bd8481b803"))
+(pin "7" (uuid "72711ac6-6b5f-54e3-b353-7e4cc5d37f92"))
+(pin "8" (uuid "8aede292-f4a2-52b1-8b3d-0f38470a84bd"))
+(pin "9" (uuid "3f8d3d68-2d9c-5256-94d7-d09932db16be"))
+(pin "10" (uuid "1a26634d-6b5d-5756-98f2-cfe74f337162"))
+(pin "11" (uuid "dcf654c3-0706-5d2e-9827-2312fccad76f"))
+(pin "12" (uuid "b396edc5-f82a-5864-bfb1-7f61ee248fab"))
+(instances (project "Firefly_pcb2" (path "/894ce443-e53a-500f-a9b5-5f3c68ae9496" (reference "U2") (unit 1)))) )
+(wire (pts (xy 284.4800 59.6900) (xy 279.4000 59.6900)) (stroke (width 0) (type default)) (uuid "144eb045-0ed6-5377-9474-a30fec8c7fff"))
+(label "I2C_SDA" (at 279.4000 59.6900 0) (effects (font (size 0.95 0.95)) (justify right bottom)) (uuid "e21d2640-5cc8-5b82-ada4-2e4ff2d7423d"))
+(wire (pts (xy 284.4800 62.2300) (xy 279.4000 62.2300)) (stroke (width 0) (type default)) (uuid "4eea9bc4-e2ed-5f1d-9f49-f85505414f96"))
+(label "I2C_SCL" (at 279.4000 62.2300 0) (effects (font (size 0.95 0.95)) (justify right bottom)) (uuid "f113bb9a-4df4-5568-937a-2bc4d8319bb7"))
+(wire (pts (xy 284.4800 64.7700) (xy 279.4000 64.7700)) (stroke (width 0) (type default)) (uuid "aea5e49b-73bd-5840-ad93-d3a44a1c3d0d"))
+(label "AMG_INT" (at 279.4000 64.7700 0) (effects (font (size 0.95 0.95)) (justify right bottom)) (uuid "2431b58e-cd93-5c9f-b78c-685f7fac82ba"))
+(wire (pts (xy 284.4800 67.3100) (xy 279.4000 67.3100)) (stroke (width 0) (type default)) (uuid "87c2cf3c-342f-551c-9a34-51b8143d5cf0"))
+(label "GND" (at 279.4000 67.3100 0) (effects (font (size 0.95 0.95)) (justify right bottom)) (uuid "227918a6-dfd9-5b2b-a8a3-e3b398f99a7e"))
+(wire (pts (xy 284.4800 69.8500) (xy 279.4000 69.8500)) (stroke (width 0) (type default)) (uuid "da28218b-9115-5ca7-bda5-24a8b13599b1"))
+(label "GND" (at 279.4000 69.8500 0) (effects (font (size 0.95 0.95)) (justify right bottom)) (uuid "46c24d04-5f83-5c9b-a799-f4983db80b47"))
+(wire (pts (xy 314.9600 62.2300) (xy 320.0400 62.2300)) (stroke (width 0) (type default)) (uuid "b10434f4-01e3-5585-8c76-b841edfec19d"))
+(label "+3V3" (at 320.0400 62.2300 0) (effects (font (size 0.95 0.95)) (justify left bottom)) (uuid "7b147bcb-da96-54a9-8425-9dc453f64e98"))
+(wire (pts (xy 314.9600 64.7700) (xy 320.0400 64.7700)) (stroke (width 0) (type default)) (uuid "66a89965-6e8b-54b2-a57e-abe579ec20b3"))
+(label "AMG_AVDD" (at 320.0400 64.7700 0) (effects (font (size 0.95 0.95)) (justify left bottom)) (uuid "59f180d8-2176-56f9-8c79-f1845d802aa3"))
+(wire (pts (xy 314.9600 69.8500) (xy 320.0400 69.8500)) (stroke (width 0) (type default)) (uuid "75047d28-98c2-5fb7-abca-251460dd919f"))
+(label "AMG_DVDD" (at 320.0400 69.8500 0) (effects (font (size 0.95 0.95)) (justify left bottom)) (uuid "46579c96-e957-51f1-9cc0-d8fe596e9080"))
+(wire (pts (xy 314.9600 72.3900) (xy 320.0400 72.3900)) (stroke (width 0) (type default)) (uuid "6ff228d5-a759-5641-8d38-a15305e35e11"))
+(label "+3V3" (at 320.0400 72.3900 0) (effects (font (size 0.95 0.95)) (justify left bottom)) (uuid "b2329a91-f974-5e0e-94b5-d92e561d9eba"))
+(symbol (lib_id "SashSense:AMG8833") (at 299.72 64.77 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "b31fce04-9ce7-545a-ae8b-cc37e48b0e4a")
+(property "Reference" "U3" (at 299.72 49.53 0) (effects (font (size 1.1 1.1)) ))
+(property "Value" "AMG8833" (at 299.72 80.00999999999999 0) (effects (font (size 1.0 1.0)) ))
+(property "Footprint" "SashSense:AMG8833" (at 299.72 64.77 0) (effects (font (size 1 1)) (hide yes)))
+(property "MPN" "AMG8833" (at 299.72 64.77 0) (effects (font (size 1 1)) (hide yes)))
+(property "Manufacturer" "Panasonic" (at 299.72 64.77 0) (effects (font (size 1 1)) (hide yes)))
+(pin "2" (uuid "f6c5e81e-749c-5f28-877b-c1f2763561ca"))
+(pin "3" (uuid "140c2318-62ae-5f1d-9db0-ab3d422d5016"))
+(pin "4" (uuid "c0fd3297-a911-58a4-b62e-45a0cf6ad7ec"))
+(pin "5" (uuid "1fcf7191-0a5d-57df-b742-25c66302df02"))
+(pin "6" (uuid "4baf1da4-df66-57ce-983a-1da3c8dcd51d"))
+(pin "1" (uuid "138ee506-6bb6-5c16-be9f-c629dd439c7e"))
+(pin "7" (uuid "071df9d2-6ecb-5376-bf9e-fb59ff84288c"))
+(pin "8" (uuid "0977b1e6-456d-542a-b2ab-a97c1a55a5b1"))
+(pin "9" (uuid "3e8b0d40-e910-5109-83dc-d6a08e0936c5"))
+(pin "10" (uuid "029a75fe-c162-5f16-94fd-43b908151c2f"))
+(pin "11" (uuid "b8170005-6216-55e6-84b5-f18f88c1b430"))
+(pin "12" (uuid "7984ce28-b9fa-5dd5-96bf-4806fd5c5402"))
+(pin "13" (uuid "a8b86171-35dc-55f9-b9d1-d9a2de67589f"))
+(pin "14" (uuid "658f6b16-a1fa-5c36-a2ba-174d5b01ef19"))
+(instances (project "Firefly_pcb2" (path "/894ce443-e53a-500f-a9b5-5f3c68ae9496" (reference "U3") (unit 1)))) )
+(wire (pts (xy 34.2900 125.7300) (xy 34.2900 120.6500)) (stroke (width 0) (type default)) (uuid "8ad53f5f-e64a-5487-b3b0-1a24e023d742"))
+(label "+3V3" (at 34.2900 120.6500 90) (effects (font (size 0.95 0.95)) (justify left bottom)) (uuid "7528d597-f110-5a42-a423-89d5415a25de"))
+(wire (pts (xy 34.2900 133.3500) (xy 34.2900 138.4300)) (stroke (width 0) (type default)) (uuid "13428185-1040-5517-8cce-8435ceacedb9"))
+(label "EN" (at 34.2900 138.4300 90) (effects (font (size 0.95 0.95)) (justify right bottom)) (uuid "e0821adb-be2e-5f95-8f98-70ba77f6a13d"))
+(symbol (lib_id "SashSense:Device_R") (at 34.29 129.54 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "1fcf4ba7-a152-572c-945d-f18caea4fce2")
+(property "Reference" "R1" (at 36.83 128.26999999999998 0) (effects (font (size 1.1 1.1)) (justify left)))
+(property "Value" "10k" (at 36.83 130.81 0) (effects (font (size 1.0 1.0)) (justify left)))
+(property "Footprint" "SashSense:R_0603_1608Metric" (at 34.29 129.54 0) (effects (font (size 1 1)) (hide yes)))
+(property "MPN" "RC0603FR-0710KL" (at 34.29 129.54 0) (effects (font (size 1 1)) (hide yes)))
+(property "Manufacturer" "Yageo" (at 34.29 129.54 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "8583c8c4-5535-59be-8841-f5c1525e76c4"))
+(pin "2" (uuid "e5374307-55a4-5756-b2ce-3fe49f004bd5"))
+(instances (project "Firefly_pcb2" (path "/894ce443-e53a-500f-a9b5-5f3c68ae9496" (reference "R1") (unit 1)))) )
+(wire (pts (xy 49.5300 125.7300) (xy 49.5300 120.6500)) (stroke (width 0) (type default)) (uuid "310d1661-fcc3-5e4d-88c2-5310bc04de37"))
+(label "EN" (at 49.5300 120.6500 90) (effects (font (size 0.95 0.95)) (justify left bottom)) (uuid "f82d1312-743e-5332-a382-31783898c0d9"))
+(wire (pts (xy 49.5300 133.3500) (xy 49.5300 138.4300)) (stroke (width 0) (type default)) (uuid "9aa16dc2-4509-5699-8e3c-46c1c63eff80"))
+(label "GND" (at 49.5300 138.4300 90) (effects (font (size 0.95 0.95)) (justify right bottom)) (uuid "da697c86-2d64-5375-8a5c-62b9fdfc9603"))
+(symbol (lib_id "SashSense:Device_C") (at 49.53 129.54 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "1b716c7e-9751-58f9-b96c-697f188d12ed")
+(property "Reference" "C1" (at 52.07 128.26999999999998 0) (effects (font (size 1.1 1.1)) (justify left)))
+(property "Value" "1uF" (at 52.07 130.81 0) (effects (font (size 1.0 1.0)) (justify left)))
+(property "Footprint" "SashSense:C_0603_1608Metric" (at 49.53 129.54 0) (effects (font (size 1 1)) (hide yes)))
+(property "MPN" "GRM188R61A105KA61D" (at 49.53 129.54 0) (effects (font (size 1 1)) (hide yes)))
+(property "Manufacturer" "Murata" (at 49.53 129.54 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "0b071662-473c-5770-811b-544e91080b77"))
+(pin "2" (uuid "b47f6abb-1ad5-5091-a77d-e26243d16264"))
+(instances (project "Firefly_pcb2" (path "/894ce443-e53a-500f-a9b5-5f3c68ae9496" (reference "C1") (unit 1)))) )
+(wire (pts (xy 68.5800 125.7300) (xy 68.5800 120.6500)) (stroke (width 0) (type default)) (uuid "9cd98b2c-6c99-5324-83f3-f732bb4c10d1"))
+(label "+3V3" (at 68.5800 120.6500 90) (effects (font (size 0.95 0.95)) (justify left bottom)) (uuid "b52d8111-60b5-554b-886f-507e08226c3f"))
+(wire (pts (xy 68.5800 133.3500) (xy 68.5800 138.4300)) (stroke (width 0) (type default)) (uuid "db94c93d-e19d-5e37-a4a0-d7f5ec983e4a"))
+(label "BOOT" (at 68.5800 138.4300 90) (effects (font (size 0.95 0.95)) (justify right bottom)) (uuid "b222d2ee-13ab-551c-ae2c-e58078c6c9dc"))
+(symbol (lib_id "SashSense:Device_R") (at 68.58 129.54 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "a5e6bb1b-872c-58fa-8fb8-7f4206f6a991")
+(property "Reference" "R2" (at 71.12 128.26999999999998 0) (effects (font (size 1.1 1.1)) (justify left)))
+(property "Value" "10k" (at 71.12 130.81 0) (effects (font (size 1.0 1.0)) (justify left)))
+(property "Footprint" "SashSense:R_0603_1608Metric" (at 68.58 129.54 0) (effects (font (size 1 1)) (hide yes)))
+(property "MPN" "RC0603FR-0710KL" (at 68.58 129.54 0) (effects (font (size 1 1)) (hide yes)))
+(property "Manufacturer" "Yageo" (at 68.58 129.54 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "b481f024-903f-54b0-a375-08fabe8ce3b0"))
+(pin "2" (uuid "c64a1ad9-7e8b-529d-9219-7befe2bba152"))
+(instances (project "Firefly_pcb2" (path "/894ce443-e53a-500f-a9b5-5f3c68ae9496" (reference "R2") (unit 1)))) )
+(wire (pts (xy 152.4000 111.7600) (xy 152.4000 106.6800)) (stroke (width 0) (type default)) (uuid "0a8c608e-5fde-5d20-832f-7ea0b10899e4"))
+(label "+3V3" (at 152.4000 106.6800 90) (effects (font (size 0.95 0.95)) (justify left bottom)) (uuid "7ad977e6-c95b-5ce6-9414-f3a31f02e7b9"))
+(wire (pts (xy 152.4000 119.3800) (xy 152.4000 124.4600)) (stroke (width 0) (type default)) (uuid "a66d04d5-6cff-5ba4-ac73-5ebe82e95507"))
+(label "TOF_XSHUT" (at 152.4000 124.4600 90) (effects (font (size 0.95 0.95)) (justify right bottom)) (uuid "235e9eac-6814-5c3c-8b6c-442f28287cf9"))
+(symbol (lib_id "SashSense:Device_R") (at 152.4 115.57000000000001 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "e0937db6-1324-5291-84f0-24975ba46860")
+(property "Reference" "R3" (at 154.94 114.30000000000001 0) (effects (font (size 1.1 1.1)) (justify left)))
+(property "Value" "10k" (at 154.94 116.84 0) (effects (font (size 1.0 1.0)) (justify left)))
+(property "Footprint" "SashSense:R_0603_1608Metric" (at 152.4 115.57000000000001 0) (effects (font (size 1 1)) (hide yes)))
+(property "MPN" "RC0603FR-0710KL" (at 152.4 115.57000000000001 0) (effects (font (size 1 1)) (hide yes)))
+(property "Manufacturer" "Yageo" (at 152.4 115.57000000000001 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "bd3114d3-d804-530b-806b-a47a375d73f0"))
+(pin "2" (uuid "665143ea-a357-57e4-bca8-96aa0be93e2e"))
+(instances (project "Firefly_pcb2" (path "/894ce443-e53a-500f-a9b5-5f3c68ae9496" (reference "R3") (unit 1)))) )
+(wire (pts (xy 171.4500 111.7600) (xy 171.4500 106.6800)) (stroke (width 0) (type default)) (uuid "327115f8-9cf6-5159-870b-69749b8b857e"))
+(label "+3V3" (at 171.4500 106.6800 90) (effects (font (size 0.95 0.95)) (justify left bottom)) (uuid "f95ee9ed-721a-5ca1-a488-df8a5412678c"))
+(wire (pts (xy 171.4500 119.3800) (xy 171.4500 124.4600)) (stroke (width 0) (type default)) (uuid "faf4d9c9-8045-542d-82c8-724ca478c46d"))
+(label "TOF_INT" (at 171.4500 124.4600 90) (effects (font (size 0.95 0.95)) (justify right bottom)) (uuid "a074b8ef-e0e0-519c-a201-26cfe6f6e768"))
+(symbol (lib_id "SashSense:Device_R") (at 171.45 115.57000000000001 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "f5dd5cd5-e0a2-5141-b519-710ab9a2df4d")
+(property "Reference" "R4" (at 173.98999999999998 114.30000000000001 0) (effects (font (size 1.1 1.1)) (justify left)))
+(property "Value" "10k" (at 173.98999999999998 116.84 0) (effects (font (size 1.0 1.0)) (justify left)))
+(property "Footprint" "SashSense:R_0603_1608Metric" (at 171.45 115.57000000000001 0) (effects (font (size 1 1)) (hide yes)))
+(property "MPN" "RC0603FR-0710KL" (at 171.45 115.57000000000001 0) (effects (font (size 1 1)) (hide yes)))
+(property "Manufacturer" "Yageo" (at 171.45 115.57000000000001 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "ad186d2a-d620-5d3c-b61d-43af68a2975e"))
+(pin "2" (uuid "8387e473-b6d1-5baa-b350-169cf36c4f2d"))
+(instances (project "Firefly_pcb2" (path "/894ce443-e53a-500f-a9b5-5f3c68ae9496" (reference "R4") (unit 1)))) )
+(wire (pts (xy 210.8200 111.7600) (xy 210.8200 106.6800)) (stroke (width 0) (type default)) (uuid "2a4f529f-ea7c-53a8-8e73-ed6b5dd6e16f"))
+(label "+3V3" (at 210.8200 106.6800 90) (effects (font (size 0.95 0.95)) (justify left bottom)) (uuid "067f79c9-f414-58be-874b-1fc788e088c0"))
+(wire (pts (xy 210.8200 119.3800) (xy 210.8200 124.4600)) (stroke (width 0) (type default)) (uuid "e5b3420f-0b3b-59d1-910a-9d5e05b5ab1e"))
+(label "I2C_SDA" (at 210.8200 124.4600 90) (effects (font (size 0.95 0.95)) (justify right bottom)) (uuid "13f5e5ef-5ce9-5748-8328-c13d8d5e4c96"))
+(symbol (lib_id "SashSense:Device_R") (at 210.82 115.57000000000001 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "26ea790c-3460-5f2e-9b18-c190fe45d768")
+(property "Reference" "R5" (at 213.35999999999999 114.30000000000001 0) (effects (font (size 1.1 1.1)) (justify left)))
+(property "Value" "4.7k" (at 213.35999999999999 116.84 0) (effects (font (size 1.0 1.0)) (justify left)))
+(property "Footprint" "SashSense:R_0603_1608Metric" (at 210.82 115.57000000000001 0) (effects (font (size 1 1)) (hide yes)))
+(property "MPN" "RC0603FR-074K7L" (at 210.82 115.57000000000001 0) (effects (font (size 1 1)) (hide yes)))
+(property "Manufacturer" "Yageo" (at 210.82 115.57000000000001 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "23b6a05b-ba57-5744-89f4-b7daef36e3eb"))
+(pin "2" (uuid "f65c12cd-2739-519a-8d9b-3cc75dbbc524"))
+(instances (project "Firefly_pcb2" (path "/894ce443-e53a-500f-a9b5-5f3c68ae9496" (reference "R5") (unit 1)))) )
+(wire (pts (xy 231.1400 111.7600) (xy 231.1400 106.6800)) (stroke (width 0) (type default)) (uuid "506e800e-29fc-520b-b2f1-01c1f9d590bf"))
+(label "+3V3" (at 231.1400 106.6800 90) (effects (font (size 0.95 0.95)) (justify left bottom)) (uuid "8b95bc7f-8b08-5fdd-a131-2f4e84089696"))
+(wire (pts (xy 231.1400 119.3800) (xy 231.1400 124.4600)) (stroke (width 0) (type default)) (uuid "b55bf517-46d9-5f24-953e-3b1de36d6515"))
+(label "I2C_SCL" (at 231.1400 124.4600 90) (effects (font (size 0.95 0.95)) (justify right bottom)) (uuid "e5111972-5c85-55ac-9ca7-848e0109b3e1"))
+(symbol (lib_id "SashSense:Device_R") (at 231.14000000000001 115.57000000000001 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "cb203e08-2492-544e-bf6b-67e3b32b78f3")
+(property "Reference" "R6" (at 233.68 114.30000000000001 0) (effects (font (size 1.1 1.1)) (justify left)))
+(property "Value" "4.7k" (at 233.68 116.84 0) (effects (font (size 1.0 1.0)) (justify left)))
+(property "Footprint" "SashSense:R_0603_1608Metric" (at 231.14000000000001 115.57000000000001 0) (effects (font (size 1 1)) (hide yes)))
+(property "MPN" "RC0603FR-074K7L" (at 231.14000000000001 115.57000000000001 0) (effects (font (size 1 1)) (hide yes)))
+(property "Manufacturer" "Yageo" (at 231.14000000000001 115.57000000000001 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "5f031e3b-eb1a-5371-b73f-a5c5b859d962"))
+(pin "2" (uuid "4ab93a6c-d1c2-5701-b7f3-95fced4cbdcb"))
+(instances (project "Firefly_pcb2" (path "/894ce443-e53a-500f-a9b5-5f3c68ae9496" (reference "R6") (unit 1)))) )
+(wire (pts (xy 270.5100 111.7600) (xy 270.5100 106.6800)) (stroke (width 0) (type default)) (uuid "9275c486-7b17-556a-941c-0384fe9ae256"))
+(label "+3V3" (at 270.5100 106.6800 90) (effects (font (size 0.95 0.95)) (justify left bottom)) (uuid "91e96761-aa88-5b24-933f-2b746ae4de1d"))
+(wire (pts (xy 270.5100 119.3800) (xy 270.5100 124.4600)) (stroke (width 0) (type default)) (uuid "e5566a73-8fd9-5f3f-ace6-8375b4a06803"))
+(label "AMG_INT" (at 270.5100 124.4600 90) (effects (font (size 0.95 0.95)) (justify right bottom)) (uuid "84f0213a-e357-5d37-b0e8-5fe6c68063dc"))
+(symbol (lib_id "SashSense:Device_R") (at 270.51 115.57000000000001 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "8695cb84-5198-5e90-b307-0755e3373d53")
+(property "Reference" "R7" (at 273.05 114.30000000000001 0) (effects (font (size 1.1 1.1)) (justify left)))
+(property "Value" "10k" (at 273.05 116.84 0) (effects (font (size 1.0 1.0)) (justify left)))
+(property "Footprint" "SashSense:R_0603_1608Metric" (at 270.51 115.57000000000001 0) (effects (font (size 1 1)) (hide yes)))
+(property "MPN" "RC0603FR-0710KL" (at 270.51 115.57000000000001 0) (effects (font (size 1 1)) (hide yes)))
+(property "Manufacturer" "Yageo" (at 270.51 115.57000000000001 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "f33bdf16-8f15-5750-9338-e2b37847ade3"))
+(pin "2" (uuid "2ee5a11c-0c26-596c-884b-376baa00d40d"))
+(instances (project "Firefly_pcb2" (path "/894ce443-e53a-500f-a9b5-5f3c68ae9496" (reference "R7") (unit 1)))) )
+(wire (pts (xy 30.4800 166.3700) (xy 30.4800 161.2900)) (stroke (width 0) (type default)) (uuid "0e1ac0ec-99b6-596a-b347-b0ce45c33a77"))
+(label "+3V3" (at 30.4800 161.2900 90) (effects (font (size 0.95 0.95)) (justify left bottom)) (uuid "79cb9c10-32bd-57ff-897a-45c5543abacd"))
+(wire (pts (xy 30.4800 173.9900) (xy 30.4800 179.0700)) (stroke (width 0) (type default)) (uuid "3aa78765-c623-5784-96b5-3fe42266cfce"))
+(label "GND" (at 30.4800 179.0700 90) (effects (font (size 0.95 0.95)) (justify right bottom)) (uuid "8bd58acf-842b-5a9b-a36e-0c8c28fe82e6"))
+(symbol (lib_id "SashSense:Device_C") (at 30.48 170.18 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "25e16b37-c47d-557d-8c48-005a04d855e1")
+(property "Reference" "C2" (at 33.02 168.91 0) (effects (font (size 1.1 1.1)) (justify left)))
+(property "Value" "10uF" (at 33.02 171.45000000000002 0) (effects (font (size 1.0 1.0)) (justify left)))
+(property "Footprint" "SashSense:C_0805_2012Metric" (at 30.48 170.18 0) (effects (font (size 1 1)) (hide yes)))
+(property "MPN" "GRM21BR61A106KE19L" (at 30.48 170.18 0) (effects (font (size 1 1)) (hide yes)))
+(property "Manufacturer" "Murata" (at 30.48 170.18 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "8fb055c6-2a32-5a58-bb93-2a0585d3dd14"))
+(pin "2" (uuid "200591cc-2c82-5ecb-8ff9-42438592486f"))
+(instances (project "Firefly_pcb2" (path "/894ce443-e53a-500f-a9b5-5f3c68ae9496" (reference "C2") (unit 1)))) )
+(wire (pts (xy 49.5300 166.3700) (xy 49.5300 161.2900)) (stroke (width 0) (type default)) (uuid "ef491d05-bb64-5f8e-b3ef-3e5eb557a6ad"))
+(label "+3V3" (at 49.5300 161.2900 90) (effects (font (size 0.95 0.95)) (justify left bottom)) (uuid "a96237ca-8d1f-5e1b-8a2d-9f1bb1e0ae31"))
+(wire (pts (xy 49.5300 173.9900) (xy 49.5300 179.0700)) (stroke (width 0) (type default)) (uuid "443ac6eb-4f59-5df6-bf23-d50aa2be2b0c"))
+(label "GND" (at 49.5300 179.0700 90) (effects (font (size 0.95 0.95)) (justify right bottom)) (uuid "9e782880-70d2-5edc-aaae-7539297a892f"))
+(symbol (lib_id "SashSense:Device_C") (at 49.53 170.18 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "49d984ef-6ef5-5cb3-b4ac-9e4b312f4929")
+(property "Reference" "C3" (at 52.07 168.91 0) (effects (font (size 1.1 1.1)) (justify left)))
+(property "Value" "100nF" (at 52.07 171.45000000000002 0) (effects (font (size 1.0 1.0)) (justify left)))
+(property "Footprint" "SashSense:C_0603_1608Metric" (at 49.53 170.18 0) (effects (font (size 1 1)) (hide yes)))
+(property "MPN" "GRM188R71C104KA01D" (at 49.53 170.18 0) (effects (font (size 1 1)) (hide yes)))
+(property "Manufacturer" "Murata" (at 49.53 170.18 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "7800574e-4cb6-5030-b0e4-4da86bf721b2"))
+(pin "2" (uuid "53901746-32d3-530e-afba-4f2c11f55c13"))
+(instances (project "Firefly_pcb2" (path "/894ce443-e53a-500f-a9b5-5f3c68ae9496" (reference "C3") (unit 1)))) )
+(wire (pts (xy 68.5800 166.3700) (xy 68.5800 161.2900)) (stroke (width 0) (type default)) (uuid "f28fbf60-05c1-5074-9500-93ef04e3dfeb"))
+(label "+3V3" (at 68.5800 161.2900 90) (effects (font (size 0.95 0.95)) (justify left bottom)) (uuid "257d4817-2d4f-516a-b174-3d4a00050a37"))
+(wire (pts (xy 68.5800 173.9900) (xy 68.5800 179.0700)) (stroke (width 0) (type default)) (uuid "ff3d5f4a-b194-5ee3-a306-b411cf54595f"))
+(label "GND" (at 68.5800 179.0700 90) (effects (font (size 0.95 0.95)) (justify right bottom)) (uuid "5561da9f-6b69-5dbc-ae54-d72937d1b3df"))
+(symbol (lib_id "SashSense:Device_C") (at 68.58 170.18 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "5c968d91-486a-5966-984c-c3e5c750d106")
+(property "Reference" "C4" (at 71.12 168.91 0) (effects (font (size 1.1 1.1)) (justify left)))
+(property "Value" "47uF" (at 71.12 171.45000000000002 0) (effects (font (size 1.0 1.0)) (justify left)))
+(property "Footprint" "SashSense:C_1206_3216Metric" (at 68.58 170.18 0) (effects (font (size 1 1)) (hide yes)))
+(property "MPN" "GRM31CR60J476ME19L" (at 68.58 170.18 0) (effects (font (size 1 1)) (hide yes)))
+(property "Manufacturer" "Murata" (at 68.58 170.18 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "5553363c-9783-5574-adcd-460f62f8b924"))
+(pin "2" (uuid "f91d2999-bc76-5f13-94e7-7ab2ae5cc92e"))
+(instances (project "Firefly_pcb2" (path "/894ce443-e53a-500f-a9b5-5f3c68ae9496" (reference "C4") (unit 1)))) )
+(wire (pts (xy 87.6300 166.3700) (xy 87.6300 161.2900)) (stroke (width 0) (type default)) (uuid "10251fca-f407-5956-b841-f42e45c15f02"))
+(label "+3V3" (at 87.6300 161.2900 90) (effects (font (size 0.95 0.95)) (justify left bottom)) (uuid "f288ff61-2405-550c-a164-667be5c96f94"))
+(wire (pts (xy 87.6300 173.9900) (xy 87.6300 179.0700)) (stroke (width 0) (type default)) (uuid "5e898071-a668-5654-8936-16044acf8ee6"))
+(label "GND" (at 87.6300 179.0700 90) (effects (font (size 0.95 0.95)) (justify right bottom)) (uuid "ab56d5ed-ea68-54de-afba-7d8a527fa7a4"))
+(symbol (lib_id "SashSense:Device_C") (at 87.63 170.18 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "46ece762-0251-5b53-94c3-c7af4c06ae0a")
+(property "Reference" "C5" (at 90.17 168.91 0) (effects (font (size 1.1 1.1)) (justify left)))
+(property "Value" "47uF" (at 90.17 171.45000000000002 0) (effects (font (size 1.0 1.0)) (justify left)))
+(property "Footprint" "SashSense:C_1206_3216Metric" (at 87.63 170.18 0) (effects (font (size 1 1)) (hide yes)))
+(property "MPN" "GRM31CR60J476ME19L" (at 87.63 170.18 0) (effects (font (size 1 1)) (hide yes)))
+(property "Manufacturer" "Murata" (at 87.63 170.18 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "8d8989c6-c069-512d-8300-68a5c12ef525"))
+(pin "2" (uuid "104ce0aa-a53b-52fa-8615-bb23f97fee7a"))
+(instances (project "Firefly_pcb2" (path "/894ce443-e53a-500f-a9b5-5f3c68ae9496" (reference "C5") (unit 1)))) )
+(wire (pts (xy 151.1300 147.3200) (xy 151.1300 142.2400)) (stroke (width 0) (type default)) (uuid "dccf34a4-d185-5f20-b1c0-ede6df522755"))
+(label "+3V3" (at 151.1300 142.2400 90) (effects (font (size 0.95 0.95)) (justify left bottom)) (uuid "65f453c5-2554-5aaf-b0fa-1fca7bb6e6d2"))
+(wire (pts (xy 151.1300 154.9400) (xy 151.1300 160.0200)) (stroke (width 0) (type default)) (uuid "adb38501-26f8-5b41-80b5-e5b41dc2092c"))
+(label "GND" (at 151.1300 160.0200 90) (effects (font (size 0.95 0.95)) (justify right bottom)) (uuid "58401f04-afd5-5002-8411-d1b8553d52db"))
+(symbol (lib_id "SashSense:Device_C") (at 151.13 151.13 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "bb1b9e60-2823-542d-8dc2-4d36ed3a445e")
+(property "Reference" "C6" (at 153.67 149.85999999999999 0) (effects (font (size 1.1 1.1)) (justify left)))
+(property "Value" "100nF" (at 153.67 152.4 0) (effects (font (size 1.0 1.0)) (justify left)))
+(property "Footprint" "SashSense:C_0603_1608Metric" (at 151.13 151.13 0) (effects (font (size 1 1)) (hide yes)))
+(property "MPN" "GRM188R71C104KA01D" (at 151.13 151.13 0) (effects (font (size 1 1)) (hide yes)))
+(property "Manufacturer" "Murata" (at 151.13 151.13 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "d4925163-6882-57c1-97ff-85d5848d45fb"))
+(pin "2" (uuid "f9d3948b-a796-5daf-b9f4-7a385c4ee90f"))
+(instances (project "Firefly_pcb2" (path "/894ce443-e53a-500f-a9b5-5f3c68ae9496" (reference "C6") (unit 1)))) )
+(wire (pts (xy 170.1800 147.3200) (xy 170.1800 142.2400)) (stroke (width 0) (type default)) (uuid "0c4d8c03-28bd-5d95-a065-480f2c5b8fd8"))
+(label "+3V3" (at 170.1800 142.2400 90) (effects (font (size 0.95 0.95)) (justify left bottom)) (uuid "865db84f-1e9d-5aa7-baa7-861825446cb9"))
+(wire (pts (xy 170.1800 154.9400) (xy 170.1800 160.0200)) (stroke (width 0) (type default)) (uuid "34259b10-f563-56ff-9d62-25a81f631fa4"))
+(label "GND" (at 170.1800 160.0200 90) (effects (font (size 0.95 0.95)) (justify right bottom)) (uuid "5e870ff7-3ecc-556e-ae0c-cc86067b289f"))
+(symbol (lib_id "SashSense:Device_C") (at 170.18 151.13 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "5ec27b5a-bdbb-5215-849a-dede3e4ee8da")
+(property "Reference" "C7" (at 172.72 149.85999999999999 0) (effects (font (size 1.1 1.1)) (justify left)))
+(property "Value" "4.7uF" (at 172.72 152.4 0) (effects (font (size 1.0 1.0)) (justify left)))
+(property "Footprint" "SashSense:C_0603_1608Metric" (at 170.18 151.13 0) (effects (font (size 1 1)) (hide yes)))
+(property "MPN" "GRM188R60J475KE19D" (at 170.18 151.13 0) (effects (font (size 1 1)) (hide yes)))
+(property "Manufacturer" "Murata" (at 170.18 151.13 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "5f4ace3b-ab5a-577a-85dd-1514db468196"))
+(pin "2" (uuid "7380ddc4-8722-5005-b3ac-7a7cd27f37b2"))
+(instances (project "Firefly_pcb2" (path "/894ce443-e53a-500f-a9b5-5f3c68ae9496" (reference "C7") (unit 1)))) )
+(wire (pts (xy 264.1600 147.3200) (xy 264.1600 142.2400)) (stroke (width 0) (type default)) (uuid "f0a33367-120f-59bc-9665-40601fa8aeb3"))
+(label "+3V3" (at 264.1600 142.2400 90) (effects (font (size 0.95 0.95)) (justify left bottom)) (uuid "6e4161d1-020b-5a86-b401-c88348cb8459"))
+(wire (pts (xy 264.1600 154.9400) (xy 264.1600 160.0200)) (stroke (width 0) (type default)) (uuid "2927026d-a07a-5d3a-8275-75e4f6e69e9b"))
+(label "GND" (at 264.1600 160.0200 90) (effects (font (size 0.95 0.95)) (justify right bottom)) (uuid "959dfa51-a6a6-56d5-a3d3-d7a8521a2fee"))
+(symbol (lib_id "SashSense:Device_C") (at 264.16 151.13 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "901b7423-d5b3-5362-b91a-7291088763cb")
+(property "Reference" "C8" (at 266.70000000000005 149.85999999999999 0) (effects (font (size 1.1 1.1)) (justify left)))
+(property "Value" "10uF" (at 266.70000000000005 152.4 0) (effects (font (size 1.0 1.0)) (justify left)))
+(property "Footprint" "SashSense:C_0805_2012Metric" (at 264.16 151.13 0) (effects (font (size 1 1)) (hide yes)))
+(property "MPN" "GRM21BR61A106KE19L" (at 264.16 151.13 0) (effects (font (size 1 1)) (hide yes)))
+(property "Manufacturer" "Murata" (at 264.16 151.13 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "4b876e0b-647b-5840-a3f0-a6b71642b3d6"))
+(pin "2" (uuid "cb291659-05a2-5559-8904-e242a518fa7d"))
+(instances (project "Firefly_pcb2" (path "/894ce443-e53a-500f-a9b5-5f3c68ae9496" (reference "C8") (unit 1)))) )
+(wire (pts (xy 283.2100 147.3200) (xy 283.2100 142.2400)) (stroke (width 0) (type default)) (uuid "365c55d4-9ff0-54e4-967d-e560aa17b518"))
+(label "+3V3" (at 283.2100 142.2400 90) (effects (font (size 0.95 0.95)) (justify left bottom)) (uuid "0d4281d2-cb44-5c83-a76b-34ef7fe8ff01"))
+(wire (pts (xy 283.2100 154.9400) (xy 283.2100 160.0200)) (stroke (width 0) (type default)) (uuid "c854ff92-5401-5ef9-8f98-0539b9fc70f5"))
+(label "GND" (at 283.2100 160.0200 90) (effects (font (size 0.95 0.95)) (justify right bottom)) (uuid "30c28536-7f9d-5681-9b9e-7e31b377dfec"))
+(symbol (lib_id "SashSense:Device_C") (at 283.21 151.13 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "8c8a93cd-4147-5bdd-9f15-4b4ba6e777ee")
+(property "Reference" "C9" (at 285.75 149.85999999999999 0) (effects (font (size 1.1 1.1)) (justify left)))
+(property "Value" "100nF" (at 285.75 152.4 0) (effects (font (size 1.0 1.0)) (justify left)))
+(property "Footprint" "SashSense:C_0603_1608Metric" (at 283.21 151.13 0) (effects (font (size 1 1)) (hide yes)))
+(property "MPN" "GRM188R71C104KA01D" (at 283.21 151.13 0) (effects (font (size 1 1)) (hide yes)))
+(property "Manufacturer" "Murata" (at 283.21 151.13 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "a02f88e6-fe27-511f-94d7-3d817053fce0"))
+(pin "2" (uuid "71279963-e626-54b7-89a5-d019a935cfed"))
+(instances (project "Firefly_pcb2" (path "/894ce443-e53a-500f-a9b5-5f3c68ae9496" (reference "C9") (unit 1)))) )
+(wire (pts (xy 302.2600 147.3200) (xy 302.2600 142.2400)) (stroke (width 0) (type default)) (uuid "87c38d89-cf0a-5846-8e31-5ca450b397d4"))
+(label "AMG_AVDD" (at 302.2600 142.2400 90) (effects (font (size 0.95 0.95)) (justify left bottom)) (uuid "f1d5ddfc-5d48-5ea4-8ac1-1bb94d5fff3e"))
+(wire (pts (xy 302.2600 154.9400) (xy 302.2600 160.0200)) (stroke (width 0) (type default)) (uuid "9a5bffb1-7963-5ae8-ab46-2fdaf232f53f"))
+(label "AMG_AVCAP_RETURN" (at 302.2600 160.0200 90) (effects (font (size 0.95 0.95)) (justify right bottom)) (uuid "8baad911-a174-5576-baed-45c67e7e0afb"))
+(symbol (lib_id "SashSense:Device_C") (at 302.26 151.13 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "415cf281-9c4e-51f2-a801-65e52b1ca3af")
+(property "Reference" "C10" (at 304.8 149.85999999999999 0) (effects (font (size 1.1 1.1)) (justify left)))
+(property "Value" "1uF" (at 304.8 152.4 0) (effects (font (size 1.0 1.0)) (justify left)))
+(property "Footprint" "SashSense:C_0603_1608Metric" (at 302.26 151.13 0) (effects (font (size 1 1)) (hide yes)))
+(property "MPN" "GRM188R61A105KA61D" (at 302.26 151.13 0) (effects (font (size 1 1)) (hide yes)))
+(property "Manufacturer" "Murata" (at 302.26 151.13 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "3ccdb4d1-7223-5780-bd00-2e07ff879943"))
+(pin "2" (uuid "162c9446-0438-5e39-b8fe-f4c9dea449b0"))
+(instances (project "Firefly_pcb2" (path "/894ce443-e53a-500f-a9b5-5f3c68ae9496" (reference "C10") (unit 1)))) )
+(wire (pts (xy 321.3100 147.3200) (xy 321.3100 142.2400)) (stroke (width 0) (type default)) (uuid "72eb6eb1-cbc0-5744-aff9-8e6d72d2096c"))
+(label "AMG_AVCAP_RETURN" (at 321.3100 142.2400 90) (effects (font (size 0.95 0.95)) (justify left bottom)) (uuid "386075e1-69db-5ece-b96b-f266b0a747eb"))
+(wire (pts (xy 321.3100 154.9400) (xy 321.3100 160.0200)) (stroke (width 0) (type default)) (uuid "d21773b1-d9a1-50f4-927b-f0f3e04edb12"))
+(label "GND" (at 321.3100 160.0200 90) (effects (font (size 0.95 0.95)) (justify right bottom)) (uuid "e90e2333-c06a-550c-a227-b1e8f9b9046f"))
+(symbol (lib_id "SashSense:Device_R") (at 321.31 151.13 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "61880758-e3e5-5202-ac79-e4d40b99209b")
+(property "Reference" "R8" (at 323.85 149.85999999999999 0) (effects (font (size 1.1 1.1)) (justify left)))
+(property "Value" "20R" (at 323.85 152.4 0) (effects (font (size 1.0 1.0)) (justify left)))
+(property "Footprint" "SashSense:R_0603_1608Metric" (at 321.31 151.13 0) (effects (font (size 1 1)) (hide yes)))
+(property "MPN" "RC0603FR-0720RL" (at 321.31 151.13 0) (effects (font (size 1 1)) (hide yes)))
+(property "Manufacturer" "Yageo" (at 321.31 151.13 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "44cbde70-510d-5140-a56a-a41ae0aecefc"))
+(pin "2" (uuid "cbee8466-730d-5664-bf67-c732cf479d95"))
+(instances (project "Firefly_pcb2" (path "/894ce443-e53a-500f-a9b5-5f3c68ae9496" (reference "R8") (unit 1)))) )
+(wire (pts (xy 340.3600 147.3200) (xy 340.3600 142.2400)) (stroke (width 0) (type default)) (uuid "1a90d496-51b0-5cfa-a708-5360aa238194"))
+(label "AMG_DVDD" (at 340.3600 142.2400 90) (effects (font (size 0.95 0.95)) (justify left bottom)) (uuid "de7d82f2-97e7-51f7-89f2-e9043f7cd8a0"))
+(wire (pts (xy 340.3600 154.9400) (xy 340.3600 160.0200)) (stroke (width 0) (type default)) (uuid "fdd62f25-17c5-5ec1-8dd4-4935868b8228"))
+(label "GND" (at 340.3600 160.0200 90) (effects (font (size 0.95 0.95)) (justify right bottom)) (uuid "ea3b5981-2fe6-50f1-8632-eda9ed6df0f3"))
+(symbol (lib_id "SashSense:Device_C") (at 340.36 151.13 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "21374f2c-99d5-5cb9-b213-edb96d01e659")
+(property "Reference" "C11" (at 342.90000000000003 149.85999999999999 0) (effects (font (size 1.1 1.1)) (justify left)))
+(property "Value" "1.5uF" (at 342.90000000000003 152.4 0) (effects (font (size 1.0 1.0)) (justify left)))
+(property "Footprint" "SashSense:C_0603_1608Metric" (at 340.36 151.13 0) (effects (font (size 1 1)) (hide yes)))
+(property "MPN" "GRM188R61A155KA61D" (at 340.36 151.13 0) (effects (font (size 1 1)) (hide yes)))
+(property "Manufacturer" "Murata" (at 340.36 151.13 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "d55dcfd3-e4cc-5a76-adf5-23fb134d9d75"))
+(pin "2" (uuid "eeccc61c-fd53-5ee1-800a-403a628dfba8"))
+(instances (project "Firefly_pcb2" (path "/894ce443-e53a-500f-a9b5-5f3c68ae9496" (reference "C11") (unit 1)))) )
+(wire (pts (xy 30.4800 209.5500) (xy 25.4000 209.5500)) (stroke (width 0) (type default)) (uuid "5bff3d87-3e40-557f-95c7-4ed0efd2e6fa"))
+(label "EN" (at 25.4000 209.5500 0) (effects (font (size 0.95 0.95)) (justify right bottom)) (uuid "394f8054-fe48-5bfc-9105-5e6b39983689"))
+(wire (pts (xy 40.6400 209.5500) (xy 45.7200 209.5500)) (stroke (width 0) (type default)) (uuid "1438ae7a-152e-5656-9376-5463293f4fdf"))
+(label "GND" (at 45.7200 209.5500 0) (effects (font (size 0.95 0.95)) (justify left bottom)) (uuid "822fbceb-95ff-5348-ac6a-d1bb780a1363"))
+(symbol (lib_id "SashSense:Switch_SW_Push") (at 35.56 209.55 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "88b8cd98-01f9-5f67-bb93-08fa3eafb565")
+(property "Reference" "SW1" (at 36.830000000000005 207.01000000000002 0) (effects (font (size 1.1 1.1)) ))
+(property "Value" "RESET" (at 35.56 211.074 0) (effects (font (size 1.0 1.0)) ))
+(property "Footprint" "SashSense:SW_SPST_TL3342" (at 35.56 209.55 0) (effects (font (size 1 1)) (hide yes)))
+(property "MPN" "TL3342F160QG" (at 35.56 209.55 0) (effects (font (size 1 1)) (hide yes)))
+(property "Manufacturer" "E-Switch" (at 35.56 209.55 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "940c9da2-5732-57f9-ae2d-9439c2bac807"))
+(pin "2" (uuid "120fd647-c43e-5759-9c72-fa2003ee8165"))
+(instances (project "Firefly_pcb2" (path "/894ce443-e53a-500f-a9b5-5f3c68ae9496" (reference "SW1") (unit 1)))) )
+(wire (pts (xy 63.5000 209.5500) (xy 58.4200 209.5500)) (stroke (width 0) (type default)) (uuid "ede74b1b-fc18-50ad-8b51-58b104250ec3"))
+(label "BOOT" (at 58.4200 209.5500 0) (effects (font (size 0.95 0.95)) (justify right bottom)) (uuid "789370e8-a0e9-5ad3-b622-fdad0b7ebc8e"))
+(wire (pts (xy 73.6600 209.5500) (xy 78.7400 209.5500)) (stroke (width 0) (type default)) (uuid "3b87e966-aa09-5ac8-ae00-08cf71f42739"))
+(label "GND" (at 78.7400 209.5500 0) (effects (font (size 0.95 0.95)) (justify left bottom)) (uuid "18da357c-28ef-5b41-8ca0-72d3e397865b"))
+(symbol (lib_id "SashSense:Switch_SW_Push") (at 68.58 209.55 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "551c8a83-8127-5ad4-b226-e4b6cc76fdda")
+(property "Reference" "SW2" (at 69.85 207.01000000000002 0) (effects (font (size 1.1 1.1)) ))
+(property "Value" "BOOT" (at 68.58 211.074 0) (effects (font (size 1.0 1.0)) ))
+(property "Footprint" "SashSense:SW_SPST_TL3342" (at 68.58 209.55 0) (effects (font (size 1 1)) (hide yes)))
+(property "MPN" "TL3342F160QG" (at 68.58 209.55 0) (effects (font (size 1 1)) (hide yes)))
+(property "Manufacturer" "E-Switch" (at 68.58 209.55 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "49de7437-e27e-52ea-ab69-50be5638d9f1"))
+(pin "2" (uuid "c0ca1cff-f788-57b9-aa31-53bd1d26a6ca"))
+(instances (project "Firefly_pcb2" (path "/894ce443-e53a-500f-a9b5-5f3c68ae9496" (reference "SW2") (unit 1)))) )
+(wire (pts (xy 24.1300 245.1100) (xy 19.0500 245.1100)) (stroke (width 0) (type default)) (uuid "b597b38a-e41b-5937-bca6-19cf9b982e22"))
+(label "+3V3" (at 19.0500 245.1100 0) (effects (font (size 0.95 0.95)) (justify right bottom)) (uuid "1d8a7486-294e-5541-93b2-0fd846d89180"))
+(wire (pts (xy 24.1300 247.6500) (xy 19.0500 247.6500)) (stroke (width 0) (type default)) (uuid "052a95f7-5fc7-5e36-a02e-855f1d9745ef"))
+(label "GND" (at 19.0500 247.6500 0) (effects (font (size 0.95 0.95)) (justify right bottom)) (uuid "4fbbd253-651e-50f6-be21-629bcbfa1d14"))
+(symbol (lib_id "SashSense:Connector_Generic_Conn_01x02") (at 29.21 245.11 0) (unit 1) (in_bom no) (on_board yes) (dnp no) (uuid "603edc86-1baf-5577-b124-812280ebab88")
+(property "Reference" "J1" (at 29.21 242.57000000000002 0) (effects (font (size 1.1 1.1)) ))
+(property "Value" "REGULATED 3.3V IN" (at 29.21 250.19000000000003 0) (effects (font (size 1.0 1.0)) ))
+(property "Footprint" "SashSense:SolderWire-0.75sqmm_1x02_P4.8mm_D1.25mm_OD2.3mm" (at 29.21 245.11 0) (effects (font (size 1 1)) (hide yes)))
+(property "MPN" "PCB FEATURE" (at 29.21 245.11 0) (effects (font (size 1 1)) (hide yes)))
+(property "Manufacturer" "PCB" (at 29.21 245.11 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "1fa9bcc2-0bf4-5a19-a48c-af25eb393ef9"))
+(pin "2" (uuid "461d14e1-5184-558a-b286-4ab55d543f14"))
+(instances (project "Firefly_pcb2" (path "/894ce443-e53a-500f-a9b5-5f3c68ae9496" (reference "J1") (unit 1)))) )
+(wire (pts (xy 111.7600 233.6800) (xy 106.6800 233.6800)) (stroke (width 0) (type default)) (uuid "07e8d2bb-baaf-540e-b1ab-3195432ac459"))
+(label "GND" (at 106.6800 233.6800 0) (effects (font (size 0.95 0.95)) (justify right bottom)) (uuid "7c04d4b3-8eaa-5120-96de-8132af8e2a66"))
+(wire (pts (xy 111.7600 236.2200) (xy 106.6800 236.2200)) (stroke (width 0) (type default)) (uuid "bbf8750e-5853-59ea-8e7d-e9f3eaf23293"))
+(label "UART_RX" (at 106.6800 236.2200 0) (effects (font (size 0.95 0.95)) (justify right bottom)) (uuid "039a8c5f-7684-5281-bf53-0c846bf43a3c"))
+(wire (pts (xy 111.7600 238.7600) (xy 106.6800 238.7600)) (stroke (width 0) (type default)) (uuid "21246bf8-7474-5d99-b7fa-20a24628254f"))
+(label "UART_TX" (at 106.6800 238.7600 0) (effects (font (size 0.95 0.95)) (justify right bottom)) (uuid "fde59963-3430-5aa0-90b0-ae778f0e02c8"))
+(wire (pts (xy 111.7600 241.3000) (xy 106.6800 241.3000)) (stroke (width 0) (type default)) (uuid "25fbcade-f6f6-5a79-8492-12c16683851d"))
+(label "EN" (at 106.6800 241.3000 0) (effects (font (size 0.95 0.95)) (justify right bottom)) (uuid "05a5b337-0f96-5e35-8446-b3556b803341"))
+(wire (pts (xy 111.7600 243.8400) (xy 106.6800 243.8400)) (stroke (width 0) (type default)) (uuid "29a7e04d-bc40-5b09-ae3a-e5c19ea2d86d"))
+(label "BOOT" (at 106.6800 243.8400 0) (effects (font (size 0.95 0.95)) (justify right bottom)) (uuid "662519c3-bff1-5188-9327-ad5faf19ba2c"))
+(wire (pts (xy 111.7600 246.3800) (xy 106.6800 246.3800)) (stroke (width 0) (type default)) (uuid "eeb9ef21-67cf-5ea2-a7b5-11d0db528985"))
+(label "+3V3" (at 106.6800 246.3800 0) (effects (font (size 0.95 0.95)) (justify right bottom)) (uuid "51af888c-34fa-5377-acb4-6b4b4a705979"))
+(symbol (lib_id "SashSense:Connector_Generic_Conn_01x06") (at 116.84 238.76 0) (unit 1) (in_bom no) (on_board yes) (dnp no) (uuid "c3e6454a-d68a-58fe-aa3f-b314a81a8611")
+(property "Reference" "J2" (at 116.84 231.14 0) (effects (font (size 1.1 1.1)) ))
+(property "Value" "UART / BOOT SERVICE" (at 116.84 248.92 0) (effects (font (size 1.0 1.0)) ))
+(property "Footprint" "SashSense:ServicePads_1x06" (at 116.84 238.76 0) (effects (font (size 1 1)) (hide yes)))
+(property "MPN" "PCB FEATURE" (at 116.84 238.76 0) (effects (font (size 1 1)) (hide yes)))
+(property "Manufacturer" "PCB" (at 116.84 238.76 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "0fff8ffb-6ba9-5497-8b28-6c0c7cfce725"))
+(pin "2" (uuid "957a8e2a-dd84-573a-a8ab-df581f6533d8"))
+(pin "3" (uuid "d402ee6e-9dd6-506e-86a0-3649794bc7d0"))
+(pin "4" (uuid "a7dcdaa5-e532-5051-be25-817523dcf2fc"))
+(pin "5" (uuid "9fb64646-f554-513d-aac3-7ace5a907022"))
+(pin "6" (uuid "1de060d2-658e-558d-a6bf-04a1732982e4"))
+(instances (project "Firefly_pcb2" (path "/894ce443-e53a-500f-a9b5-5f3c68ae9496" (reference "J2") (unit 1)))) )
+(wire (pts (xy 240.0300 210.8200) (xy 234.9500 210.8200)) (stroke (width 0) (type default)) (uuid "f50887f8-d697-5f7d-90d3-e10f628eb884"))
+(label "+3V3" (at 234.9500 210.8200 0) (effects (font (size 0.95 0.95)) (justify right bottom)) (uuid "8f0dfeb1-920b-5400-b86b-b2a011b25151"))
+(wire (pts (xy 240.0300 215.9000) (xy 234.9500 215.9000)) (stroke (width 0) (type default)) (uuid "c6e69ab8-fea4-5421-bc5f-22ec17523c6e"))
+(label "BEEP_LOW" (at 234.9500 215.9000 0) (effects (font (size 0.95 0.95)) (justify right bottom)) (uuid "7c16d4b9-7f86-599b-8bec-f1fdcf43d770"))
+(symbol (lib_id "SashSense:Device_Buzzer") (at 242.57 213.36 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "fd926426-48a9-58c8-a1a9-60daf10f49ab")
+(property "Reference" "BZ1" (at 247.65 209.55 0) (effects (font (size 1.1 1.1)) ))
+(property "Value" "PKLCS1212E4001-R1" (at 242.57 220.98000000000002 0) (effects (font (size 1.0 1.0)) ))
+(property "Footprint" "SashSense:Buzzer_Murata_PKLCS1212E" (at 242.57 213.36 0) (effects (font (size 1 1)) (hide yes)))
+(property "MPN" "PKLCS1212E4001-R1" (at 242.57 213.36 0) (effects (font (size 1 1)) (hide yes)))
+(property "Manufacturer" "Murata" (at 242.57 213.36 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "528b2cad-8c66-5d0b-8578-e25afc8c53f3"))
+(pin "2" (uuid "4e698c19-9549-54b3-87eb-d3aedc4d010b"))
+(instances (project "Firefly_pcb2" (path "/894ce443-e53a-500f-a9b5-5f3c68ae9496" (reference "BZ1") (unit 1)))) )
+(wire (pts (xy 270.5100 218.4400) (xy 265.4300 218.4400)) (stroke (width 0) (type default)) (uuid "03fd39a3-5769-53e5-944f-269e6d963139"))
+(label "BEEP_BASE" (at 265.4300 218.4400 0) (effects (font (size 0.95 0.95)) (justify right bottom)) (uuid "0c151563-7ef6-58ec-bd24-1023fa6af45d"))
+(wire (pts (xy 278.1300 223.5200) (xy 278.1300 228.6000)) (stroke (width 0) (type default)) (uuid "aec5f5d4-4cd4-5ed6-aa7c-962267fba4c1"))
+(label "GND" (at 278.1300 228.6000 90) (effects (font (size 0.95 0.95)) (justify right bottom)) (uuid "cfc01312-5614-51a1-901f-71956ce80a37"))
+(wire (pts (xy 278.1300 213.3600) (xy 278.1300 208.2800)) (stroke (width 0) (type default)) (uuid "c986ce83-c933-523f-8ef5-a4f1bb124731"))
+(label "BEEP_LOW" (at 278.1300 208.2800 90) (effects (font (size 0.95 0.95)) (justify left bottom)) (uuid "8654e8f7-81f8-5daa-8a52-120a2c5e3271"))
+(symbol (lib_id "SashSense:Transistor_BJT_Q_NPN_BEC") (at 275.59000000000003 218.44 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "ece32047-464d-54b8-adfa-cfdcce72e85f")
+(property "Reference" "Q1" (at 280.67 217.17 0) (effects (font (size 1.1 1.1)) ))
+(property "Value" "MMBT3904LT1G" (at 283.21000000000004 220.98 0) (effects (font (size 1.0 1.0)) (justify left)))
+(property "Footprint" "SashSense:SOT-23" (at 275.59000000000003 218.44 0) (effects (font (size 1 1)) (hide yes)))
+(property "MPN" "MMBT3904LT1G" (at 275.59000000000003 218.44 0) (effects (font (size 1 1)) (hide yes)))
+(property "Manufacturer" "onsemi" (at 275.59000000000003 218.44 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "7e676c61-8b43-5076-9ccd-c49a0e616dff"))
+(pin "2" (uuid "dd8f8e87-2ee3-5ea1-8b5e-00e35862bcef"))
+(pin "3" (uuid "edc06398-1d14-54fe-8e70-f661d9bdc5e9"))
+(instances (project "Firefly_pcb2" (path "/894ce443-e53a-500f-a9b5-5f3c68ae9496" (reference "Q1") (unit 1)))) )
+(wire (pts (xy 309.8800 209.5500) (xy 309.8800 204.4700)) (stroke (width 0) (type default)) (uuid "897e0144-ecfb-5230-97a2-66ce52459c37"))
+(label "BEEP_PWM" (at 309.8800 204.4700 90) (effects (font (size 0.95 0.95)) (justify left bottom)) (uuid "3c4ec8b0-6910-5376-95b8-bcd20418e140"))
+(wire (pts (xy 309.8800 217.1700) (xy 309.8800 222.2500)) (stroke (width 0) (type default)) (uuid "e12af696-16e7-5a8a-b48e-6ea4eece0ed8"))
+(label "BEEP_BASE" (at 309.8800 222.2500 90) (effects (font (size 0.95 0.95)) (justify right bottom)) (uuid "b041964f-6163-5e48-b959-da82e84d4310"))
+(symbol (lib_id "SashSense:Device_R") (at 309.88 213.36 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "a593f294-d916-5232-a15d-ec19f36e7a2a")
+(property "Reference" "R9" (at 312.42 212.09 0) (effects (font (size 1.1 1.1)) (justify left)))
+(property "Value" "1k" (at 312.42 214.63000000000002 0) (effects (font (size 1.0 1.0)) (justify left)))
+(property "Footprint" "SashSense:R_0603_1608Metric" (at 309.88 213.36 0) (effects (font (size 1 1)) (hide yes)))
+(property "MPN" "RC0603FR-071KL" (at 309.88 213.36 0) (effects (font (size 1 1)) (hide yes)))
+(property "Manufacturer" "Yageo" (at 309.88 213.36 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "5e187a48-af40-5cae-ae02-62e729a57606"))
+(pin "2" (uuid "1e1aa851-395e-559e-adb3-dc87b076a48d"))
+(instances (project "Firefly_pcb2" (path "/894ce443-e53a-500f-a9b5-5f3c68ae9496" (reference "R9") (unit 1)))) )
+(wire (pts (xy 331.4700 209.5500) (xy 331.4700 204.4700)) (stroke (width 0) (type default)) (uuid "fee29e80-5090-537f-bce3-e2f605f4ff21"))
+(label "BEEP_BASE" (at 331.4700 204.4700 90) (effects (font (size 0.95 0.95)) (justify left bottom)) (uuid "8759683b-f662-55e7-8c4a-66c87b7bf2ef"))
+(wire (pts (xy 331.4700 217.1700) (xy 331.4700 222.2500)) (stroke (width 0) (type default)) (uuid "3c039ff8-5496-515e-a9e4-e6bcedba8bb4"))
+(label "GND" (at 331.4700 222.2500 90) (effects (font (size 0.95 0.95)) (justify right bottom)) (uuid "6e88bc64-bb5f-53ec-bd42-731d941a2a03"))
+(symbol (lib_id "SashSense:Device_R") (at 331.47 213.36 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "e5c1a1f1-3e0f-5c4f-ba01-340d259d7c90")
+(property "Reference" "R10" (at 334.01000000000005 212.09 0) (effects (font (size 1.1 1.1)) (justify left)))
+(property "Value" "100k" (at 334.01000000000005 214.63000000000002 0) (effects (font (size 1.0 1.0)) (justify left)))
+(property "Footprint" "SashSense:R_0603_1608Metric" (at 331.47 213.36 0) (effects (font (size 1 1)) (hide yes)))
+(property "MPN" "RC0603FR-07100KL" (at 331.47 213.36 0) (effects (font (size 1 1)) (hide yes)))
+(property "Manufacturer" "Yageo" (at 331.47 213.36 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "eba68e49-1db3-531d-950c-5a4e36dac6c9"))
+(pin "2" (uuid "d479da80-fdec-585f-ad1a-78a48b381d3d"))
+(instances (project "Firefly_pcb2" (path "/894ce443-e53a-500f-a9b5-5f3c68ae9496" (reference "R10") (unit 1)))) )
+(wire (pts (xy 218.4400 209.5500) (xy 218.4400 204.4700)) (stroke (width 0) (type default)) (uuid "c40b6289-949d-52a3-8640-85c0f8292e6b"))
+(label "+3V3" (at 218.4400 204.4700 90) (effects (font (size 0.95 0.95)) (justify left bottom)) (uuid "33f9bf74-2476-5120-8c8d-e69e82c62f5a"))
+(wire (pts (xy 218.4400 217.1700) (xy 218.4400 222.2500)) (stroke (width 0) (type default)) (uuid "de8f50ee-0e97-5b88-befc-f8f8ad11bd8a"))
+(label "BEEP_LOW" (at 218.4400 222.2500 90) (effects (font (size 0.95 0.95)) (justify right bottom)) (uuid "0aa6f65a-4453-500f-972d-1c3abde813d6"))
+(symbol (lib_id "SashSense:Device_R") (at 218.44 213.36 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "63fad429-64d4-5b7a-be07-931952dd075b")
+(property "Reference" "R11" (at 220.98 212.09 0) (effects (font (size 1.1 1.1)) (justify left)))
+(property "Value" "1k" (at 220.98 214.63000000000002 0) (effects (font (size 1.0 1.0)) (justify left)))
+(property "Footprint" "SashSense:R_0603_1608Metric" (at 218.44 213.36 0) (effects (font (size 1 1)) (hide yes)))
+(property "MPN" "RC0603FR-071KL" (at 218.44 213.36 0) (effects (font (size 1 1)) (hide yes)))
+(property "Manufacturer" "Yageo" (at 218.44 213.36 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "51bc5fde-2341-57ae-92e3-df2fca6d09da"))
+(pin "2" (uuid "25343b26-8590-5c26-9bbf-c66d6f563b1c"))
+(instances (project "Firefly_pcb2" (path "/894ce443-e53a-500f-a9b5-5f3c68ae9496" (reference "R11") (unit 1)))) )
+(wire (pts (xy 157.4800 242.5700) (xy 157.4800 247.6500)) (stroke (width 0) (type default)) (uuid "929348ff-47db-5d09-9d14-18d79ff0528f"))
+(label "+3V3" (at 157.4800 247.6500 90) (effects (font (size 0.95 0.95)) (justify right bottom)) (uuid "5a721bc6-fba9-555a-a142-7aedb6165953"))
+(symbol (lib_id "SashSense:Connector_TestPoint") (at 157.48 242.57 0) (unit 1) (in_bom no) (on_board yes) (dnp no) (uuid "863f4336-a740-5847-83d0-b517acded511")
+(property "Reference" "TP1" (at 157.48 235.712 0) (effects (font (size 1.1 1.1)) ))
+(property "Value" "+3V3" (at 157.48 237.48999999999998 0) (effects (font (size 1.0 1.0)) ))
+(property "Footprint" "SashSense:TestPoint_Pad_D1.5mm" (at 157.48 242.57 0) (effects (font (size 1 1)) (hide yes)))
+(property "MPN" "PCB FEATURE" (at 157.48 242.57 0) (effects (font (size 1 1)) (hide yes)))
+(property "Manufacturer" "PCB" (at 157.48 242.57 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "f008d676-e655-5a6a-aa99-b88320d3b4ba"))
+(instances (project "Firefly_pcb2" (path "/894ce443-e53a-500f-a9b5-5f3c68ae9496" (reference "TP1") (unit 1)))) )
+(wire (pts (xy 176.5300 242.5700) (xy 176.5300 247.6500)) (stroke (width 0) (type default)) (uuid "f4fecbeb-14a5-5551-8c4f-6b560147e205"))
+(label "GND" (at 176.5300 247.6500 90) (effects (font (size 0.95 0.95)) (justify right bottom)) (uuid "7088dd86-d9af-5173-8d5e-b849c313842c"))
+(symbol (lib_id "SashSense:Connector_TestPoint") (at 176.53 242.57 0) (unit 1) (in_bom no) (on_board yes) (dnp no) (uuid "0ca2ad38-939a-5b2b-b50c-b4576d4b3a42")
+(property "Reference" "TP2" (at 176.53 235.712 0) (effects (font (size 1.1 1.1)) ))
+(property "Value" "GND" (at 176.53 237.48999999999998 0) (effects (font (size 1.0 1.0)) ))
+(property "Footprint" "SashSense:TestPoint_Pad_D1.5mm" (at 176.53 242.57 0) (effects (font (size 1 1)) (hide yes)))
+(property "MPN" "PCB FEATURE" (at 176.53 242.57 0) (effects (font (size 1 1)) (hide yes)))
+(property "Manufacturer" "PCB" (at 176.53 242.57 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "d6a7e3c8-53e9-5e2c-822d-2c07b8a491a8"))
+(instances (project "Firefly_pcb2" (path "/894ce443-e53a-500f-a9b5-5f3c68ae9496" (reference "TP2") (unit 1)))) )
+(wire (pts (xy 196.8500 242.5700) (xy 196.8500 247.6500)) (stroke (width 0) (type default)) (uuid "8fbc6fad-ed7c-5945-b451-da872fc79961"))
+(label "I2C_SDA" (at 196.8500 247.6500 90) (effects (font (size 0.95 0.95)) (justify right bottom)) (uuid "e781a58f-de10-56d7-9cdb-33d671a5cee5"))
+(symbol (lib_id "SashSense:Connector_TestPoint") (at 196.85 242.57 0) (unit 1) (in_bom no) (on_board yes) (dnp no) (uuid "9334fd94-cac2-515a-a950-5690f6700b21")
+(property "Reference" "TP3" (at 196.85 235.712 0) (effects (font (size 1.1 1.1)) ))
+(property "Value" "I2C_SDA" (at 196.85 237.48999999999998 0) (effects (font (size 1.0 1.0)) ))
+(property "Footprint" "SashSense:TestPoint_Pad_D1.5mm" (at 196.85 242.57 0) (effects (font (size 1 1)) (hide yes)))
+(property "MPN" "PCB FEATURE" (at 196.85 242.57 0) (effects (font (size 1 1)) (hide yes)))
+(property "Manufacturer" "PCB" (at 196.85 242.57 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "c5682e80-fdca-5ed7-bfd5-7cc37bc8b7a8"))
+(instances (project "Firefly_pcb2" (path "/894ce443-e53a-500f-a9b5-5f3c68ae9496" (reference "TP3") (unit 1)))) )
+(wire (pts (xy 217.1700 242.5700) (xy 217.1700 247.6500)) (stroke (width 0) (type default)) (uuid "61a56943-911b-5b76-beaf-191bc40ed8c3"))
+(label "I2C_SCL" (at 217.1700 247.6500 90) (effects (font (size 0.95 0.95)) (justify right bottom)) (uuid "9868dd5a-2247-58e3-acea-c9f660b34632"))
+(symbol (lib_id "SashSense:Connector_TestPoint") (at 217.17000000000002 242.57 0) (unit 1) (in_bom no) (on_board yes) (dnp no) (uuid "e96d7b7a-c718-5ffb-b841-74e09bb9ba4f")
+(property "Reference" "TP4" (at 217.17000000000002 235.712 0) (effects (font (size 1.1 1.1)) ))
+(property "Value" "I2C_SCL" (at 217.17000000000002 237.48999999999998 0) (effects (font (size 1.0 1.0)) ))
+(property "Footprint" "SashSense:TestPoint_Pad_D1.5mm" (at 217.17000000000002 242.57 0) (effects (font (size 1 1)) (hide yes)))
+(property "MPN" "PCB FEATURE" (at 217.17000000000002 242.57 0) (effects (font (size 1 1)) (hide yes)))
+(property "Manufacturer" "PCB" (at 217.17000000000002 242.57 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "6f829d19-3b01-5723-a466-08ae5411cdca"))
+(instances (project "Firefly_pcb2" (path "/894ce443-e53a-500f-a9b5-5f3c68ae9496" (reference "TP4") (unit 1)))) )
+(wire (pts (xy 237.4900 242.5700) (xy 237.4900 247.6500)) (stroke (width 0) (type default)) (uuid "e2cebcf1-c06d-586e-bf44-84a1d3239295"))
+(label "TOF_XSHUT" (at 237.4900 247.6500 90) (effects (font (size 0.95 0.95)) (justify right bottom)) (uuid "ae241944-23e3-52be-b892-e46af6bd61b9"))
+(symbol (lib_id "SashSense:Connector_TestPoint") (at 237.49 242.57 0) (unit 1) (in_bom no) (on_board yes) (dnp no) (uuid "f4544c5f-c149-5161-bae9-4c931d3de712")
+(property "Reference" "TP5" (at 237.49 235.712 0) (effects (font (size 1.1 1.1)) ))
+(property "Value" "TOF_XSHUT" (at 237.49 237.48999999999998 0) (effects (font (size 1.0 1.0)) ))
+(property "Footprint" "SashSense:TestPoint_Pad_D1.5mm" (at 237.49 242.57 0) (effects (font (size 1 1)) (hide yes)))
+(property "MPN" "PCB FEATURE" (at 237.49 242.57 0) (effects (font (size 1 1)) (hide yes)))
+(property "Manufacturer" "PCB" (at 237.49 242.57 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "7d125339-9143-5fce-b4cb-1072e663786c"))
+(instances (project "Firefly_pcb2" (path "/894ce443-e53a-500f-a9b5-5f3c68ae9496" (reference "TP5") (unit 1)))) )
+(wire (pts (xy 256.5400 242.5700) (xy 256.5400 247.6500)) (stroke (width 0) (type default)) (uuid "bff75f3d-dc98-5fa4-89ea-022b035b5eb7"))
+(label "TOF_INT" (at 256.5400 247.6500 90) (effects (font (size 0.95 0.95)) (justify right bottom)) (uuid "3b9228a5-3d0f-5879-bcb9-1c0de4ce6b63"))
+(symbol (lib_id "SashSense:Connector_TestPoint") (at 256.54 242.57 0) (unit 1) (in_bom no) (on_board yes) (dnp no) (uuid "c9a2932e-fea6-5af6-aed9-9eddc907c76b")
+(property "Reference" "TP6" (at 256.54 235.712 0) (effects (font (size 1.1 1.1)) ))
+(property "Value" "TOF_INT" (at 256.54 237.48999999999998 0) (effects (font (size 1.0 1.0)) ))
+(property "Footprint" "SashSense:TestPoint_Pad_D1.5mm" (at 256.54 242.57 0) (effects (font (size 1 1)) (hide yes)))
+(property "MPN" "PCB FEATURE" (at 256.54 242.57 0) (effects (font (size 1 1)) (hide yes)))
+(property "Manufacturer" "PCB" (at 256.54 242.57 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "367203a5-9ec4-5732-9149-d07d29a7392f"))
+(instances (project "Firefly_pcb2" (path "/894ce443-e53a-500f-a9b5-5f3c68ae9496" (reference "TP6") (unit 1)))) )
+(wire (pts (xy 276.8600 242.5700) (xy 276.8600 247.6500)) (stroke (width 0) (type default)) (uuid "633e454d-6084-5e72-ba37-94059ef77769"))
+(label "AMG_INT" (at 276.8600 247.6500 90) (effects (font (size 0.95 0.95)) (justify right bottom)) (uuid "71f9d542-d0a8-53c1-baaf-e9f87b54cf78"))
+(symbol (lib_id "SashSense:Connector_TestPoint") (at 276.86 242.57 0) (unit 1) (in_bom no) (on_board yes) (dnp no) (uuid "a08546d7-940c-536d-9df3-06d0c05f0761")
+(property "Reference" "TP7" (at 276.86 235.712 0) (effects (font (size 1.1 1.1)) ))
+(property "Value" "AMG_INT" (at 276.86 237.48999999999998 0) (effects (font (size 1.0 1.0)) ))
+(property "Footprint" "SashSense:TestPoint_Pad_D1.5mm" (at 276.86 242.57 0) (effects (font (size 1 1)) (hide yes)))
+(property "MPN" "PCB FEATURE" (at 276.86 242.57 0) (effects (font (size 1 1)) (hide yes)))
+(property "Manufacturer" "PCB" (at 276.86 242.57 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "94d2da7f-e3ca-5437-8d15-fad910878b12"))
+(instances (project "Firefly_pcb2" (path "/894ce443-e53a-500f-a9b5-5f3c68ae9496" (reference "TP7") (unit 1)))) )
+(wire (pts (xy 297.1800 242.5700) (xy 297.1800 247.6500)) (stroke (width 0) (type default)) (uuid "dc381911-c285-53db-9e17-bb82f79e8839"))
+(label "BEEP_PWM" (at 297.1800 247.6500 90) (effects (font (size 0.95 0.95)) (justify right bottom)) (uuid "7df7ae3a-0e6f-54fd-9454-eeef3912f067"))
+(symbol (lib_id "SashSense:Connector_TestPoint") (at 297.18 242.57 0) (unit 1) (in_bom no) (on_board yes) (dnp no) (uuid "ea05b0d6-760a-53e1-8232-d574e40ef9ce")
+(property "Reference" "TP8" (at 297.18 235.712 0) (effects (font (size 1.1 1.1)) ))
+(property "Value" "BEEP_PWM" (at 297.18 237.48999999999998 0) (effects (font (size 1.0 1.0)) ))
+(property "Footprint" "SashSense:TestPoint_Pad_D1.5mm" (at 297.18 242.57 0) (effects (font (size 1 1)) (hide yes)))
+(property "MPN" "PCB FEATURE" (at 297.18 242.57 0) (effects (font (size 1 1)) (hide yes)))
+(property "Manufacturer" "PCB" (at 297.18 242.57 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "8973ab62-5303-5aee-b074-d8a31fbb864d"))
+(instances (project "Firefly_pcb2" (path "/894ce443-e53a-500f-a9b5-5f3c68ae9496" (reference "TP8") (unit 1)))) )
+(wire (pts (xy 35.5600 256.5400) (xy 35.5600 261.6200)) (stroke (width 0) (type default)) (uuid "6f9185a3-ab24-5606-a9db-75c5e5a775f7"))
+(label "+3V3" (at 35.5600 261.6200 90) (effects (font (size 0.95 0.95)) (justify right bottom)) (uuid "a2021aa5-9f2b-55c4-845f-f43c397f2d81"))
+(symbol (lib_id "SashSense:power_PWR_FLAG") (at 35.56 256.54 0) (unit 1) (in_bom no) (on_board no) (dnp no) (uuid "f7cc3c7d-3a54-5e26-9d04-b81f97e52b4e")
+(property "Reference" "#FLG01" (at 35.56 254.63500000000002 0) (effects (font (size 1 1)) (hide yes)))
+(property "Value" "PWR_FLAG" (at 35.56 252.73000000000002 0) (effects (font (size 1.0 1.0)) ))
+(property "Footprint" "" (at 35.56 256.54 0) (effects (font (size 1 1)) (hide yes)))
+(property "MPN" "" (at 35.56 256.54 0) (effects (font (size 1 1)) (hide yes)))
+(property "Manufacturer" "" (at 35.56 256.54 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "386ae7ee-6ed9-5d2d-bbf3-99a5bbb7bcda"))
+(instances (project "Firefly_pcb2" (path "/894ce443-e53a-500f-a9b5-5f3c68ae9496" (reference "#FLG01") (unit 1)))) )
+(wire (pts (xy 68.5800 256.5400) (xy 68.5800 261.6200)) (stroke (width 0) (type default)) (uuid "98e506a6-6964-559b-a367-2d3d7b768103"))
+(label "GND" (at 68.5800 261.6200 90) (effects (font (size 0.95 0.95)) (justify right bottom)) (uuid "528adf07-dfb3-5b3f-aca5-139395003bd4"))
+(symbol (lib_id "SashSense:power_PWR_FLAG") (at 68.58 256.54 0) (unit 1) (in_bom no) (on_board no) (dnp no) (uuid "b7a43379-1b83-5467-ae96-7074bf39802f")
+(property "Reference" "#FLG02" (at 68.58 254.63500000000002 0) (effects (font (size 1 1)) (hide yes)))
+(property "Value" "PWR_FLAG" (at 68.58 252.73000000000002 0) (effects (font (size 1.0 1.0)) ))
+(property "Footprint" "" (at 68.58 256.54 0) (effects (font (size 1 1)) (hide yes)))
+(property "MPN" "" (at 68.58 256.54 0) (effects (font (size 1 1)) (hide yes)))
+(property "Manufacturer" "" (at 68.58 256.54 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "a8b3086b-e437-5571-a25c-8233dde943d2"))
+(instances (project "Firefly_pcb2" (path "/894ce443-e53a-500f-a9b5-5f3c68ae9496" (reference "#FLG02") (unit 1)))) )
+(text "PROCESSOR / RESET" (at 25 22 0) (effects (font (size 2 2)) (justify left)) (uuid "546b5fa8-5ef8-593e-bef4-7fe85a6a5b16"))
+(text "TIME OF FLIGHT - +Z optical axis" (at 143 25 0) (effects (font (size 1.7 1.7)) (justify left)) (uuid "3c30eab4-3f56-5d7d-b76b-1661061c7551"))
+(text "THERMAL ARRAY - +Z optical axis" (at 263 25 0) (effects (font (size 1.7 1.7)) (justify left)) (uuid "698e9ad2-2a70-5f8f-97ea-09d881f35e30"))
+(text "RESET / BOOT BIAS" (at 25 111 0) (effects (font (size 1.5 1.5)) (justify left)) (uuid "c869e6ae-5f64-5b4d-bfc5-25792474e806"))
+(text "I2C - 100 kHz initial bring-up" (at 205 99 0) (effects (font (size 1.5 1.5)) (justify left)) (uuid "ee68371d-03e3-5187-b37c-96b699f43f3e"))
+(text "POWER / BYPASS" (at 25 151 0) (effects (font (size 1.5 1.5)) (justify left)) (uuid "ad6f54f3-a6a5-5a71-8125-ac4f202073f8"))
+(text "TOF LOCAL DECOUPLING" (at 145 135 0) (effects (font (size 1.5 1.5)) (justify left)) (uuid "4193088f-ff15-5d30-b7b9-26e919432189"))
+(text "AMG INTERNAL REGULATOR BYPASS" (at 261 135 0) (effects (font (size 1.5 1.5)) (justify left)) (uuid "9e6ad7f0-da7d-5cf3-b6a6-e8b367852ede"))
+(text "BEEPER - PWM approximately 4 kHz" (at 205 190 0) (effects (font (size 1.5 1.5)) (justify left)) (uuid "ed4da161-2ab7-54ba-ba36-71dd6517ccbb"))
+(text "SERVICE PADS / TEST ACCESS" (at 105 264 0) (effects (font (size 1.5 1.5)) (justify left)) (uuid "e6e52c7d-7e8b-5966-bfe5-b95eb86378b0"))
+(text "3.3 V REGULATED INPUT ONLY; >=1 A transient source. NO 5 V." (at 20 271 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid "d8021859-ee09-50bb-9694-e765983fa6d7"))
+(text "P1: mounting / enclosure / host protocol remain provisional. No external I2C cable is designed." (at 20 277 0) (effects (font (size 1.0 1.0)) (justify left)) (uuid "40d156d9-621a-50fa-b5ae-4489441a7945"))
+(text "AMG: VPP tied VDD; AD_SELECT low -> 0x68. TOF: 7-bit 0x29, 2V8 I/O mode." (at 20 283 0) (effects (font (size 1.0 1.0)) (justify left)) (uuid "63a29bcf-0b73-5a1d-9bfe-aa7d4595c007"))
+(embedded_fonts no))
