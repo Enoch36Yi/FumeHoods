@@ -2,7 +2,7 @@
 
 2026-10-19. Status: placed and fully routed native KiCad 10.0.5 board; digitally verified. **Not released for fabrication**: mounting, sensor apertures, host interface and the beeper part lifecycle remain open (see *Release blockers*).
 
-## Deliverables
+## Files
 
 | File | Content |
 |---|---|
@@ -18,11 +18,11 @@
 | `outputs/Firefly_pcb2_board_layers.pdf` | Vector plot of every fabricated layer |
 | `outputs/manufacturing_P2_PROVISIONAL/` | Gerbers, drill, CPL, BOM, assembly drawing, IPC-D-356, STEP; see its README |
 
-The preliminary routed draft under `drafts/stopped_pcb/` was inspected but not reused; the new board was placed and routed from the exported schematic netlist. The schematic-stage files are copied unchanged to `drafts/schematic_stage_snapshot/`.
+The board was placed and routed from the exported schematic netlist.
 
 ## Board
 
-- Outline: one Edge.Cuts rectangle from (25, 25) to (525, 525) mm, **500.000000 x 500.000000 mm** measured at 1 nm resolution in the board and in the exported Edge.Cuts Gerber (the Gerber job file reports 500.05 mm because it includes the 0.05 mm outline drawing line).
+- Outline: a provisional **500 x 500 mm** Edge.Cuts rectangle, from (25, 25) to (525, 525) mm.
 - Two copper layers, 1.6 mm nominal. GND pours on both layers over the populated region (x 27-190, y 27-82 mm) for balanced copper, tied by 171 stitching vias; the rest of the board is bare laminate.
 - 25 provisional M3 supports (3.2 mm NPTH) on the earlier 120 mm grid, each with a 4 mm-radius copper keepout. Three global fiducials. All are board-only items, outside the BOM and CPL.
 - All 29 purchased parts and all pads are on the top side.
@@ -84,7 +84,7 @@ KiCad's project defaults ignore five DRC checks (no courtyard, track not centred
 5. Programming is UART-only through J2 (USB D+/D- unused); use a 3.3 V adapter.
 6. The module footprint's 12 thermal-via pads are 0.2 mm drills; confirm the fabricator's minimum.
 
-The circuit-level decisions in `sensor_and_beeper_review.md` (GPIO map, pull-ups, 100 kHz start, sensor addresses, bypass values) were rechecked against the board and stand.
+The GPIO map, pull-ups, 100 kHz starting bus speed, sensor addresses and bypass values match the electrical review in `sensor_and_beeper_review.md`.
 
 ## Engineering limits
 
@@ -93,7 +93,7 @@ The circuit-level decisions in `sensor_and_beeper_review.md` (GPIO map, pull-ups
 - RF: antenna keepout is clear on both layers; enclosure, supports and cables near the antenna are unknown.
 - Digital checks do not establish mechanical fit, optics, thermal accuracy, RF performance, assembly yield or hardware function.
 
-## Release blockers and smallest remaining inputs
+## Before fabrication
 
 1. Beeper: confirmed availability of PKLCS1212E4001-R1, or an approved replacement.
 2. Mechanics: support/mounting pattern, board thickness, enclosure, and sensor aperture or window positions (ToF 27 deg and AMG 60 deg fields of view).
@@ -102,7 +102,7 @@ The circuit-level decisions in `sensor_and_beeper_review.md` (GPIO map, pull-ups
 
 ## Reproduction
 
-From `SashSense_Reconstruction` in PowerShell (KiCad 10 at `C:\Program Files\KiCad\10.0`, or set `KICAD_ROOT`):
+From the `SashSense_node2` directory in PowerShell (KiCad 10 at `C:\Program Files\KiCad\10.0`, or set `KICAD_ROOT`):
 
 ```powershell
 & 'C:\Program Files\KiCad\10.0\bin\python.exe' scripts\layout_pcb.py --overwrite   # only to regenerate the board; replaces manual edits

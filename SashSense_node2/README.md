@@ -22,7 +22,7 @@ $kp = 'C:\Program Files\KiCad\10.0\bin\python.exe'
 & $kp scripts/verify_pcb.py
 ```
 
-`make_pcb_outputs.ps1` runs the larger pipeline, including renders, Gerbers, drill files, BOM/CPL and the output checks. The manufacturing review files are generated on demand under `outputs/manufacturing_P2_PROVISIONAL`; they are not committed here. The saved 25-check output report was rerun against the complete local artifact package before publication.
+`make_pcb_outputs.ps1` runs the larger pipeline, including renders, Gerbers, drill files, BOM/CPL and the output checks. The manufacturing review files are generated on demand under `outputs/manufacturing_P2_PROVISIONAL`; they are not committed here. The saved output report covers the complete local package.
 
 ```powershell
 .\scripts\make_pcb_outputs.ps1
@@ -32,8 +32,8 @@ To regenerate the routed board, export the netlist first, then use `& $kp script
 
 ## Results and release blockers
 
-The saved CAD passed ERC (0 errors/warnings), configured DRC (0), configured parity (0), and unrouted count (0). The independent checks passed 186/186 for the schematic and 527/527 for the board. A stricter scratch project with five ignored categories enabled still had 0 DRC violations, but reported 24 footprint-filter metadata parity mismatches. See `reports/drc_strict.json` and the layout review.
+The saved KiCad checks report no ERC errors or warnings, configured DRC violations, unconnected items or configured parity issues. A stricter run reports 24 footprint-filter metadata mismatches. Detailed results, including the script checks, are in the [layout review](docs/pcb_layout_review.md) and `reports/drc_strict.json`.
 
 Beeper sourcing, support pattern, sensor openings, board thickness, power harness and large-board fabrication/assembly acceptance remain open. J1 currently has no reverse-polarity, TVS or fuse protection. RF performance, optical behavior, self-heating, physical fit and assembled operation still require hardware tests.
 
-`docs/pcb_layout_review.md` records placement and routing decisions; `docs/bringup_checklist.md` is the future hardware checklist. Vendor datasheets and earlier drafts remain in the original local project folder. The schematic-stage snapshot and original local files were not changed.
+See the [layout review](docs/pcb_layout_review.md) for placement and routing decisions and the [bring-up checklist](docs/bringup_checklist.md) for the first assembled board. The electrical review links to manufacturer datasheets.

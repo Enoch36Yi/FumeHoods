@@ -1,11 +1,11 @@
 # Source notes
 
-The root KiCad files are the original in-hood project, renamed from PCB_FUMEHOODS to SashSense_node1 for this repository. The schematic, board and project settings are byte-identical to the original local files. Fresh checks after the rename gave ERC 0, parity 0, 10 DRC findings and 9 unconnected items; exported net connectivity also matched the original exactly.
+The in-hood KiCad project was renamed from `PCB_FUMEHOODS` to `SashSense_node1`. Its CAD contents and project settings were kept unchanged. The repository history retains the earlier filenames.
 
-The original folder has no project Git repository. Its .history directory contains one KiCad automatic PCB snapshot (dffdc29, 2026-09-02) with no remote. That snapshot and all original local files remain untouched. The repository history retains the earlier filenames.
+The original local folder also contains a KiCad automatic PCB snapshot dated 2026-09-02. That snapshot is kept separately.
 
-SashSense_node2 contains selected source and review files from SashSense_Reconstruction. Firefly_pcb2 is a new presence-board reconstruction, not recovery of the lost original board. Its native CAD files are unchanged from the supplied design. In a separate working copy, ERC, native DRC/parity/unrouted checks, and 186 schematic / 527 board / 25 artifact checks were rerun successfully. A stricter scratch copy records the 24 footprint-filter metadata parity issues separately.
+`SashSense_node2` is a new reconstruction of the presence board, not a recovered copy of the lost original. It includes project-local libraries, generation and verification scripts, engineering notes, PDFs and selected previews.
 
-Selected project-local libraries, builders, engineering review docs, schematic/layer PDFs, a few previews and verification reports are included. Original vendor PDF downloads, internal handoff notes, drafts, local preferences, large STEP exports and manufacturing archives are excluded. The output verification report refers to the complete local manufacturing review package; the export script recreates those files on demand. The netlist XML's absolute source pathname was replaced with the schematic filename; electrical content was preserved and rechecked.
+Vendor PDFs, internal notes, drafts, large STEP exports and manufacturing archives are not included. The electrical review links to manufacturer datasheets. The export script generates the manufacturing review files locally; the saved output-verification report covers that complete local package.
 
-The user confirmed authorship/authorization for private sharing of this engineering work and requested both board revisions here. No new license has been added. Neither board is released for fabrication.
+Neither board is released for fabrication. No license has been added.
