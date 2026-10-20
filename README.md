@@ -22,7 +22,7 @@ Open `SashSense_node1.kicad_pro` in KiCad 10. The matching schematic and board u
 
 [Node 1 schematic](SashSense_node1.pdf)
 
-This earlier revision contains ESP32-WROOM-32E, SHT31, USB-C, CP2102N and AMS1117-3.3. It labels the distance sensor VL53L0X-family, while the current system specifies VL53L1X; the part and footprint still need to be reconciled.
+This earlier revision contains ESP32-WROOM-32E, SHT31, USB-C, CP2102N and AMS1117-3.3. Its distance sensor is a VL53L1X.
 
 ## Node 2 — presence-board reconstruction
 
@@ -44,12 +44,12 @@ Saved KiCad 10.0.5 check results:
 | Check | Node 1 | Firefly node 2 |
 | --- | --- | --- |
 | ERC errors/warnings | 0 / 0 | 0 / 0 |
-| Configured DRC findings | 10 | 0 |
-| Unconnected items | 9 | 0 |
+| Configured DRC findings | 1 | 0 |
+| Unconnected items | 0 | 0 |
 | Configured schematic/PCB parity issues | 0 | 0 |
 
 A stricter check reports 24 footprint-filter metadata mismatches. The generator needs that fix before schematic regeneration. Script-check results and the stricter-check details are in the [layout review](SashSense_node2/docs/pcb_layout_review.md).
 
-Neither revision is released for fabrication. Node 1 needs its clearance, connectivity and sensor-revision issues resolved. Firefly needs confirmed beeper sourcing, mounting and optical openings, a regulated 3.3 V harness, and a fabricator DFM review. It has no hardware bring-up or deployment result yet.
+Neither revision is released for fabrication. Node 1's one DRC finding is its ESP32 footprint differing from KiCad's library copy (0.3 mm instead of 0.2 mm thermal vias), kept on purpose. Firefly needs confirmed beeper sourcing, mounting and optical openings, a regulated 3.3 V harness, and a fabricator DFM review. It has no hardware bring-up or deployment result yet.
 
 The root reports describe Node 1; Firefly reports are under `SashSense_node2/reports/`.
