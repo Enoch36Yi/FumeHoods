@@ -6,54 +6,25 @@ I selected sensors, tested breadboard circuits, designed PCBs and built earlier 
 
 The in-hood node measures sash opening and temperature/humidity. The presence node uses VL53L1X and an AMG8833 thermopile array; it builds on SEAL's Firefly human-presence project.
 
-## Schematics and PCB previews
+## Open the designs
 
-| Board | Schematic | 3D PCB |
-| --- | --- | --- |
-| Node 1 | [JPG](previews/SashSense_node1_schematic.jpg) | [JPG](previews/SashSense_node1_pcb_3d.jpg) |
-| Node 2 | [JPG](previews/SashSense_node2_schematic.jpg) | [JPG](previews/SashSense_node2_pcb_3d.jpg) |
+Use KiCad 10. Keep each project, board and schematic together, and preserve the node 2 library folders and library tables.
 
-The PCB previews are CAD renders; some component models are missing.
+| Board | Project | Schematic | PCB |
+| --- | --- | --- | --- |
+| Node 1 | [KiCad project](SashSense_node1.kicad_pro) | [Schematic](SashSense_node1.kicad_sch) | [Board](SashSense_node1.kicad_pcb) |
+| Node 2 | [KiCad project](SashSense_node2/Firefly_pcb2.kicad_pro) | [Schematic](SashSense_node2/Firefly_pcb2.kicad_sch) | [Board](SashSense_node2/Firefly_pcb2.kicad_pcb) |
 
+Node 1 uses ESP32-WROOM-32E, SHT31, USB-C, CP2102N, AMS1117-3.3 and VL53L1X. Node 2 is a new reconstruction of the presence board, not a recovered original. It uses ESP32-S3-WROOM-1-N8, VL53L1X, AMG8833 and a transistor-driven piezo beeper.
 
-## Node 1 — in-hood board
+[Node 2 BOM](SashSense_node2/outputs/BOM.csv) · [Node 2 details](SashSense_node2/README.md)
 
-Open `SashSense_node1.kicad_pro` in KiCad 10. The matching schematic and board use the same filename stem.
+## Status and unfinished work
 
-![Node 1 in-hood board CAD render](previews/SashSense_node1_pcb_3d.jpg)
+Neither revision is released for fabrication. Previously saved KiCad 10.0.5 checks reported zero ERC errors/warnings, unconnected items and configured schematic/PCB parity issues on both boards. Node 1 had one configured DRC finding: its ESP32 footprint differs from KiCad's library copy (0.3 mm instead of 0.2 mm thermal vias), kept on purpose. Node 2 had zero configured DRC findings, but a stricter check reported 24 footprint-filter metadata mismatches. These are historical results, not new validation.
 
-*CAD render, not a hardware photograph.*
+Node 2's 160 × 60 mm outline was trimmed from a provisional 500 × 500 mm outline without changing component placement/routing. Sensor positions and mounting holes remain provisional. Its beeper is externally mounted; mounting, optical openings, a regulated 3.3 V harness and fabricator DFM review remain open. Hardware performance has not been established by these CAD checks.
 
-[Node 1 schematic](SashSense_node1.pdf)
+## Repository contents
 
-This earlier revision contains ESP32-WROOM-32E, SHT31, USB-C, CP2102N and AMS1117-3.3. Its distance sensor is a VL53L1X.
-
-## Node 2 — presence-board reconstruction
-
-Open [SashSense_node2/Firefly_pcb2.kicad_pro](SashSense_node2/Firefly_pcb2.kicad_pro). The circuit uses ESP32-S3-WROOM-1-N8, VL53L1X, AMG8833 and a transistor-driven piezo beeper. Project-local symbols, footprints, layout builders and verification scripts are included.
-
-![Firefly presence-node CAD render](SashSense_node2/outputs/previews/Firefly_pcb2_3D_top.png)
-
-*CAD render of the complete 160 × 60 mm board, not a hardware photograph. Some part models are absent.*
-
-The outline was first drawn as a provisional 500 × 500 mm board and has since been trimmed to the populated area; placement and routing did not change. Sensor positions and the four corner mounting holes are provisional. Placement and routing decisions are documented in the layout review below.
-
-[Node 2 schematic](SashSense_node2/outputs/Firefly_pcb2_schematic.pdf) · [Layout review](SashSense_node2/docs/pcb_layout_review.md) · [Open, check and regenerate](SashSense_node2/README.md)
-
-
-## Current checks and unfinished work
-
-Saved KiCad 10.0.5 check results:
-
-| Check | Node 1 | Firefly node 2 |
-| --- | --- | --- |
-| ERC errors/warnings | 0 / 0 | 0 / 0 |
-| Configured DRC findings | 1 | 0 |
-| Unconnected items | 0 | 0 |
-| Configured schematic/PCB parity issues | 0 | 0 |
-
-A stricter check reports 24 footprint-filter metadata mismatches. The generator needs that fix before schematic regeneration. Script-check results and the stricter-check details are in the [layout review](SashSense_node2/docs/pcb_layout_review.md).
-
-Neither revision is released for fabrication. Node 1's one DRC finding is its ESP32 footprint differing from KiCad's library copy (0.3 mm instead of 0.2 mm thermal vias), kept on purpose. Firefly's beeper is externally mounted, and needs mounting and optical openings, a regulated 3.3 V harness, and a fabricator DFM review. 
-
-The root reports describe Node 1; Firefly reports are under `SashSense_node2/reports/`.
+Editable boards, schematics, project settings, required node 2 symbols/footprints/library tables and the supplied node 2 BOM are retained. CAD generators, intermediate manifests, rendered exports and old check reports were removed from the current tree. Earlier files and engineering notes remain recoverable in Git history. Board, schematic, project and library content was not changed by this cleanup. No license has been added.
